@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+}
+
+@keyframes logo-anim {
+  0%,
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+  25% {
+    transform: translateY(-15px) translateX(15px);
+  }
+  50% {
+    transform: translateY(0) translateX(0);
+  }
+  75% {
+    transform: translateY(-15px) translateX(-15px);
+  }
+}
+
+.animate-logo {
+  animation: logo-anim 8s infinite ease-in-out;
+}
+
+.line {
+    width: 100%; /* Занимает всю ширину */
+    height: 40px; /* Толщина линии */
+    background-color: #2196f3; /* Цвет линии */
+    border-radius: 9999px; /* Полное закругление краев */
+  }
+  
