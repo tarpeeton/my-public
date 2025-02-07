@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import "@/lib/i18n"; 
+import { useTranslation } from "react-i18next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,8 +24,10 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const { i18n } = useTranslation(); 
+
   return (
-    <html lang="en">
+    <html lang={i18n.language}>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
