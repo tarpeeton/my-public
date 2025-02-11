@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <div className="flex justify-around items-center mt-2 mb-4">
       <img src="/logo.png" alt="Логотип" />
-      <div className="flex gap-5">
+      <div className="flex gap-5 text-black">
         <Button className="py-5 px-5" variant="outline">
           Врачи
         </Button>
