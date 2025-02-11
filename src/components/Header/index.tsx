@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import "./header.css";
+import Image from "next/image";
 
 export const Header = () => {
   return (
@@ -26,7 +27,7 @@ export const Header = () => {
 
         {/* Графическая часть */}
         <div className="flex justify-center relative bottom-10">
-          <img
+          <Image
             src="./big-logo1.png"
             alt="big-logo"
             className="mb-6 animate-logo"
@@ -39,7 +40,7 @@ export const Header = () => {
 
       {/* Линия ЭКГ */}
       <div className="absolute bottom-0 left-0 right-0">
-        <img src="./Vector1.png" alt="" />
+        <Image src="./Vector1.png" alt="" />
       </div>
     </div>
   );

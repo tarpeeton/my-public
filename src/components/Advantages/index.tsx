@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import React, { useState } from "react";
 
 const benefits = [
@@ -38,7 +39,8 @@ const benefits = [
 
 const BenefitsSection = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-
+  console.log(hoveredIndex);
+  
   return (
     <section className="px-4 py-12 md:px-16">
       <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">Преимущества платформы</h2>
@@ -54,7 +56,7 @@ const BenefitsSection = () => {
             onMouseEnter={() => setHoveredIndex(index)}
             onMouseLeave={() => setHoveredIndex(null)}
           >
-            <img src={benefit.icon} alt={benefit.title} className="w-16 h-16 mb-4" />
+            <Image src={benefit.icon} alt={benefit.title} className="w-16 h-16 mb-4" />
             <h3 className="text-xl font-semibold">{benefit.title}</h3>
             <p className="mt-2">{benefit.description}</p>
           </div>
