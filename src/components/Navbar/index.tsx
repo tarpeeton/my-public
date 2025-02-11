@@ -28,7 +28,7 @@ const Header = () => {
       {/* Десктопное меню */}
       <nav className="hidden md:flex gap-5">
         {link.map((el) => 
-          <Link href={`/${language}${el.href}`} key={el.id}>
+          <Link className="border p-3 px-6 rounded-[10px] text-[18px] font-medium transition-colorsn hover:bg-[#eae8e87d]" href={`/${language}${el.href}`} key={el.id}>
             {el.title}
           </Link>
         )}

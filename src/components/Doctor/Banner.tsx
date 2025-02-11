@@ -6,7 +6,7 @@ import bannerImage from '@/assets/image/doctor_banner_image.png'
 const Banner = () => {
     const t = useTranslations('Doctor')
     return (
-        <div className=' px-4 md:px-10 py-4 relative'>
+        <div className=' relative'>
             <div className="bg-gradient-to-b from-[#379FF2] via-[#206BEF] to-[#0129E3] overflow-hidden p-5 md:p-16 xl:pb-24 rounded-[40px] flex flex-col xl:flex-row">
                 <div className="w-full xl:w-[50%] text-white z-10">
                     <h1 className='text-[24px] md:text-[48px] xl:text-[56px] leading-10  md:leading-[60px] font-semibold'>{t('banner_title')}</h1>
