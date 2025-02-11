@@ -1,13 +1,17 @@
 {
-    "Header":{
-        "doctor":"Врачи ",
-        "clinics":"Клиники",
-        "service":"Услуги "
+    "Header": {
+      "title": "Eng yaxshi shifokorlarni yoningizda toping",
+      "description": "Med Yordam — bu shifokorlar, klinikalar va bemorlarni birlashtiruvchi zamonaviy platforma.",
+      "button": "Shifokor topish",
+      "doctor": "Shifokor",
+      "clinics": "Klinikalar",
+      "service": "Xizmatlar"
     },
     "Doctor": {
-        "banner_title":"Найдите лучших врачей раядом с вами  ",
-        "banner_desc":"1843 врачей в Ташкент ",
-        "filter_search":"Поиск врача или клиники ",
-        "search":"Поиск "
+      "banner_title": "Eng yaxshi shifokorlarni toping",
+      "banner_desc": "Biz sizga eng yaxshi shifokorlarni topishda yordam beramiz",
+      "filter_search": "Shifokorni qidiring",
+      "search": "Qidirish"
     }
-}
+  }
+  
