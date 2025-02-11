@@ -42,18 +42,20 @@ const benefits = [
 
 const BenefitsSection = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-  console.log(hoveredIndex);
 
   return (
     <section className="px-4 py-12 md:px-16">
-      <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
+      <span className="bg-button-gradient text-white mb-2 px-4 py-1 rounded-md text-sm font-semibold inline-block -rotate-12">
+        Врачи
+      </span>
+      <h2 className="text-3xl md:text-4xl font-bold mb-8">
         Преимущества платформы
       </h2>
-      <div className="flex flex-wrap justify-center gap-x-[16px] gap-y-[32px]">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
         {benefits.map((benefit, index) => (
           <div
             key={index}
-            className={`w-[446px] h-[363px] p-[40px] border border-gray-200 rounded-[20px] shadow-lg transition duration-300 flex flex-col justify-center items-center text-center ${
+            className={`w-full h-[450px] lg:h-[363px] p-[40px] border border-gray-200 rounded-[20px] shadow-lg transition duration-300 flex flex-col justify-center items-center text-center ${
               benefit.isPrimary
                 ? "bg-gradient-to-br from-[#12C2F2] to-[#0129E3] text-white"
                 : "bg-white hover:bg-gradient-to-br hover:from-[#12C2F2] hover:to-[#0129E3] hover:text-white"
@@ -69,7 +71,6 @@ const BenefitsSection = () => {
               className="mb-4"
               priority
             />
-
             <h3 className="text-xl font-semibold">{benefit.title}</h3>
             <p className="mt-2">{benefit.description}</p>
           </div>
