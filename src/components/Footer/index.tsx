@@ -1,7 +1,6 @@
 import {
   FaInstagram,
   FaTelegram,
-  FaPhone,
   FaYoutube,
   FaFacebook,
 } from "react-icons/fa";

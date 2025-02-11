@@ -1,10 +1,12 @@
+
+import './globals.css';
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
 import { NextIntlClientProvider } from 'next-intl';
 import { MantineProviderComponent } from '@/providers/MantineProvider';
 import Navbar from "@/components/Navbar/index"
-import { Footer } from "@/components/Footer";
+import Footer  from "@/components/Footer/index";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

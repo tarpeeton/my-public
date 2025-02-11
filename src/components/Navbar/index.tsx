@@ -1,32 +1,19 @@
-import React, { useState } from "react";
+'use client'
 import { Button } from "../ui/button";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
+import { useState } from "react";
 import { FaAngleDown } from "react-icons/fa6";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-<<<<<<< HEAD
-    <div className="flex justify-around items-center mt-2 mb-4">
-      <img src="/logo.png" alt="Логотип" />
-      <div className="flex gap-5 text-black">
-        <Button className="py-5 px-5" variant="outline">
-          Врачи
-        </Button>
-        <Button className="py-5 px-5" variant="outline">
-          Клиники
-        </Button>
-        <Button className="py-5 px-5" variant="outline">
-          Услуги
-        </Button>
-=======
+
     <header className="relative flex justify-between items-center px-4 md:px-10 py-4 bg-white">
       <div className="flex items-center gap-2">
         <Image src="/Union.png" alt="Логотип" width={40} height={40} />
         <span className="text-2xl font-bold">Med Yordam</span>
->>>>>>> 67f19e8b042eed26e4993f858cfd3f9001a01a61
       </div>
 
       {/* Десктопное меню */}
