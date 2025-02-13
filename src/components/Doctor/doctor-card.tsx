@@ -7,6 +7,9 @@ import { MoveRight, Phone } from 'lucide-react';
 import Link from 'next/link';
 const DoctorCard = () => {
     const t = useTranslations('Doctor')
+    const mapUrl = "https://yandex.uz/map-widget/v1/?ll=${longitude},${latitude}&z=12&pt=${longitude},${latitude},pm2rdl"
+    console.log(mapUrl);
+    
     return (
         <div className='shadow-md rounded-[20px] px-4 py-6 flex gap-6'>
             <div className="flex w-full xl:w-[70%] gap-10">
