@@ -45,7 +45,7 @@ const BenefitsSection = () => {
 
   return (
     <section className="px-4 py-12 md:px-16">
-      <span className="bg-button-gradient text-white mb-2 px-4 py-1 rounded-md text-sm font-semibold inline-block -rotate-12">
+      <span className="bg-button-gradient text-white mb-2 px-4 py-1 rounded-md text-sm font-semibold inline-block -rotate-[5deg]">
         Врачи
       </span>
       <h2 className="text-3xl md:text-4xl font-bold mb-8">

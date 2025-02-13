@@ -15,7 +15,7 @@ const doctors = [
     name: "Лариса Юрьевна",
     specialty: "Педиатр",
     rating: "4.9",
-    morespec: "Педиатр с многолетним стажем Педиатр с многолетним стажем",
+    morespec: "Опытный специалист в области педиатрии.",
     location: "Ташкент, улица Шаблонка, д.10",
     image: "/doc1.jpg",
   },
@@ -23,7 +23,7 @@ const doctors = [
     name: "Сабина Камоловна",
     specialty: "Педиатр",
     rating: "4.9",
-    morespec: "Педиатр с многолетним стажем Педиатр с многолетним стажем",
+    morespec: "Специализируется на детском здоровье.",
     location: "Ташкент, улица Шаблонка, д.10",
     image: "/doc2.jpg",
   },
@@ -31,7 +31,7 @@ const doctors = [
     name: "Алекс Азимович",
     specialty: "Хирург",
     rating: "4.9",
-    morespec: "Педиатр с многолетним стажем Педиатр с многолетним стажем",
+    morespec: "Высококвалифицированный хирург.",
     location: "Ташкент, улица Шаблонка, д.10",
     image: "/doc3.jpg",
   },
@@ -39,7 +39,7 @@ const doctors = [
     name: "Лобар Садихахмуд",
     specialty: "Стоматолог",
     rating: "4.9",
-    morespec: "Педиатр с многолетним стажем Педиатр с многолетним стажем",
+    morespec: "Специалист по здоровью зубов.",
     location: "Ташкент, улица Шаблонка, д.10",
     image: "/doc4.jpg",
   },
@@ -47,49 +47,55 @@ const doctors = [
 
 export default function DoctorsCarousel() {
   return (
-    <div className="px-16">
-      <div className="p-6 bg-[#F6FAFF] rounded-3xl mt-10 px-[60px]">
-        {/* Заголовок и кнопки навигации */}
-        <span className="bg-button-gradient text-white mb-2 px-4 py-1 rounded-md text-sm font-semibold inline-block -rotate-12">
+    <div className="lg:px-[100px]">
+      <div className="p-6 bg-[#F6FAFF] rounded-3xl mt-10 lg:px-[60px] relative">
+        <span className="bg-button-gradient mb-2 text-white px-4 py-1 rounded-md text-sm font-semibold inline-block -rotate-[5deg]">
           Врачи
         </span>
-        <div className="flex justify-between items-center mb-4">
+        <div className="flex justify-between items-center mb-4 relative">
           <h2 className="text-4xl font-semibold">Топ 10 врачей Ташкента</h2>
-          <div className="flex gap-2">
-            <Button className="swiper-button-prev !static" variant="ghost">
+          <div className="lg:absolute lg:top-0 lg:right-0 lg:flex lg:gap-2 hidden">
+            <div
+              id="doctors-prev"
+              className="swiper-button-prev !w-10 !h-10 bg-[#6236ff] text-white rounded-full flex items-center justify-center shadow-lg"
+            >
               <FiArrowLeft className="w-5 h-5" />
-            </Button>
-            <Button className="swiper-button-next !static" variant="ghost">
+            </div>
+            <div
+              id="doctors-next"
+              className="swiper-button-next !w-10 !h-10 bg-[#6236ff] text-white rounded-full flex items-center justify-center shadow-lg"
+            >
               <FiArrowRight className="w-5 h-5" />
-            </Button>
+            </div>
           </div>
         </div>
 
-        {/* Swiper с карточками врачей */}
         <Swiper
           modules={[Navigation]}
-          slidesPerView={3.5}
           spaceBetween={10}
           navigation={{
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
+            nextEl: "#doctors-next",
+            prevEl: "#doctors-prev",
           }}
-          className="relative"
+          breakpoints={{
+            320: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3.5 },
+          }}
         >
           {doctors.map((doctor, index) => (
             <SwiperSlide key={index}>
-              <div className="bg-white rounded-2xl shadow-md overflow-hidden w-[300px] mb-10">
+              <div className="bg-white rounded-2xl overflow-hidden w-[320px] mb-10 shadow-sm hover:shadow-md duration-200">
                 <div className="w-full h-[300px] relative">
                   <Image
                     src={doctor.image}
                     alt={doctor.name}
-                    layout="fill"
-                    objectFit="cover"
-                    className="rounded-t-2xl object-top"
+                    fill={true}
+                    className="rounded-t-2xl object-cover object-top"
                   />
                   <div className="absolute bottom-3 bg-white px-2 py-1 rounded-r-md flex items-center shadow-md gap-1">
                     <span className="text-blue-500 font-bold text-sm">
-                      <FaStar />{" "}
+                      <FaStar />
                     </span>
                     {doctor.rating}
                   </div>
@@ -118,9 +124,11 @@ export default function DoctorsCarousel() {
           ))}
         </Swiper>
 
-        {/* Кнопка "Посмотреть всех" */}
         <div className="flex justify-center">
-          <Button className="bg-blue-600 text-white px-7 py-6 rounded-full mb-[40px]">
+          <Button
+            id="view-all-doctors"
+            className="bg-blue-600 text-white px-7 py-6 rounded-full mb-[40px]"
+          >
             Посмотреть всех
           </Button>
         </div>

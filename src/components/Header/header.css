@@ -30,11 +30,3 @@
 .animate-logo {
   animation: logo-anim 8s infinite ease-in-out;
 }
-
-.line {
-    width: 100%; /* Занимает всю ширину */
-    height: 40px; /* Толщина линии */
-    background-color: #2196f3; /* Цвет линии */
-    border-radius: 9999px; /* Полное закругление краев */
-  }
-  

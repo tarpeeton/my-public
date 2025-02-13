@@ -40,25 +40,25 @@ const faqItems = [
 
 export default function FAQ() {
   return (
-    <div className="mx-auto p-6 rounded-2xl px-16">
-      <span className="bg-button-gradient text-white mb-2 px-4 py-1 rounded-md text-sm font-semibold inline-block -rotate-12">
+    <div className="mx-auto px-2 md:p-6 rounded-2xl md:px-16 w-full">
+      <span className="bg-button-gradient text-white mb-2 px-4 py-1 rounded-md text-sm font-semibold inline-block -rotate-[5deg]">
           FAQ
         </span>
       <div className="flex items-center space-x-3 mb-6">
         <h2 className="text-2xl font-bold">Часто задаваемые вопросы</h2>
       </div>
-      <Accordion type="single" collapsible className="space-y-4"> {/* Увеличил space-y */}
+      <Accordion type="single" collapsible className="space-y-4"> 
         {faqItems.map((item, index) => (
           <AccordionItem    
             key={index}
             value={`item-${index}`}
             className="border rounded-lg transition-all duration-300"
           >
-            <AccordionTrigger className="px-6 py-4 text-lg font-medium">
+            <AccordionTrigger className="px-6 py-4 text-lg font-medium text-start">
               {item.question}
             </AccordionTrigger>
             <AccordionContent 
-              className="px-6 py-4 text-gray-600 shadow-md rounded-b-lg bg-white"
+              className="px-6 py-4 text-gray-600 shadow-md rounded-b-lg bg-white text-start"
             >
               {item.answer}
             </AccordionContent>
