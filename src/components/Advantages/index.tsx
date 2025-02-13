@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import React, { useState } from "react";
+import React from "react";
 
 const benefits = [
   {
@@ -9,7 +9,6 @@ const benefits = [
     description:
       "Это единственная платформа в Ташкенте, удобная для поиска клиник и врачей.",
     icon: "/contact-form.svg",
-    isPrimary: true,
   },
   {
     title: "Доступ к пациентам",
@@ -41,8 +40,6 @@ const benefits = [
 ];
 
 const BenefitsSection = () => {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-
   return (
     <section className="px-4 py-12 md:px-16">
       <span className="bg-button-gradient text-white mb-2 px-4 py-1 rounded-md text-sm font-semibold inline-block -rotate-[5deg]">
@@ -55,20 +52,14 @@ const BenefitsSection = () => {
         {benefits.map((benefit, index) => (
           <div
             key={index}
-            className={`w-full h-[450px] lg:h-[363px] p-[40px] border border-gray-200 rounded-[20px] shadow-lg transition duration-300 flex flex-col justify-center items-center text-center ${
-              benefit.isPrimary
-                ? "bg-gradient-to-br from-[#12C2F2] to-[#0129E3] text-white"
-                : "bg-white hover:bg-gradient-to-br hover:from-[#12C2F2] hover:to-[#0129E3] hover:text-white"
-            }`}
-            onMouseEnter={() => setHoveredIndex(index)}
-            onMouseLeave={() => setHoveredIndex(null)}
+            className="group w-full h-[450px] lg:h-[363px] p-[40px] border border-gray-200 rounded-[20px] shadow-lg transition duration-300 flex flex-col justify-center items-center text-center bg-white hover:bg-gradient-to-br hover:from-[#12C2F2] hover:to-[#0129E3] hover:text-white"
           >
             <Image
               src={benefit.icon}
               alt={benefit.title}
               width={64}
               height={64}
-              className="mb-4"
+              className="mb-4 group-hover:brightness-0 group-hover:invert transition duration-300"
               priority
             />
             <h3 className="text-xl font-semibold">{benefit.title}</h3>
