@@ -8,10 +8,18 @@
       "service": "Xizmatlar"
     },
     "Doctor": {
-      "banner_title": "Eng yaxshi shifokorlarni toping",
-      "banner_desc": "Biz sizga eng yaxshi shifokorlarni topishda yordam beramiz",
-      "filter_search": "Shifokorni qidiring",
-      "search": "Qidirish"
+
+        "banner_title":"Найдите лучших врачей раядом с вами  ",
+        "banner_desc":"1843 врачей в Ташкент ",
+        "filter_search":"Поиск врача или клиники ",
+        "search":"Поиск ",
+        "bread_crumb_page":"Врачи",
+        "nav_home":"Главная страница",
+        "top_10":"Топ 10 врачей Ташкента",
+        "experens":"Стаж",
+        "year": "лет",
+        "connection":"Запись на приём: ",
+        "map_open_text":"Открыть в яндэкс картах "
     }
   }
   
