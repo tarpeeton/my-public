@@ -4,7 +4,6 @@ import {
   FaYoutube,
   FaFacebook,
 } from "react-icons/fa";
-import logo from '../../../public/Union.png'
 import Image from "next/image";
 
 const Footer = () => {
@@ -13,8 +12,12 @@ const Footer = () => {
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-6 pb-16">
         <div>
           <h2 className="text-xl font-semibold flex items-center gap-2">
-            <Image src={logo} alt="Логотип" width={40} height={40} />
-            <p className="text-3xl">Med Yordam</p>
+          <Image 
+              src="/Logo.png" 
+              alt="Логотип" 
+              width={40} 
+              height={40} 
+            />
           </h2>
           <p className="text-sm mt-2">Консультации от врачей</p>
         </div>

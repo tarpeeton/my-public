@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export const Header = () => {
   return (
-    <div className="relative max-w-[95%] mx-auto bg-gradient-to-b from-[#4FADF7] to-[#0052D4] text-white p-10 rounded-3xl shadow-lg overflow-hidden">
+    <div className="relative max-h-[100%] max-w-[95%] mx-auto bg-gradient-to-b from-[#4FADF7] to-[#0052D4] text-white p-10 rounded-3xl shadow-lg overflow-hidden">
       <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-6">
         {/* Текстовая часть */}
         <div className="flex-1">
@@ -26,13 +26,15 @@ export const Header = () => {
         </div>
 
         {/* Графическая часть */}
-        <div className="flex justify-center relative bottom-10">
+        <div className="flex justify-end relative bottom-10">
           <Image
-            src="./big-logo1.png"
+            src="/big-logo1.png"
+            width={500}
+            height={500}
             alt="big-logo"
             className="mb-6 animate-logo"
           />
-          <p className="absolute bottom-12 text-white text-4xl font-semibold">
+          <p className="mb-12 absolute bottom-12 text-white text-4xl font-semibold justify-end">
             Med Yordam
           </p>
         </div>
@@ -40,7 +42,13 @@ export const Header = () => {
 
       {/* Линия ЭКГ */}
       <div className="absolute bottom-0 left-0 right-0">
-        <Image src="./Vector1.png" alt="" />
+        <Image
+          src="/Vector1.png"
+          alt="big-logo"
+          width={2500}
+          height={2500}
+          className="object-contain mb-16"
+        />
       </div>
     </div>
   );

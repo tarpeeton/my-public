@@ -1,3 +1,16 @@
 {
-    "doctor":"Hello"
+  "Header": {
+    "title": "Eng yaxshi shifokorlarni yoningizda toping",
+    "description": "Med Yordam — bu shifokorlar, klinikalar va bemorlarni birlashtiruvchi zamonaviy platforma.",
+    "button": "Shifokor topish",
+    "doctor": "Shifokor",
+    "clinics": "Klinikalar",
+    "service": "Xizmatlar"
+  },
+  "Doctor": {
+    "banner_title": "Eng yaxshi shifokorlarni toping",
+    "banner_desc": "Biz sizga eng yaxshi shifokorlarni topishda yordam beramiz",
+    "filter_search": "Shifokorni qidiring",
+    "search": "Qidirish"
+  }
 }
