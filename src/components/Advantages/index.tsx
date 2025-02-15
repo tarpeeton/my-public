@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import React from "react";
 
 const benefits = [
@@ -9,33 +8,39 @@ const benefits = [
     description:
       "Это единственная платформа в Ташкенте, удобная для поиска клиник и врачей.",
     icon: "/contact-form.svg",
+    hoverIcon: "/contact-form-hover.svg",
   },
   {
     title: "Доступ к пациентам",
     description:
       "Пациенты смогут находить вас через платформу и записываться на прием.",
     icon: "/contact-form-1.svg",
+    hoverIcon: "/contact-form-1-hover.svg",
   },
   {
     title: "Публикация услуг",
     description: "Размещайте список ваших услуг с ценами или без них.",
     icon: "/contact-form-2.svg",
+    hoverIcon: "/contact-form-2-hover.svg",
   },
   {
     title: "Гибкость управления",
     description:
       "Легко редактируйте информацию о себе и клинике в любое время.",
     icon: "/contact-form-3.svg",
+    hoverIcon: "/contact-form-3-hover.svg",
   },
   {
     title: "Геолокация",
     description: "Пациенты могут искать ближайших врачей и записываться.",
     icon: "/contact-form-4.svg",
+    hoverIcon: "/contact-form-4-hover.svg",
   },
   {
     title: "Абсолютно бесплатно",
     description: "Регистрация и использование платформы не требуют оплаты.",
     icon: "/contact-form-5.svg",
+    hoverIcon: "/contact-form-5-hover.svg",
   },
 ];
 
@@ -52,17 +57,45 @@ const BenefitsSection = () => {
         {benefits.map((benefit, index) => (
           <div
             key={index}
-            className="group w-full h-[450px] lg:h-[363px] p-[40px] border border-gray-200 rounded-[20px] shadow-lg transition duration-300 flex flex-col justify-center items-center text-center bg-white hover:bg-gradient-to-br hover:from-[#12C2F2] hover:to-[#0129E3] hover:text-white"
+            className="group w-full lg:h-[363px] p-[40px] border border-gray-200 rounded-[20px] shadow-lg transition duration-300 flex flex-col justify-center items-center text-center 
+            bg-white hover:text-white hover:bg-button-gradient"
           >
-            <Image
-              src={benefit.icon}
-              alt={benefit.title}
-              width={64}
-              height={64}
-              className="mb-4 group-hover:brightness-0 group-hover:invert transition duration-300"
-              priority
-            />
-            <h3 className="text-xl font-semibold">{benefit.title}</h3>
+            <div className="relative flex justify-center items-center w-full mb-4">
+              <img
+                src="/bg-card21.svg"
+                alt="background"
+                className="absolute w-[140px] h-[140px] mr-8 mb-2 z-10"
+              />
+
+              <img
+                src="/bg-card12-1.svg"
+                alt="background"
+                className="absolute w-[250px] h-[150px] z-20 transition-opacity duration-300 
+             group-hover:opacity-0"
+              />
+              <img
+                src="/bg-card12.svg"
+                alt="bg-card12-1.svg"
+                className="absolute w-[250px] h-[150px] z-20 opacity-0 transition-opacity duration-300 
+             group-hover:opacity-100"
+              />
+
+              {/* Основная иконка */}
+              <img
+                src={benefit.icon}
+                alt={benefit.title}
+                className="relative w-16 h-16 z-30 transition-opacity duration-300 group-hover:opacity-0 mb-4"
+              />
+
+              {/* Иконка при наведении */}
+              <img
+                src={benefit.hoverIcon}
+                alt={benefit.title}
+                className="absolute w-16 h-16 z-30 opacity-0 transition-opacity duration-300 group-hover:opacity-100 mb-4"
+              />
+            </div>
+
+            <h3 className="text-xl font-semibold mt-7">{benefit.title}</h3>
             <p className="mt-2">{benefit.description}</p>
           </div>
         ))}
