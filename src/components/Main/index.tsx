@@ -8,6 +8,7 @@ import TopClinics from "@/components/TopClinics/TopClinics"
 import SpecializationsCarousel from '../Specializations/Specialization';
 import TelegramBanner from '../TelegramBot/TelegramBot';
 import News from '../News/News';
+import Discount from '../Discount/Discount';
 
 const Main = () => {
     return (
@@ -15,6 +16,7 @@ const Main = () => {
             <Header />
             <Filter />
             <TopDoctos />
+            <Discount />
             <SpecializationsCarousel />
             <TopClinics />
             <Advantages />
