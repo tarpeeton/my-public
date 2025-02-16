@@ -85,7 +85,7 @@ export default function DoctorsCarousel() {
         >
           {doctors.map((doctor, index) => (
             <SwiperSlide key={index}>
-              <div className="bg-white rounded-2xl overflow-hidden w-[320px] mb-10 shadow-sm hover:shadow-md duration-200">
+              <div className="px-5 md:px-0 bg-white rounded-2xl overflow-hidden ;gw-[320px] mb-10 shadow-sm hover:shadow-md duration-200">
                 <div className="w-full h-[300px] relative">
                   <Image
                     src={doctor.image}
