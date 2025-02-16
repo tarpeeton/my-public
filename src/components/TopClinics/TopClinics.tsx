@@ -48,7 +48,7 @@ const clinics = [
 export default function ClinicsCarousel() {
   return (
     <div className="lg:px-[100px]">
-      <div className="p-5 bg-[#F6FAFF] rounded-3xl mt-10 lg:px-[60px] relative">
+      <div className="p-6 bg-[#F6FAFF] rounded-3xl mt-10 lg:px-[60px] relative">
         <span className="bg-button-gradient mb-2 text-white px-4 py-1 rounded-md text-sm font-semibold inline-block -rotate-[5deg]">
           Клиники
         </span>

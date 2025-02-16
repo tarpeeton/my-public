@@ -9,12 +9,14 @@ import SpecializationsCarousel from '../Specializations/Specialization';
 import TelegramBanner from '../TelegramBot/TelegramBot';
 import News from '../News/News';
 import Discount from '../Discount/Discount';
+import HowItWorks from '../HowItWorks';
 
 const Main = () => {
     return (
         <div>
             <Header />
             <Filter />
+            <HowItWorks />
             <TopDoctos />
             <Discount />
             <SpecializationsCarousel />
