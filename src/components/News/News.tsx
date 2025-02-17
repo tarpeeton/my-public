@@ -4,6 +4,11 @@ import Image from "next/image";
 import { HiArrowRight } from "react-icons/hi";
 import "./news.css";
 import { Button } from "../ui/button";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 const newsData = [
   {
@@ -35,7 +40,7 @@ const newsData = [
 export default function NewsCard() {
   return (
     <div className="lg:px-[100px]">
-      <div className="p-6 bg-[#F6FAFF] rounded-3xl mt-10 lg:px-[60px] relative">
+      <div className="p-6 bg-[#F6FAFF] rounded-3xl mt-10 relative">
         <span className="bg-button-gradient mb-2 text-white px-4 py-1 rounded-md text-sm font-semibold inline-block -rotate-[5deg]">
           Блог
         </span>
@@ -43,13 +48,22 @@ export default function NewsCard() {
         {/* Заголовок теперь сверху */}
         <h2 className="text-4xl font-semibold mb-6">Новости и статьи</h2>
 
-        <div className="relative">
-          <div className="flex justify-between items-center mb-4">
-            {newsData.map((news, index) => (
-              <div
-                key={index}
-                className="relative bg-white shadow hover:shadow-md rounded-[25px] p-6 w-[420px]"
-              >
+        {/* Swiper контейнер */}
+        <Swiper
+          modules={[Navigation, Pagination]}
+          spaceBetween={20}
+          slidesPerView={1}
+          breakpoints={{
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+          }}
+          navigation
+          pagination={{ clickable: true }}
+          className="pb-10"
+        >
+          {newsData.map((news, index) => (
+            <SwiperSlide key={index}>
+              <div className="relative bg-white shadow hover:shadow-md rounded-[25px] p-6 w-full mb-3">
                 {/* Автор и дата */}
                 <span className="text-blue-600 text-sm font-semibold">
                   {news.author} • {news.date}
@@ -73,21 +87,22 @@ export default function NewsCard() {
                 </div>
 
                 {/* Кнопка со стрелкой */}
-                <div className="absolute bottom-8 right-7 bg-[#0129E3] hover:bg-[#6882f7] duration-300 p-3 rounded-full cursor-pointer flex items-center justify-center w-14 h-14 z-20">
+                <div className="absolute bottom-8 right-5 bg-[#0129E3] hover:bg-[#6882f7] duration-300 p-3 rounded-full cursor-pointer flex items-center justify-center w-14 h-14 z-20">
                   <HiArrowRight className="w-6 h-6 text-white" />
                 </div>
               </div>
-            ))}
-          </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
 
-          <div className="flex justify-center">
-            <Button
-              id="view-all-doctors"
-              className="bg-blue-600 text-white px-7 py-6 rounded-full mb-[40px]"
-            >
-              Посмотреть новости
-            </Button>
-          </div>
+        {/* Кнопка "Посмотреть новости" */}
+        <div className="flex justify-center">
+          <Button
+            id="view-all-doctors"
+            className="bg-blue-600 text-white px-7 py-6 rounded-full mt-6"
+          >
+            Посмотреть новости
+          </Button>
         </div>
       </div>
     </div>
