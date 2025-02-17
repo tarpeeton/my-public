@@ -17,12 +17,12 @@ const Main = () => {
         <div>
             <Header />
             <Filter />
-            <HowItWorks />
             <TopDoctos />
-            <Discount />
             <SpecializationsCarousel />
             <TopClinics />
+            <HowItWorks />
             <Advantages />
+            <Discount />
             <FAQ />
             <News />
             <LogosAnimation />
