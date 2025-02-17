@@ -59,13 +59,13 @@ const stepsData = {
 
 const getStepIcon = (index: number) => {
   const icons = [
-    <div className="absolute left-56 top-56">
+    <div key="icon-1" className="absolute left-56 top-56">
       <img src="/icon-1.png" alt="" className="w-24 h-24" />
     </div>,
-    <div className="absolute top-16">
+    <div key="icon-2" className="absolute top-16">
       <img src="/icon-3.png" alt="" className="w-24 h-24" />
     </div>,
-    <div className="absolute top-44">
+    <div key="icon-3" className="absolute top-44">
       <img src="/icon-2.png" alt="" className="w-24 h-24" />
     </div>,
   ];
@@ -74,13 +74,13 @@ const getStepIcon = (index: number) => {
 
 const getNumIcon = (index: number) => {
   const nums = [
-    <div className="absolute left-16">
+    <div key="num-1" className="absolute left-16">
       <img src="/1.png" alt="" className="h-32" />
     </div>,
-    <div className="absolute top-60 left-[450px]">
+    <div key="num-2" className="absolute top-60 left-[450px]">
       <img src="/2.png" alt="" className="h-32" />
     </div>,
-    <div className="absolute top-10 right-72">
+    <div key="num-3" className="absolute top-10 right-72">
       <img src="/3.png" alt="" className="h-32" />
     </div>,
   ];
@@ -104,13 +104,24 @@ const HowItWorks = () => {
 
           <div className="relative mt-16">
             <div className="absolute top-24 left-0 w-full">
-              <img src="/singleLine0.png" alt="" className="w-full object-cover" />
+              <img
+                src="/singleLine0.png"
+                alt=""
+                className="w-full object-cover"
+              />
             </div>
 
             {Object.entries(stepsData).map(([key, steps]) => (
-             <TabsContent key={key} value={key} className="relative z-10 flex justify-between">
+              <TabsContent
+                key={key}
+                value={key}
+                className="relative z-10 flex justify-between"
+              >
                 {steps.map((step, index) => (
-                  <div key={index} className="w-1/3 px-8 flex flex-col items-center">
+                  <div
+                    key={step.title}
+                    className="w-1/3 px-8 flex flex-col items-center"
+                  >
                     <div className="flex flex-col items-center">
                       <div className="mb-2">{getNumIcon(index)}</div>
                       <div className="w-32 h-32 flex justify-center">
@@ -123,11 +134,13 @@ const HowItWorks = () => {
                         step.position === "top"
                           ? "top-12 ml-5"
                           : step.position === "bottom-extra"
-                          ? "mt-32 ml-36"
-                          : "mt-44 ml-28"
+                            ? "mt-32 ml-36"
+                            : "mt-44 ml-28"
                       }`}
                     >
-                      <h3 className="text-lg font-semibold mb-2">{step.title}</h3>
+                      <h3 className="text-lg font-semibold mb-2">
+                        {step.title}
+                      </h3>
                       <p className="text-gray-600 text-sm text-center max-w-[220px] break-words">
                         {step.description}
                       </p>
