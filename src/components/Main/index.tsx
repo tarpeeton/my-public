@@ -10,6 +10,7 @@ import TelegramBanner from '../TelegramBot/TelegramBot';
 import News from '../News/News';
 import Discount from '../Discount/Discount';
 import HowItWorks from '../HowItWorks';
+import LogosAnimation from "../LogosAnimation/LogoAnim"
 
 const Main = () => {
     return (
@@ -24,6 +25,7 @@ const Main = () => {
             <Advantages />
             <FAQ />
             <News />
+            <LogosAnimation />
             <TelegramBanner />
         </div>
     );
