@@ -1,9 +1,13 @@
+"use client"
+
 import {
   Accordion,
   AccordionItem,
   AccordionTrigger,
   AccordionContent,
 } from "@/components/ui/accordion";
+import { useState } from "react";
+import clsx from "clsx"; // импортируем clsx
 
 const faqItems = [
   {
@@ -39,25 +43,37 @@ const faqItems = [
 ];
 
 export default function FAQ() {
+  const [openIndex, setOpenIndex] = useState<number | null>(null); // создаем состояние для отслеживания открытого аккордеона
+
+  const handleToggle = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index); // переключаем аккордеон: если он открыт, то закрываем, если закрыт — открываем
+  };
+
   return (
     <div className="mx-auto px-2 md:p-6 rounded-2xl md:px-16 w-full">
       <span className="bg-button-gradient text-white mb-2 px-4 py-1 rounded-md text-sm font-semibold inline-block -rotate-[5deg]">
-          FAQ
-        </span>
+        FAQ
+      </span>
       <div className="flex items-center space-x-3 mb-6">
         <h2 className="text-2xl font-bold">Часто задаваемые вопросы</h2>
       </div>
-      <Accordion type="single" collapsible className="space-y-4"> 
+      <Accordion type="single" collapsible className="space-y-4">
         {faqItems.map((item, index) => (
-          <AccordionItem    
+          <AccordionItem
             key={index}
             value={`item-${index}`}
             className="border rounded-lg transition-all duration-300"
           >
-            <AccordionTrigger className="px-6 py-4 text-lg font-medium text-start">
+            <AccordionTrigger
+              className={clsx(
+                "px-6 py-4 text-lg font-medium text-start transition-colors duration-300 hover:no-underline",
+                openIndex === index ? "text-blue-600" : "text-black"
+              )}
+              onClick={() => handleToggle(index)} // при клике меняем состояние
+            >
               {item.question}
             </AccordionTrigger>
-            <AccordionContent 
+            <AccordionContent
               className="px-6 py-4 text-gray-600 shadow-md rounded-b-lg bg-white text-start"
             >
               {item.answer}
