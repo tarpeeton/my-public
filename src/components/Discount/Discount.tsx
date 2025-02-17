@@ -61,7 +61,7 @@ export default function DonationList() {
 
         {/* Заголовок + кнопки навигации */}
         <div className="flex justify-between items-center mb-4 relative">
-          <h2 className="text-4xl font-semibold">Горящие акции и скидки</h2>
+          <h2 className="text-4xl font-semibold">Акции и предложения </h2>
           <div className="lg:absolute lg:top-0 lg:right-0 lg:flex lg:gap-2 hidden">
             <div
               id="donations-prev"
