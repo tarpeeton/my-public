@@ -21,54 +21,61 @@ const Filter = () => {
         <form className="flex flex-col space-y-4">
           <div className="relative w-full">
             <Input
-              className="pl-10 outline-none "
+              className="pl-10 outline-none"
               type="search"
               placeholder={t("filter_search")}
             />
             <Search className="absolute top-2 left-2" />
           </div>
-          <div className="mt-2 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-y-2 md:gap-x-4 ">
+          <div className="mt-2 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-y-2 md:gap-x-4">
+            {/* По специализации */}
             <Select>
               <SelectTrigger className="w-full">
-                <SelectValue placeholder="Select a fruit" />
+                <SelectValue placeholder="По специализации" />
               </SelectTrigger>
               <SelectContent>
                 <SelectGroup>
-                  <SelectLabel>Fruits</SelectLabel>
-                  <SelectItem value="apple">Apple</SelectItem>
-                  <SelectItem value="banana">Banana</SelectItem>
-                  <SelectItem value="blueberry">Blueberry</SelectItem>
+                  <SelectLabel>Специализация</SelectLabel>
+                  <SelectItem value="cardiologist">Кардиолог</SelectItem>
+                  <SelectItem value="neurologist">Невролог</SelectItem>
+                  <SelectItem value="therapist">Терапевт</SelectItem>
                 </SelectGroup>
               </SelectContent>
             </Select>
+
+            {/* По городу */}
             <Select>
               <SelectTrigger className="w-full">
-                <SelectValue placeholder="Select a fruit" />
+                <SelectValue placeholder="По городу" />
               </SelectTrigger>
               <SelectContent>
                 <SelectGroup>
-                  <SelectLabel>Fruits</SelectLabel>
-                  <SelectItem value="apple">Apple</SelectItem>
-                  <SelectItem value="banana">Banana</SelectItem>
-                  <SelectItem value="blueberry">Blueberry</SelectItem>
+                  <SelectLabel>Город</SelectLabel>
+                  <SelectItem value="tashkent">Ташкент</SelectItem>
+                  <SelectItem value="samarkand">Самарканд</SelectItem>
+                  <SelectItem value="bukhara">Бухара</SelectItem>
                 </SelectGroup>
               </SelectContent>
             </Select>
+
+            {/* По названию/имени */}
             <Select>
               <SelectTrigger className="w-full">
-                <SelectValue placeholder="Select a fruit" />
+                <SelectValue placeholder="По названию/имени" />
               </SelectTrigger>
               <SelectContent>
                 <SelectGroup>
-                  <SelectLabel>Fruits</SelectLabel>
-                  <SelectItem value="apple">Apple</SelectItem>
-                  <SelectItem value="banana">Banana</SelectItem>
-                  <SelectItem value="blueberry">Blueberry</SelectItem>
+                  <SelectLabel>Название/Имя</SelectLabel>
+                  <SelectItem value="clinic1">Клиника №1</SelectItem>
+                  <SelectItem value="doctor-akhmedov">Доктор Ахмедов</SelectItem>
+                  <SelectItem value="med-center">Медицинский центр "Здоровье"</SelectItem>
                 </SelectGroup>
               </SelectContent>
             </Select>
-            <Button className="bg-[#0129E3] text-white hover:bg-[#0129E3] ">
-              <Search /> {t("search")}
+
+            {/* Кнопка поиска */}
+            <Button className="bg-[#0129E3] text-white hover:bg-[#0129E3] flex items-center">
+              <Search className="mr-2" /> {t("search")}
             </Button>
           </div>
         </form>
