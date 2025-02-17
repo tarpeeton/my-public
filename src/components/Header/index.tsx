@@ -11,7 +11,7 @@ export const Header = () => {
         <div className="flex-1">
           <Card className="bg-white  rounded-xl shadow-lg">
             <CardContent>
-              <h1 className="text-3xl md:text-4xl font-bold text-black">
+              <h1 className="text-3xl md:text-4xl font-bold text-black mt-4 md:mt-0">
                 Найдите лучших врачей и клиники рядом с вами
               </h1>
               <p className="mt-2 text-lg text-gray-700">
@@ -34,7 +34,7 @@ export const Header = () => {
             alt="big-logo"
             className="mb-6 animate-logo"
           />
-          <p className="mb-12 absolute bottom-12 text-white text-4xl font-semibold justify-end">
+          <p className="md:mb-12 absolute bottom-12 text-white text-4xl font-semibold justify-end">
             Med Yordam
           </p>
         </div>
