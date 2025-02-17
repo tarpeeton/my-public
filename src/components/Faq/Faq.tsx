@@ -43,14 +43,14 @@ const faqItems = [
 ];
 
 export default function FAQ() {
-  const [openIndex, setOpenIndex] = useState<number | null>(null); // создаем состояние для отслеживания открытого аккордеона
+  const [openIndex, setOpenIndex] = useState<number | null>(null); 
 
   const handleToggle = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index); // переключаем аккордеон: если он открыт, то закрываем, если закрыт — открываем
+    setOpenIndex(openIndex === index ? null : index); 
   };
 
   return (
-    <div className="mx-auto px-2 md:p-6 rounded-2xl md:px-16 w-full">
+    <div className="mx-auto px-2 md:p-6 rounded-2xl md:px-[100px] w-full">
       <span className="bg-button-gradient text-white mb-2 px-4 py-1 rounded-md text-sm font-semibold inline-block -rotate-[5deg]">
         FAQ
       </span>
@@ -69,7 +69,7 @@ export default function FAQ() {
                 "px-6 py-4 text-lg font-medium text-start transition-colors duration-300 hover:no-underline",
                 openIndex === index ? "text-blue-600" : "text-black"
               )}
-              onClick={() => handleToggle(index)} // при клике меняем состояние
+              onClick={() => handleToggle(index)}
             >
               {item.question}
             </AccordionTrigger>
