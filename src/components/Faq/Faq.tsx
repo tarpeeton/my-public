@@ -7,7 +7,7 @@ import {
   AccordionContent,
 } from "@/components/ui/accordion";
 import { useState } from "react";
-import clsx from "clsx"; // импортируем clsx
+import clsx from "clsx"; 
 
 const faqItems = [
   {

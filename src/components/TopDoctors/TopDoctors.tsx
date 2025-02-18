@@ -48,7 +48,7 @@ const doctors = [
 export default function DoctorsCarousel() {
   return (
     <div className="lg:px-[100px]">
-      <div className="p-5 bg-[#F6FAFF] rounded-3xl mt-10  relative">
+      <div className="p-5 bg-[#F6FAFF] rounded-3xl mt-10 relative">
         <span className="bg-button-gradient mb-2 text-white px-4 py-1 rounded-md text-sm font-semibold inline-block -rotate-[5deg]">
           Врачи
         </span>
@@ -85,8 +85,8 @@ export default function DoctorsCarousel() {
         >
           {doctors.map((doctor, index) => (
             <SwiperSlide key={index}>
-              <div className="px-5 md:px-0 bg-white rounded-2xl overflow-hidden ;gw-[320px] mb-10 shadow-sm hover:shadow-md duration-200">
-                <div className="w-full h-[300px] relative">
+              <div className="px-5 md:px-0 bg-white rounded-2xl overflow-hidden w-[320px] mb-10 shadow-sm hover:shadow-md duration-200 flex flex-col justify-between">
+                <div className="w-full 2xl:h-[300px] h-[250px] relative">
                   <Image
                     src={doctor.image}
                     alt={doctor.name}
@@ -100,31 +100,34 @@ export default function DoctorsCarousel() {
                     {doctor.rating}
                   </div>
                 </div>
-                <div className="p-4">
-                  <span className="bg-[#CFFAFE] px-3 py-1.5 rounded-md text-sm font-semibold">
+                <div className="p-4 flex flex-col flex-grow">
+                  <span className="bg-[#CFFAFE] w-max px-3 py-1.5 rounded-md text-sm font-semibold">
                     {doctor.specialty}
                   </span>
+
                   <h3 className="text-lg font-semibold mt-2">{doctor.name}</h3>
-                  <p className="text-sm text-gray-500 mt-1">
-                    {doctor.morespec}
+                  <p className="text-sm text-gray-500 mt-1 flex-grow">
+                    {doctor.morespec.length > 50
+                      ? doctor.morespec.slice(0, 50) + "..."
+                      : doctor.morespec}
                   </p>
                   <div className="flex items-center text-sm mt-2">
                     <FaLocationDot className="w-5 h-5 text-blue-500 mr-1" />
                     {doctor.location}
                   </div>
-                  <Button
-                    variant="link"
-                    className="text-[#0129E3] flex items-center mt-2"
-                  >
-                    Подробнее <FiArrowRight className="w-4" />
-                  </Button>
+
+                  <div className="flex justify-start mt-auto">
+                    <Button variant="link" className="text-[#0129E3]">
+                      Подробнее <FiArrowRight className="w-4" />
+                    </Button>
+                  </div>
                 </div>
               </div>
             </SwiperSlide>
           ))}
         </Swiper>
 
-        <div className="flex justify-center">
+        <div className="flex justify-center mt-5">
           <Button
             id="view-all-doctors"
             className="bg-blue-600 text-white px-7 py-6 rounded-full mb-[40px]"

@@ -68,7 +68,9 @@ const Filter = () => {
                   <SelectLabel>Название/Имя</SelectLabel>
                   <SelectItem value="clinic1">Клиника №1</SelectItem>
                   <SelectItem value="doctor-akhmedov">Доктор Ахмедов</SelectItem>
-                  <SelectItem value="med-center">Медицинский центр "Здоровье"</SelectItem>
+                  <SelectItem value="med-center">
+                    Медицинский центр &quot;Здоровье&quot;
+                  </SelectItem>
                 </SelectGroup>
               </SelectContent>
             </Select>

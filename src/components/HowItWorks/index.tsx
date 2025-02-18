@@ -60,12 +60,15 @@ const stepsData = {
 const getStepIcon = (index: number) => {
   const icons = [
     <div key="icon-1" className="absolute left-56 top-56">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
       <img src="/icon-1.png" alt="" className="w-24 h-24" />
     </div>,
     <div key="icon-2" className="absolute top-16">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
       <img src="/icon-3.png" alt="" className="w-24 h-24" />
     </div>,
     <div key="icon-3" className="absolute top-44">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
       <img src="/icon-2.png" alt="" className="w-24 h-24" />
     </div>,
   ];
@@ -75,12 +78,15 @@ const getStepIcon = (index: number) => {
 const getNumIcon = (index: number) => {
   const nums = [
     <div key="num-1" className="absolute left-16">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
       <img src="/1.png" alt="" className="h-32" />
     </div>,
     <div key="num-2" className="absolute top-60 left-[450px]">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
       <img src="/2.png" alt="" className="h-32" />
     </div>,
     <div key="num-3" className="absolute top-10 right-72">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
       <img src="/3.png" alt="" className="h-32" />
     </div>,
   ];
@@ -104,6 +110,7 @@ const HowItWorks = () => {
 
           <div className="relative mt-16">
             <div className="absolute top-24 left-0 w-full">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/singleLine0.png"
                 alt=""
@@ -130,7 +137,7 @@ const HowItWorks = () => {
                     </div>
 
                     <div
-                      className={`flex absolute flex-col items-center text-center max-w-xs ${
+                      className={`absolute flex flex-col items-center text-center max-w-xs ${
                         step.position === "top"
                           ? "top-12 ml-5"
                           : step.position === "bottom-extra"
