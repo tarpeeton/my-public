@@ -130,7 +130,7 @@ const HowItWorks = () => {
                     </div>
 
                     <div
-                      className={`flex absolute flex-col items-center text-center max-w-xs ${
+                      className={`absolute flex flex-col items-center text-center max-w-xs ${
                         step.position === "top"
                           ? "top-12 ml-5"
                           : step.position === "bottom-extra"
