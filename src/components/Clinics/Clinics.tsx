@@ -1,11 +1,10 @@
 "use client";
 
-import { Card, CardContent } from "@/components/ui/card";
+import { Card} from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 import { FaPhone } from "react-icons/fa6";
-import { HiArrowRight } from "react-icons/hi";
 
 const YandexMap = dynamic(() => import("@/components/YandexMap/Map"), {
   ssr: false,
