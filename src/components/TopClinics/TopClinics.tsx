@@ -9,6 +9,9 @@ import { FiArrowRight, FiArrowLeft } from "react-icons/fi";
 import { FaLocationDot } from "react-icons/fa6";
 import Image from "next/image";
 import { FaStar } from "react-icons/fa";
+import useSwiperNavigation from "@/hooks/useSwiperPrevNext";
+
+
 
 const clinics = [
   {
@@ -49,8 +52,11 @@ const clinics = [
 
 
 export default function ClinicsCarousel() {
-  const prevRef = useRef<HTMLButtonElement>(null);
-  const nextRef = useRef<HTMLButtonElement>(null);
+
+
+  const { swiperRef, handlePrev, handleNext } = useSwiperNavigation()
+
+
 
 
   return (
@@ -62,25 +68,15 @@ export default function ClinicsCarousel() {
         <div className="flex flex-row justify-between items-center mb-4 relative">
           <h2 className="text-4xl font-semibold">Лучшие клиники Ташкента</h2>
           <div className="flex flex-row items-center gap-2">
-            <button ref={prevRef} className="md:w-14  w-10 h-10  flex items-center justify-center md:h-14 rounded-full bg-[#0129E3] text-white"><FiArrowLeft /></button>
-            <button  ref={nextRef}  className="md:w-14  w-10 h-10 flex items-center justify-center  md:h-14 rounded-full bg-[#0129E3] text-white"><FiArrowRight /></button>
+            <button onClick={handlePrev} className="md:w-14  w-10 h-10  flex items-center justify-center md:h-14 rounded-full bg-[#0129E3] text-white"><FiArrowLeft /></button>
+            <button onClick={handleNext}  className="md:w-14  w-10 h-10 flex items-center justify-center  md:h-14 rounded-full bg-[#0129E3] text-white"><FiArrowRight /></button>
           </div>
         </div>
         <Swiper
           modules={[Navigation]}
           loop={true}
           spaceBetween={20}
-          navigation={{
-            prevEl: prevRef.current,
-            nextEl: nextRef.current,
-          }}
-            onBeforeInit={(swiper) => {
-            if (typeof swiper.params.navigation !== "boolean") {
-              swiper.params.navigation.prevEl = prevRef.current;
-              swiper.params.navigation.nextEl = nextRef.current;
-            }
-          }}
-          className="md:ml-[160px]"
+          onSwiper={(swiper) => (swiperRef.current = swiper)}
           breakpoints={{
             320: { slidesPerView: 1 },
             768: { slidesPerView: 2 },

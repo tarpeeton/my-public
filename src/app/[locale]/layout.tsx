@@ -3,7 +3,6 @@ import './globals.css';
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { NextIntlClientProvider } from 'next-intl';
-import { MantineProviderComponent } from '@/providers/MantineProvider';
 import Navbar from "@/components/Navbar/index"
 import Footer  from "@/components/Footer/index";
 
@@ -49,11 +48,9 @@ export default async function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white text-black`}
       >
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <MantineProviderComponent>
             <Navbar/>
             {children}
             <Footer/>
-          </MantineProviderComponent>
         </NextIntlClientProvider>
       </body>
     </html>
