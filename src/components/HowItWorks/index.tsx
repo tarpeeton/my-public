@@ -1,4 +1,4 @@
-import React from "react";
+"use client"
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 
 const stepsData = {
@@ -23,52 +23,57 @@ const stepsData = {
   ],
   patient: [
     {
-      title: "Создайте аккаунт",
-      description: "Зарегистрируйтесь, чтобы найти врачей и клиники",
+      title: "Регистрация",
+      description: "Пройдите верификацию и заполните свою карточку врача",
+      position: "bottom-extra",
+    },
+    {
+      title: "Поиск врача",
+      description:
+        "Обновляйте информацию, редактируйте контакты и график работы",
       position: "bottom",
     },
     {
-      title: "Выберите врача",
-      description: "Ищите специалистов по отзывам и рейтингу",
+      title: "Назначить встречу",
+      description:
+        "Получайте запросы и записывайте пациентов через платформу и Telegram",
       position: "top",
-    },
-    {
-      title: "Запишитесь на прием",
-      description: "Бронируйте удобное время онлайн",
-      position: "bottom",
     },
   ],
   clinic: [
     {
-      title: "Добавьте клинику",
-      description: "Зарегистрируйте свою клинику на платформе",
+      title: "Регистрация",
+      description: "Пройдите верификацию и заполните свою карточку врача",
+      position: "bottom-extra",
+    },
+    {
+      title: "Поиск врача",
+      description:
+        "Обновляйте информацию, редактируйте контакты и график работы",
       position: "bottom",
     },
     {
-      title: "Заполните данные",
-      description: "Укажите услуги, контакты и расписание",
+      title: "Назначить встречу",
+      description:
+        "Получайте запросы и записывайте пациентов через платформу и Telegram",
       position: "top",
     },
-    {
-      title: "Принимайте пациентов",
-      description: "Получайте записи и управляйте ими через платформу",
-      position: "bottom",
-    },
   ],
+ 
 };
+
+
+
 
 const getStepIcon = (index: number) => {
   const icons = [
     <div key="icon-1" className="absolute left-56 top-56">
-      {/* eslint-disable-next-line @next/next/no-img-element */}
       <img src="/icon-1.png" alt="" className="w-24 h-24" />
     </div>,
     <div key="icon-2" className="absolute top-16">
-      {/* eslint-disable-next-line @next/next/no-img-element */}
       <img src="/icon-3.png" alt="" className="w-24 h-24" />
     </div>,
     <div key="icon-3" className="absolute top-44">
-      {/* eslint-disable-next-line @next/next/no-img-element */}
       <img src="/icon-2.png" alt="" className="w-24 h-24" />
     </div>,
   ];
@@ -78,15 +83,12 @@ const getStepIcon = (index: number) => {
 const getNumIcon = (index: number) => {
   const nums = [
     <div key="num-1" className="absolute left-16">
-      {/* eslint-disable-next-line @next/next/no-img-element */}
       <img src="/1.png" alt="" className="h-32" />
     </div>,
     <div key="num-2" className="absolute top-60 left-[450px]">
-      {/* eslint-disable-next-line @next/next/no-img-element */}
       <img src="/2.png" alt="" className="h-32" />
     </div>,
     <div key="num-3" className="absolute top-10 right-72">
-      {/* eslint-disable-next-line @next/next/no-img-element */}
       <img src="/3.png" alt="" className="h-32" />
     </div>,
   ];
@@ -97,20 +99,21 @@ const HowItWorks = () => {
   return (
     <div className="w-full bg-white mb-64">
       <div className="max-w-7xl mx-auto px-4 py-12 md:px-16">
-        <div className="flex items-center justify-between mb-8">
-          <h2 className="text-2xl font-bold">Как это работает</h2>
-        </div>
+       
 
         <Tabs defaultValue="doctor">
+          <div className="flex flex-row items-center justify-between">
+          <h2 className="text-2xl font-bold">Как это работает</h2>
           <TabsList className="flex gap-4">
             <TabsTrigger value="doctor">Врач</TabsTrigger>
             <TabsTrigger value="patient">Пациент</TabsTrigger>
             <TabsTrigger value="clinic">Клиника</TabsTrigger>
           </TabsList>
+          </div>
+      
 
           <div className="relative mt-16">
             <div className="absolute top-24 left-0 w-full">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/singleLine0.png"
                 alt=""

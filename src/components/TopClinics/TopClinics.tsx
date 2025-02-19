@@ -1,5 +1,4 @@
 "use client";
-import { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -73,7 +72,6 @@ export default function ClinicsCarousel() {
           </div>
         </div>
         <Swiper
-          modules={[Navigation]}
           loop={true}
           spaceBetween={20}
           onSwiper={(swiper) => (swiperRef.current = swiper)}

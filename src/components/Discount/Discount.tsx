@@ -1,15 +1,14 @@
 "use client";
 
-import { useRef } from "react";
+import useSwiperNavigation from "@/hooks/useSwiperPrevNext";
+
 import Image from "next/image";
 import { Button } from "../ui/button";
 import { MapPin, Phone } from "lucide-react";
 import { FaLocationDot } from "react-icons/fa6";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
 import { FiArrowRight, FiArrowLeft } from "react-icons/fi";
 import "swiper/css";
-import "swiper/css/navigation";
 
 const donationCards = [
   {
@@ -56,8 +55,10 @@ const donationCards = [
 
 
 export default function DonationList() {
-   const prevRef = useRef<HTMLButtonElement>(null);
-    const nextRef = useRef<HTMLButtonElement>(null);
+
+  const { swiperRef, handlePrev, handleNext } = useSwiperNavigation()
+
+   
   return (
     <div className="lg:px-[100px]">
       <div className="p-5 bg-[#F6FAFF] rounded-3xl mt-10 relative">
@@ -70,26 +71,16 @@ export default function DonationList() {
         <div className="flex flex-row flex-nowrap justify-between items-center mb-4 relative">
           <h2 className="text-4xl font-semibold">Акции и предложения </h2>
           <div className="flex flex-row items-center gap-2">
-            <button ref={prevRef} className="md:w-14  w-10 h-10  flex items-center justify-center md:h-14 rounded-full bg-[#0129E3] text-white"><FiArrowLeft /></button>
-            <button  ref={nextRef}  className="md:w-14  w-10 h-10 flex items-center justify-center  md:h-14 rounded-full bg-[#0129E3] text-white"><FiArrowRight /></button>
+            <button onClick={handlePrev} className="md:w-14  w-10 h-10  flex items-center justify-center md:h-14 rounded-full bg-[#0129E3] text-white"><FiArrowLeft /></button>
+            <button onClick={handleNext}   className="md:w-14  w-10 h-10 flex items-center justify-center  md:h-14 rounded-full bg-[#0129E3] text-white"><FiArrowRight /></button>
           </div>
         </div>
 
         {/* Слайдер */}
         <Swiper
-          modules={[Navigation]}
           spaceBetween={20}
           loop={true}
-          navigation={{
-            prevEl: prevRef.current,
-            nextEl: nextRef.current,
-          }}
-            onBeforeInit={(swiper) => {
-            if (typeof swiper.params.navigation !== "boolean") {
-              swiper.params.navigation.prevEl = prevRef.current;
-              swiper.params.navigation.nextEl = nextRef.current;
-            }
-          }}
+          onSwiper={(swiper) => (swiperRef.current = swiper)}
           breakpoints={{
             320: { slidesPerView: 1 },
             768: { slidesPerView: 2 },
