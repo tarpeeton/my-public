@@ -44,11 +44,8 @@ export default function NewsCard() {
         <span className="bg-button-gradient mb-2 text-white px-4 py-1 rounded-md text-sm font-semibold inline-block -rotate-[5deg]">
           Блог
         </span>
-
-        {/* Заголовок теперь сверху */}
         <h2 className="text-4xl font-semibold mb-6">Новости и статьи</h2>
 
-        {/* Swiper контейнер */}
         <Swiper
           modules={[Navigation, Pagination]}
           spaceBetween={20}
