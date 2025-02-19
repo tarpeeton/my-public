@@ -38,7 +38,7 @@ export default function SpecializationCards() {
           {cards.map((item, index) => (
             <SwiperSlide key={index}>
               <div className="relative">
-                <div className="relative lg:w-[300px] h-[250px] bg-teal-500 p-4 flex flex-col justify-between inverted-radius overflow-hidden">
+                <div className="relative  h-[250px] bg-teal-500 p-4 flex flex-col justify-between inverted-radius overflow-hidden">
                   <h3 className="text-lg text-end font-semibold text-white absolute top-4 right-4 z-10">
                     {item.title}
                   </h3>

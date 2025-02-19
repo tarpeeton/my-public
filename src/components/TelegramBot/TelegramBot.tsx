@@ -10,8 +10,7 @@ export default function TelegramBotSection() {
   return (
     <div className="flex justify-center px-5 lg:px-16 mt-24 mb-5">
       <div className="lg:h-[400px] lg:w-[1400px] lg:relative lg:flex lg:flex-row lg:items-center bg-gradient-to-r from-[#379FF2] to-[#022FE4] rounded-3xl shadow-lg text-white  p-8  max-w-8xl">
-        {/* Блок с изображениями телефонов */}
-        <div className="relative flex justify-center -ml-24">
+        <div className="relative  flex justify-center -ml-24 ">
           <Image
             src="/phone1.png"
             alt="Телефон 1"
@@ -28,7 +27,6 @@ export default function TelegramBotSection() {
           />
         </div>
 
-        {/* Контентный блок */}
         <div className="flex flex-col text-left relative  md:-mt-0 -mt-20">
         <h2 className="text-2xl md:text-3xl font-semibold mb-4 md:text-left text-start">
             Переходите в <span>Telegram-бот</span>
