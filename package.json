@@ -44,8 +44,6 @@
     "@types/stats.js": "^0.17.3",
     "@types/tailwindcss": "^3.0.11",
     "@types/three": "^0.172.0",
-    "eslint": "^9.19.0",
-    "eslint-config-next": "15.1.6",
     "eslint-config-prettier": "^10.0.1",
     "eslint-plugin-prettier": "^5.2.3",
     "husky": "^8.0.3",
