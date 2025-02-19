@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import { useRef } from "react";
 import Image from "next/image";
 import { Button } from "../ui/button";
 import { MapPin, Phone } from "lucide-react";
@@ -51,6 +51,8 @@ const donationCards = [
 ];
 
 export default function DonationList() {
+   const prevRef = useRef<HTMLButtonElement>(null);
+    const nextRef = useRef<HTMLButtonElement>(null);
   return (
     <div className="lg:px-[100px]">
       <div className="p-5 bg-[#F6FAFF] rounded-3xl mt-10 relative">
@@ -60,36 +62,34 @@ export default function DonationList() {
         </span>
 
         {/* Заголовок + кнопки навигации */}
-        <div className="flex justify-between items-center mb-4 relative">
+        <div className="flex flex-row flex-nowrap justify-between items-center mb-4 relative">
           <h2 className="text-4xl font-semibold">Акции и предложения </h2>
-          <div className="lg:absolute lg:top-0 lg:right-0 lg:flex lg:gap-2 hidden">
-            <div
-              id="donations-prev"
-              className="swiper-button-prev !w-10 !h-10 bg-[#6236ff] text-white rounded-full flex items-center justify-center shadow-lg"
-            >
-              <FiArrowLeft className="w-5 h-5" />
-            </div>
-            <div
-              id="donations-next"
-              className="swiper-button-next !w-10 !h-10 bg-[#6236ff] text-white rounded-full flex items-center justify-center shadow-lg"
-            >
-              <FiArrowRight className="w-5 h-5" />
-            </div>
+          <div className="flex flex-row items-center gap-2">
+            <button ref={prevRef} className="md:w-14  w-10 h-10  flex items-center justify-center md:h-14 rounded-full bg-[#0129E3] text-white"><FiArrowLeft /></button>
+            <button  ref={nextRef}  className="md:w-14  w-10 h-10 flex items-center justify-center  md:h-14 rounded-full bg-[#0129E3] text-white"><FiArrowRight /></button>
           </div>
         </div>
 
         {/* Слайдер */}
         <Swiper
           modules={[Navigation]}
-          spaceBetween={10}
+          spaceBetween={20}
+          loop={true}
           navigation={{
-            nextEl: "#donations-next",
-            prevEl: "#donations-prev",
+            prevEl: prevRef.current,
+            nextEl: nextRef.current,
+          }}
+            onBeforeInit={(swiper) => {
+            if (typeof swiper.params.navigation !== "boolean") {
+              swiper.params.navigation.prevEl = prevRef.current;
+              swiper.params.navigation.nextEl = nextRef.current;
+            }
           }}
           breakpoints={{
             320: { slidesPerView: 1 },
             768: { slidesPerView: 2 },
-            1024: { slidesPerView: 3.5 },
+            1024: { slidesPerView: 3 },
+            1420: { slidesPerView: 4 },
           }}
         >
           {donationCards.map((card) => (

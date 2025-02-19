@@ -1,5 +1,5 @@
 "use client";
-
+import { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -45,41 +45,52 @@ const clinics = [
   },
 ];
 
+
+
+
 export default function ClinicsCarousel() {
+  const prevRef = useRef<HTMLButtonElement>(null);
+  const nextRef = useRef<HTMLButtonElement>(null);
+
+
   return (
-    <div className="lg:px-[100px]">
+    <section className="lg:px-[100px]">
       <div className="p-6 bg-[#F6FAFF] rounded-3xl mt-10 lg:px-[60px] relative">
         <span className="bg-button-gradient mb-2 text-white px-4 py-1 rounded-md text-sm font-semibold inline-block -rotate-[5deg]">
           Клиники
         </span>
-        <div className="flex justify-between items-center mb-4 relative">
+        <div className="flex flex-row justify-between items-center mb-4 relative">
           <h2 className="text-4xl font-semibold">Лучшие клиники Ташкента</h2>
-          <div className="lg:absolute lg:top-0 lg:right-0 lg:flex lg:gap-2 hidden">
-            <div id="clinics-prev" className="swiper-button-prev !relative !w-10 !h-10 bg-[#6236ff] text-white rounded-full flex items-center justify-center shadow-lg">
-              <FiArrowLeft className="w-5 h-5" />
-            </div>
-            <div id="clinics-next" className="swiper-button-next !relative !w-10 !h-10 bg-[#6236ff] text-white rounded-full flex items-center justify-center shadow-lg">
-              <FiArrowRight className="w-5 h-5" />
-            </div>
+          <div className="flex flex-row items-center gap-2">
+            <button ref={prevRef} className="md:w-14  w-10 h-10  flex items-center justify-center md:h-14 rounded-full bg-[#0129E3] text-white"><FiArrowLeft /></button>
+            <button  ref={nextRef}  className="md:w-14  w-10 h-10 flex items-center justify-center  md:h-14 rounded-full bg-[#0129E3] text-white"><FiArrowRight /></button>
           </div>
         </div>
         <Swiper
           modules={[Navigation]}
+          loop={true}
           spaceBetween={20}
           navigation={{
-            nextEl: "#clinics-next",
-            prevEl: "#clinics-prev",
+            prevEl: prevRef.current,
+            nextEl: nextRef.current,
+          }}
+            onBeforeInit={(swiper) => {
+            if (typeof swiper.params.navigation !== "boolean") {
+              swiper.params.navigation.prevEl = prevRef.current;
+              swiper.params.navigation.nextEl = nextRef.current;
+            }
           }}
           className="md:ml-[160px]"
           breakpoints={{
             320: { slidesPerView: 1 },
             768: { slidesPerView: 2 },
-            1024: { slidesPerView: 3.5 },
+            1024: { slidesPerView: 3 },
+            1420: { slidesPerView: 4 },
           }}
         >
           {clinics.map((clinic, index) => (
             <SwiperSlide key={index}>
-              <div className="bg-white rounded-2xl overflow-hidden w-[320px] mb-10 shadow-sm hover:shadow-md duration-200">
+              <div className="bg-white rounded-2xl overflow-hidden  mb-10 shadow-sm hover:shadow-md duration-200">
                 <div className="w-full h-[300px] relative">
                   <Image
                     src={clinic.image}
@@ -124,6 +135,6 @@ export default function ClinicsCarousel() {
           </Button>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

@@ -3,7 +3,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
-import { Navigation } from "swiper/modules";
+import { Navigation  , Autoplay} from "swiper/modules";
 import { Button } from "@/components/ui/button";
 import { FiArrowRight, FiArrowLeft } from "react-icons/fi";
 import { FaLocationDot } from "react-icons/fa6";
@@ -45,6 +45,12 @@ const doctors = [
   },
 ];
 
+
+// import axios get doctor  , slice doctors 10
+
+
+
+
 export default function DoctorsCarousel() {
   return (
     <div className="lg:px-[100px]">
@@ -71,8 +77,9 @@ export default function DoctorsCarousel() {
         </div>
 
         <Swiper
-          modules={[Navigation]}
-          spaceBetween={10}
+          modules={[Navigation , Autoplay]}
+          loop={true}
+          spaceBetween={20}
           navigation={{
             nextEl: "#doctors-next",
             prevEl: "#doctors-prev",
@@ -80,17 +87,19 @@ export default function DoctorsCarousel() {
           breakpoints={{
             320: { slidesPerView: 1 },
             768: { slidesPerView: 2 },
-            1024: { slidesPerView: 3.5 },
+            1024: { slidesPerView: 3 },
+            1420: { slidesPerView: 4 },
           }}
         >
           {doctors.map((doctor, index) => (
             <SwiperSlide key={index}>
-              <div className="px-5 md:px-0 bg-white rounded-2xl overflow-hidden w-[320px] mb-10 shadow-sm hover:shadow-md duration-200 flex flex-col justify-between">
+              <div className="px-5 lg:min-h-[510px] md:px-0 bg-white rounded-2xl overflow-hidden  mb-10 shadow-sm hover:shadow-md duration-200 flex flex-col justify-between">
                 <div className="w-full 2xl:h-[300px] h-[250px] relative">
                   <Image
                     src={doctor.image}
                     alt={doctor.name}
                     fill={true}
+                    quality={100}
                     className="rounded-t-2xl object-cover object-top"
                   />
                   <div className="absolute bottom-3 bg-white px-2 py-1 rounded-r-md flex items-center shadow-md gap-1">
