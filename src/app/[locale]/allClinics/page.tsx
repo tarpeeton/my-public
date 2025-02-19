@@ -3,7 +3,7 @@ import Clinics from "@/components/Clinics/Clinics";
 import ClinicAdvantages from "@/components/ClinicAdvantages/ClinicAdvantages";
 import Discount from "@/components/Discount/Discount";
 import NewsCard from "@/components/News/News";
-import LogosAnimation from "@/components/LogosAnimation/LogoAnim";  
+import LogosAnimation from "@/components/LogosAnimation/LogoAnim";
 function allClinics() {
   return (
     <div>

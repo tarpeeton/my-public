@@ -1,6 +1,11 @@
+"use client";
 import { useEffect, useRef } from "react";
 
-export default function YandexMap({ location }: { location: [number, number] }) {
+interface YandexMapProps {
+  location: [number, number];
+}
+
+export default function YandexMap({ location }: YandexMapProps) {
   const mapRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -19,24 +24,39 @@ export default function YandexMap({ location }: { location: [number, number] }) 
       map.geoObjects.add(placemark);
     };
 
+    // Agar API allaqachon yuklangan bo'lsa, to'g'ridan-to'g'ri initializeMap chaqiramiz
     if (window.ymaps && window.ymaps.ready) {
       window.ymaps.ready(initializeMap);
-    } else {
-      let script = document.querySelector("#yandex-map-script") as HTMLScriptElement;
+      return;
+    }
 
-      if (!script) {
-        script = document.createElement("script");
-        script.id = "yandex-map-script";
-        script.src = "https://api-maps.yandex.ru/2.1/?lang=ru_RU";
-        script.async = true;
-        script.onload = () => window.ymaps.ready(initializeMap);
-        document.body.appendChild(script);
-      } else {
-        script.onload = () => window.ymaps.ready(initializeMap);
-      }
+    // Script manzilini aniqlaymiz
+    const scriptSrc = "https://api-maps.yandex.ru/2.1/?lang=ru_RU";
+    let existingScript = document.querySelector(
+      `script[src="${scriptSrc}"]`
+    ) as HTMLScriptElement | null;
+
+    if (existingScript) {
+      // Agar script mavjud bo'lsa, uning yuklanish tugaganini kutamiz
+      existingScript.addEventListener("load", () => {
+        window.ymaps.ready(initializeMap);
+      });
+    } else {
+      // Agar script hali mavjud bo'lmasa, uni yaratamiz
+      const script = document.createElement("script");
+      script.src = scriptSrc;
+      script.async = true;
+      script.onload = () => {
+        window.ymaps.ready(initializeMap);
+      };
+      document.body.appendChild(script);
     }
   }, [location]);
 
-  return <div ref={mapRef} style={{ width: "500px", height: "300px", margin: "0 auto" }} />;
-
+  return (
+    <div
+      ref={mapRef}
+      style={{ width: "500px", height: "300px", margin: "0 auto" }}
+    />
+  );
 }

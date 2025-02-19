@@ -71,6 +71,8 @@ const clinics: {
   },
 ];
 
+
+
 const StarRating = ({ rating }) => {
   return (
     <div className="flex items-center space-x-1">
@@ -97,6 +99,8 @@ const StarRating = ({ rating }) => {
     </div>
   );
 };
+
+
 
 export default function ClinicsPage() {
   return (
