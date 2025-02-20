@@ -9,54 +9,48 @@ import { FaLocationDot } from "react-icons/fa6";
 import Image from "next/image";
 import { FaStar } from "react-icons/fa";
 import useSwiperNavigation from "@/hooks/useSwiperPrevNext";
-
-
-
-const clinics = [
-  {
-    name: "Клиника Здоровье",
-    specialty: "Многопрофильная",
-    rating: "4.8",
-    description: "Современные технологии диагностики и лечения.",
-    location: "Ташкент, проспект Амира Темура, д.25",
-    image: "/clinic1.jpg",
-  },
-  {
-    name: "МедЦентр Плюс",
-    specialty: "Диагностика",
-    rating: "4.7",
-    description: "Современные технологии диагностики и лечения.",
-    location: "Ташкент, улица Мустакиллик, д.15",
-    image: "/clinic2.jpg",
-  },
-  {
-    name: "Дента Про",
-    specialty: "Стоматология",
-    rating: "4.9",
-    description: "Современные технологии диагностики и лечения.",
-    location: "Ташкент, улица Навои, д.8",
-    image: "/clinic3.jpg",
-  },
-  {
-    name: "Гармония Зрения",
-    specialty: "Офтальмология",
-    rating: "4.8",
-    description: "Современные технологии диагностики и лечения.",
-    location: "Ташкент, улица Фурката, д.12",
-    image: "/clinic4.jpg",
-  },
-];
-
-
-
+import { useEffect, useState } from "react";
+import axios from "axios";
+import { useLocale } from "next-intl";
+import Link from "next/link";
 
 export default function ClinicsCarousel() {
+  const [clinics, setClinics] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  const locale = useLocale() as "ru" | "uz" | "en";
+  const { swiperRef, handlePrev, handleNext } = useSwiperNavigation();
 
+  useEffect(() => {
+    async function fetchClinics() {
+      try {
+        const response = await axios.get("https://medyordam.result-me.uz/api/clinic", {
+          params: {
+            page: 1,
+            size: 10,
+            all: true,
+            sortBy: "name",
+            specialityId: 0,
+            cityId: 0,
+            doctorFullNameOrClinicName: "",
+          },
+          headers: {
+            "Accept-Language": locale,
+          },
+        });
 
-  const { swiperRef, handlePrev, handleNext } = useSwiperNavigation()
+        setClinics(response.data.data || []);
+      } catch (err) {
+        setError("Ошибка загрузки данных клиник");
+      } finally {
+        setLoading(false);
+      }
+    }
+    fetchClinics();
+  }, [locale]);
 
-
-
+  if (loading) return <p>Загрузка...</p>;
+  if (error) return <p className="text-red-500">{error}</p>;
 
   return (
     <section className="lg:px-[100px]">
@@ -67,8 +61,12 @@ export default function ClinicsCarousel() {
         <div className="flex flex-row justify-between items-center mb-4 relative">
           <h2 className="text-4xl font-semibold">Лучшие клиники Ташкента</h2>
           <div className="flex flex-row items-center gap-2">
-            <button onClick={handlePrev} className="md:w-14  w-10 h-10  flex items-center justify-center md:h-14 rounded-full bg-[#0129E3] text-white"><FiArrowLeft /></button>
-            <button onClick={handleNext}  className="md:w-14  w-10 h-10 flex items-center justify-center  md:h-14 rounded-full bg-[#0129E3] text-white"><FiArrowRight /></button>
+            <button onClick={handlePrev} className="md:w-14 w-10 h-10 flex items-center justify-center md:h-14 rounded-full bg-[#0129E3] text-white">
+              <FiArrowLeft />
+            </button>
+            <button onClick={handleNext} className="md:w-14 w-10 h-10 flex items-center justify-center md:h-14 rounded-full bg-[#0129E3] text-white">
+              <FiArrowRight />
+            </button>
           </div>
         </div>
         <Swiper
@@ -82,12 +80,13 @@ export default function ClinicsCarousel() {
             1420: { slidesPerView: 4 },
           }}
         >
-          {clinics.map((clinic, index) => (
-            <SwiperSlide key={index}>
-              <div className="bg-white rounded-2xl overflow-hidden  mb-10 shadow-sm hover:shadow-md duration-200">
+          {clinics.map((clinic) => (
+            <SwiperSlide key={clinic.id}>
+              <div className="bg-white rounded-2xl overflow-hidden mb-10 shadow-sm hover:shadow-md duration-200">
                 <div className="w-full h-[300px] relative">
+                  {/* ✅ Исправлен путь к изображению */}
                   <Image
-                    src={clinic.image}
+                    src={clinic.mainPhoto?.url || "/placeholder.jpg"}
                     alt={clinic.name}
                     layout="fill"
                     objectFit="cover"
@@ -97,27 +96,30 @@ export default function ClinicsCarousel() {
                     <span className="text-blue-500 font-bold text-sm">
                       <FaStar />
                     </span>
-                    {clinic.rating}
+                    {clinic.rating || "Нет рейтинга"}
                   </div>
                 </div>
                 <div className="p-4">
-                  <span className="bg-[#CFFAFE] px-3 py-1.5 rounded-md text-sm font-semibold">
-                    {clinic.specialty}
-                  </span>
+                  {/* ✅ Выводим название клиники */}
                   <h3 className="text-lg font-semibold mt-2">{clinic.name}</h3>
+
+                  {/* ✅ Исправлено описание (description) */}
                   <p className="text-sm text-gray-500 mt-1">
-                    {clinic.description}
+                    {clinic.aboutUs?.[0]?.description?.[locale] || "Описание отсутствует"}
                   </p>
+
+                  {/* ✅ Исправлен адрес (location) */}
                   <div className="flex items-center text-sm mt-2">
                     <FaLocationDot className="w-5 h-5 text-blue-500 mr-1" />
-                    {clinic.location}
+                    {clinic.address?.[0]?.name?.[locale] || "Адрес не указан"}
                   </div>
-                  <Button
-                    variant="link"
-                    className="text-[#0129E3] flex items-center mt-2"
-                  >
-                    Подробнее <FiArrowRight className="w-4" />
-                  </Button>
+
+                  {/* ✅ Кнопка "Подробнее" */}
+                  <Link href={`/clinic/${clinic.id}`} passHref>
+                    <Button variant="link" className="text-[#0129E3] flex items-center mt-2">
+                      Подробнее <FiArrowRight className="w-4" />
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </SwiperSlide>
