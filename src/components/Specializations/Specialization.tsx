@@ -29,6 +29,7 @@ export default function SpecializationCards() {
           modules={[Navigation]}
           spaceBetween={20}
           navigation
+          loop={true}
           breakpoints={{
             320: { slidesPerView: 1 }, // Мобильные устройства
             768: { slidesPerView: 2 }, // Планшеты

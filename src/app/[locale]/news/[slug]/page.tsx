@@ -1,4 +1,3 @@
-import React from 'react'
 import SingleNews from "@/components/News/SingleNews";
 import NewsCard from '@/components/News/News';
 
