@@ -3,55 +3,47 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
-import { Navigation  , Autoplay} from "swiper/modules";
+import { Navigation, Autoplay } from "swiper/modules";
 import { Button } from "@/components/ui/button";
 import { FiArrowRight, FiArrowLeft } from "react-icons/fi";
 import { FaLocationDot } from "react-icons/fa6";
 import Image from "next/image";
 import { FaStar } from "react-icons/fa";
-
-const doctors = [
-  {
-    name: "Лариса Юрьевна",
-    specialty: "Педиатр",
-    rating: "4.9",
-    morespec: "Опытный специалист в области педиатрии.",
-    location: "Ташкент, улица Шаблонка, д.10",
-    image: "/doc1.jpg",
-  },
-  {
-    name: "Сабина Камоловна",
-    specialty: "Педиатр",
-    rating: "4.9",
-    morespec: "Специализируется на детском здоровье.",
-    location: "Ташкент, улица Шаблонка, д.10",
-    image: "/doc2.jpg",
-  },
-  {
-    name: "Алекс Азимович",
-    specialty: "Хирург",
-    rating: "4.9",
-    morespec: "Высококвалифицированный хирург.",
-    location: "Ташкент, улица Шаблонка, д.10",
-    image: "/doc3.jpg",
-  },
-  {
-    name: "Лобар Садихахмуд",
-    specialty: "Стоматолог",
-    rating: "4.9",
-    morespec: "Специалист по здоровью зубов.",
-    location: "Ташкент, улица Шаблонка, д.10",
-    image: "/doc4.jpg",
-  },
-];
-
-
-// import axios get doctor  , slice doctors 10
-
-
-
+import { useEffect, useState } from "react";
+import axios from "axios";
+import { useLocale } from "next-intl";
 
 export default function DoctorsCarousel() {
+  const [doctors, setDoctors] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const locale = useLocale() as "ru" | "uz" | "en";
+
+  useEffect(() => {
+    async function fetchDoctors() {
+      try {
+        const response = await axios.get(
+          "https://medyordam.result-me.uz/api/doctor",
+
+          {
+            headers: {
+              "Accept-Language": locale,
+            },
+          }
+        );
+        setDoctors(response.data.data || []);
+      } catch (err) {
+        setError("Ошибка загрузки данных врачей");
+      } finally {
+        setLoading(false);
+      }
+    }
+    fetchDoctors();
+  }, []);
+  
+  if (loading) return <p>Загрузка...</p>;
+  if (error) return <p className="text-red-500">{error}</p>;
+
   return (
     <div className="lg:px-[100px]">
       <div className="p-5 bg-[#F6FAFF] rounded-3xl mt-10 relative">
@@ -77,7 +69,7 @@ export default function DoctorsCarousel() {
         </div>
 
         <Swiper
-          modules={[Navigation , Autoplay]}
+          modules={[Navigation, Autoplay]}
           loop={true}
           spaceBetween={20}
           navigation={{
@@ -93,10 +85,10 @@ export default function DoctorsCarousel() {
         >
           {doctors.map((doctor, index) => (
             <SwiperSlide key={index}>
-              <div className="px-5 lg:min-h-[510px] md:px-0 bg-white rounded-2xl overflow-hidden  mb-10 shadow-sm hover:shadow-md duration-200 flex flex-col justify-between">
+              <div className="px-5 lg:min-h-[510px] bg-white rounded-2xl overflow-hidden mb-10 shadow-sm hover:shadow-md duration-200 flex flex-col justify-between">
                 <div className="w-full 2xl:h-[300px] h-[250px] relative">
                   <Image
-                    src={doctor.image}
+                    src={doctor.image || "/default-doctor.jpg"}
                     alt={doctor.name}
                     fill={true}
                     quality={100}
@@ -106,23 +98,23 @@ export default function DoctorsCarousel() {
                     <span className="text-blue-500 font-bold text-sm">
                       <FaStar />
                     </span>
-                    {doctor.rating}
+                    {doctor.rating || "-"}
                   </div>
                 </div>
                 <div className="p-4 flex flex-col flex-grow">
                   <span className="bg-[#CFFAFE] w-max px-3 py-1.5 rounded-md text-sm font-semibold">
-                    {doctor.specialty}
+                    {doctor.specialty || "Неизвестно"}
                   </span>
 
                   <h3 className="text-lg font-semibold mt-2">{doctor.name}</h3>
                   <p className="text-sm text-gray-500 mt-1 flex-grow">
-                    {doctor.morespec.length > 50
+                    {doctor.morespec?.length > 50
                       ? doctor.morespec.slice(0, 50) + "..."
                       : doctor.morespec}
                   </p>
                   <div className="flex items-center text-sm mt-2">
                     <FaLocationDot className="w-5 h-5 text-blue-500 mr-1" />
-                    {doctor.location}
+                    {doctor.location || "Неизвестный адрес"}
                   </div>
 
                   <div className="flex justify-start mt-auto">
@@ -137,10 +129,7 @@ export default function DoctorsCarousel() {
         </Swiper>
 
         <div className="flex justify-center mt-5">
-          <Button
-            id="view-all-doctors"
-            className="bg-blue-600 text-white px-7 py-6 rounded-full mb-[40px]"
-          >
+          <Button className="bg-blue-600 text-white px-7 py-6 rounded-full mb-[40px]">
             Посмотреть всех
           </Button>
         </div>
