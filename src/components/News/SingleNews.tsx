@@ -35,7 +35,7 @@ export default function NewsPage() {
       </div>
 
       <div className="text-2xl font-bold text-gray-800 mb-4 max-w-[650px] break-words">
-        {data.title}
+        {data}
       </div>
 
       <div className="text-sm text-[#0129E3] font-semibold mb-4">
@@ -52,7 +52,6 @@ export default function NewsPage() {
 
 </div>
       <div className="w-full h-[400px] md:h-[635px] overflow-hidden rounded-3xl">
-        {}
         <Image
           src="/single-news.jpg"
           alt="Семинар по лечению коморбидных пациентов"
