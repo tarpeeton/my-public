@@ -1,5 +1,5 @@
 export interface breadcrambs {
-    title: string,
+    title: {ru: string , uz: string , en: string},
     slug: string,
   }
   
