@@ -1,6 +1,4 @@
 export interface IClinicFull {
-    message: string;
-    data: {
       id: number;
       name: string;
       phone: string;
@@ -179,7 +177,3 @@ export interface IClinicFull {
         url: string;
       };
     };
-    status: number;
-    pagination: null;
-  }
-  

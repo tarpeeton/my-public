@@ -1,0 +1,77 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+:root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+@font-face {
+  font-family: 'SFProDisplay';
+  src: url('./fonts/SFPRODISPLAYMEDIUM.OTF') format('.OTF');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+body {
+  background-color: #F6FAFF;
+  font-family: 'SFProDisplay', !important;
+}
+
+button , a , h1 , h2 , h3 , h4 , h5 , p  , input , label , select  {
+  font-family: 'SFProDisplay', !important;
+
+}
+
+.ant-picker-input {
+  display: none !important;
+}
+
+
+/* Скрыть стандартный инпут внутри DatePicker */
+.ant-picker-input {
+  display: none !important;
+}
+
+/* Убрать обводку и фон у выпадающего календаря */
+.ant-picker-dropdown {
+  box-shadow: none !important;
+  border: none !important;
+  background: transparent !important;
+}
+
+/* Убрать любые внутренние рамки внутри панели */
+.ant-picker-panel-container,
+.ant-picker-panel {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+
+
+
+.AdminInput {
+  width: 100%;
+  color: #747474;
+  border-radius: 12px;
+  background-color: #F8F8F8;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  padding-left: 40px;
+  padding-right: 15px;
+  outline: none;
+}
+
+.AdminInput:focus {
+  ring-width: 1px;
+  ring-color: var(--ring-ring);
+}

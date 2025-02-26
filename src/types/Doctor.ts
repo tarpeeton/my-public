@@ -1,37 +1,53 @@
+export interface IMultiLang {
+  ru: string;
+  uz: string;
+  en: string;
+}
+
+interface IEducation {
+  id?: number | null;
+  name: IMultiLang;
+  faculty: IMultiLang;
+  fromYear: string;
+  toYear: string;
+  direction?: string;
+}
+
+interface ISpecialty {
+  id: number;
+  name: IMultiLang;
+}
+
+
+
+interface IWorkExperience {
+  id?: number | null;
+  name: IMultiLang;
+  city: IMultiLang;
+  fromYear: string;
+  toYear: string;
+  position: {
+    ru: string[];
+    uz: string[];
+    en: string[];
+  };
+}
+
+
 export interface IDoctorFull {
     id: number;
     slug: string;
-    name: {
-      uz: string;
-      ru: string;
-      en: string;
-    };
-    surname: {
-      uz: string;
-      ru: string;
-      en: string;
-    };
-    patronymic: {
-      uz: string;
-      ru: string;
-      en: string;
-    };
-    quote: {
-      uz: string | null;
-      ru: string | null;
-      en: string | null;
-    };
+    name: IMultiLang;
+    surname: IMultiLang
+    patronymic: IMultiLang
+    quote: IMultiLang
     exp: number;
     rating: number | null;
     gender: string;
     phone: string;
     city: {
       id: number;
-      name: {
-        uz: string;
-        ru: string;
-        en: string;
-      };
+      name: IMultiLang
     };
     contact: {
       id: number;
@@ -41,22 +57,16 @@ export interface IDoctorFull {
       facebook: string;
       youtube: string;
     };
-    language: string[]; // предполагается массив строк
-    achievement: {
-      uz: string | null;
-      ru: string | null;
-      en: string | null;
-    };
+    language: string[];
+    achievement: IMultiLang
     photo: {
       id: number;
       url: string;
     };
-    clinic: any[];
-    education: any[];
-    speciality: any[];
-    training: any[];
-    comment: any[];
-    experience: any[];
+ 
+    education: IEducation[];
+    speciality: ISpecialty[];
+    experience: IWorkExperience[];
     receptionTime: {
       id: number;
       days: {
@@ -66,16 +76,8 @@ export interface IDoctorFull {
         to: string | null;
       }[];
       clinicName: string;
-      address: {
-        uz: string;
-        ru: string;
-        en: string;
-      };
-      orientir: {
-        uz: string;
-        ru: string;
-        en: string;
-      };
+      address: IMultiLang
+      orientir: IMultiLang
       price: number;
       addressLink: string;
       latitude: number;
@@ -91,23 +93,11 @@ export interface IDoctorFull {
     }[];
     promotionList: {
       id: number;
-      address: {
-        uz: string;
-        ru: string;
-        en: string;
-      };
+      address: IMultiLang;
       addressLink: string;
       phone: string;
-      title: {
-        uz: string;
-        ru: string;
-        en: string;
-      };
-      description: {
-        uz: string;
-        ru: string;
-        en: string;
-      };
+      title: IMultiLang
+      description: IMultiLang
       percent: number;
       photo: {
         id: number;
@@ -120,13 +110,8 @@ export interface IDoctorFull {
         id: number;
         categoryId: number;
         slug: string;
-        name: {
-          uz: string;
-          ru: string;
-          en: string;
-        };
+        name: IMultiLang
       };
       price: number;
     }[];
   }
-  

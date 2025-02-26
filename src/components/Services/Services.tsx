@@ -14,12 +14,11 @@ interface IServicesProps {
   total: number;
 }
 
-
 export const Services = ({ serviceData, total }: IServicesProps) => {
   const locale = useLocale() as "ru" | "uz" | "en";
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [perPage, setPerPage] = useState(9);
-const router = useRouter()
+  const router = useRouter();
   const totalPages = Math.ceil(total / perPage);
   const breadcrumbData = {
     title: { ru: "Главная", uz: "Bosh sahifa", en: "Home" },
@@ -39,20 +38,22 @@ const router = useRouter()
     setCurrentPage(1);
   }
 
-
-  const handleLink = (id: number, serviceID: number , name: { ru: string; uz: string; en: string }) => {
+  const handleLink = (
+    serviceID: number,
+    name: { ru: string; uz: string; en: string },
+  ) => {
     localStorage.setItem("serviceName", JSON.stringify(name));
     localStorage.setItem("serviceID", JSON.stringify(serviceID));
-
-    router.push(`services/${id}`);
+    router.push(`services/${serviceID}`);
   };
+
 
 
   return (
     <section>
       <BreacdCrambs
         data={breadcrumbData}
-        page={{ en: "Services", ru: "Услуги    ", uz: "Xizmatlar" }}
+        page={{ en: "Services", ru: "Услуги", uz: "Xizmatlar" }}
       />
       <div>
         <p className="w-[120px] font-bold  -rotate-[5deg] text-center py-[12px] text-white bg-gradient-to-tr from-[#012ae3ed] to-[#379FF2] rounded-[10px]  items-center flex justify-center px-3">
@@ -100,7 +101,7 @@ const router = useRouter()
             </div>
             <div className="absolute   flex group justify-center bottom-0 lg:bottom-1 lg:right-2 right-0 border-l border-t  border-tl-[#E8E8E8] rounded-full  bg-white z-10 w-[70px] h-[70px] md:w-[80px] md:h-[80px] flex-row items-center ">
               <button
-                  onClick={() => handleLink(service.id,  service.id ,service.name)}
+                onClick={() => handleLink(service.id,  service.name )}
                 className="border w-[40px] lg:w-[55px] lg:h-[55px] flex items-center justify-center h-[40px] bg-numberOrBg border-[#E8E8E8] rounded-full"
               >
                 <GrLinkNext className="text-white group-hover:ml-[8px] transition-all duration-100" />

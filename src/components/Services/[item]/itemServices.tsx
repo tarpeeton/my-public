@@ -66,7 +66,7 @@ export const ItemServices = ({ serviceData, total }: IServicesProps) => {
   }, []);
 
   const transformedPrice = (price: number | null): string => {
-    if (price === null) return "N/A";
+    if (price === null) return "";
     return new Intl.NumberFormat("ru-RU", {
       maximumFractionDigits: 0,
     }).format(price);
