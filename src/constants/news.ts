@@ -47,7 +47,7 @@ Mutaxassisning amaliy tajribasi qanchalik ko'p bo'lsa, tashxisni tez va aniq qo'
           en: "Reputation Among Patients",
           uz: "Bemorlar orasidagi obro’",
         },
-        img: "",
+           img: "https://ucarecdn.com/a4e557fc-cc5d-44aa-908c-cd481c8b65b1/-/preview/1000x777/",
         subtitle: {
           ru: `Отзывы пациентов — это один из самых важных факторов при выборе врача. Обратите внимание на:
 - Общий рейтинг врача по отзывам
@@ -97,7 +97,7 @@ Agar shifokor eskirgan usullardan foydalanib, malakasini oshirishga intilmasa, d
           en: "Individual Approach and Attentiveness",
           uz: "Shaxsiy yondashuv va e'tibor",
         },
-        img: "",
+           img: "https://ucarecdn.com/a4e557fc-cc5d-44aa-908c-cd481c8b65b1/-/preview/1000x777/",
         subtitle: {
           ru: `Настоящий профессионал не просто ставит диагноз, а учитывает все особенности пациента: возраст, образ жизни, хронические заболевания. Обратите внимание на:
 - Насколько врач внимательно слушает ваши жалобы
@@ -147,7 +147,7 @@ Shifokor nafaqat malakali, balki qulay tarzda qabulga yoziladigan bo'lishi kerak
           en: "Conclusion",
           uz: "Xulosa",
         },
-        img: "",
+           img: "https://ucarecdn.com/a4e557fc-cc5d-44aa-908c-cd481c8b65b1/-/preview/1000x777/",
         subtitle: {
           ru: `Выбор врача в Ташкенте — важный процесс, к которому стоит подходить серьезно. Ориентируйтесь на квалификацию, отзывы, методы лечения, отношение к пациенту и удобство записи. Только так вы сможете найти действительно хорошего специалиста, которому можно доверить свое здоровье.`,
           en: `Choosing a doctor in Tashkent is an important process that should be approached seriously. Focus on qualifications, patient reviews, treatment methods, the doctor’s attitude, and appointment convenience. Only then can you find a truly excellent specialist to trust with your health.`,
@@ -191,7 +191,7 @@ Shifokor nafaqat malakali, balki qulay tarzda qabulga yoziladigan bo'lishi kerak
           en: "Republican Specialized Surgery Center named after Academician Vakhidov",
           uz: "Akademik Vahidov nomidagi Respublikaviy maxsus jarrohlik markazi",
         },
-        img: "",
+           img: "https://ucarecdn.com/a4e557fc-cc5d-44aa-908c-cd481c8b65b1/-/preview/1000x777/",
         subtitle: {
           ru: "Преимущества: Высокий уровень хирургических вмешательств, передовые методы диагностики и лечения.",
           en: "Advantages: High level of surgical interventions and advanced methods of diagnosis and treatment.",
@@ -217,7 +217,7 @@ Shifokor nafaqat malakali, balki qulay tarzda qabulga yoziladigan bo'lishi kerak
           en: "National Cardiology Center of Uzbekistan",
           uz: "O‘zbekiston Milliy Kardiologiya Markazi",
         },
-        img: "",
+           img: "https://ucarecdn.com/a4e557fc-cc5d-44aa-908c-cd481c8b65b1/-/preview/1000x777/",
         subtitle: {
           ru: "Преимущества: Лечение сердечно-сосудистых заболеваний на высшем уровне, передовые технологии диагностики.",
           en: "Advantages: Top-level treatment of cardiovascular diseases and advanced diagnostic technologies.",
@@ -243,7 +243,7 @@ Shifokor nafaqat malakali, balki qulay tarzda qabulga yoziladigan bo'lishi kerak
           en: "Multidisciplinary Clinic 'Shox Med Center'",
           uz: "Ko‘p sohalik klinika 'Shox Med Center'",
         },
-        img: "",
+           img: "https://ucarecdn.com/a4e557fc-cc5d-44aa-908c-cd481c8b65b1/-/preview/1000x777/",
         subtitle: {
           ru: "Преимущества: Высокий уровень сервиса, внимательное отношение к пациентам.",
           en: "Advantages: High level of service and attentive care for patients.",
@@ -256,7 +256,7 @@ Shifokor nafaqat malakali, balki qulay tarzda qabulga yoziladigan bo'lishi kerak
           en: "Clinic 'Grandmed'",
           uz: "Klinika 'Grandmed'",
         },
-        img: "",
+           img: "https://ucarecdn.com/a4e557fc-cc5d-44aa-908c-cd481c8b65b1/-/preview/1000x777/",
         subtitle: {
           ru: "Преимущества: Современные методы лечения, комфортные условия для пациентов.",
           en: "Advantages: Modern treatment methods and comfortable conditions for patients.",
@@ -269,7 +269,7 @@ Shifokor nafaqat malakali, balki qulay tarzda qabulga yoziladigan bo'lishi kerak
           en: "Diagnostic Center 'In Vitro' Tashkent",
           uz: "Toshkent 'In Vitro' Diagnostika Markazi",
         },
-        img: "",
+           img: "https://ucarecdn.com/a4e557fc-cc5d-44aa-908c-cd481c8b65b1/-/preview/1000x777/",
         subtitle: {
           ru: "Преимущества: Точные лабораторные исследования, высокое качество обслуживания.",
           en: "Advantages: Accurate laboratory testing and high-quality service.",
@@ -282,7 +282,7 @@ Shifokor nafaqat malakali, balki qulay tarzda qabulga yoziladigan bo'lishi kerak
           en: "Clinic 'Sehhat'",
           uz: "Klinika 'Sehhat'",
         },
-        img: "",
+           img: "https://ucarecdn.com/a4e557fc-cc5d-44aa-908c-cd481c8b65b1/-/preview/1000x777/",
         subtitle: {
           ru: "Преимущества: Узкопрофильные специалисты, инновационные методики лечения.",
           en: "Advantages: Specialized experts and innovative treatment methods.",
@@ -295,7 +295,7 @@ Shifokor nafaqat malakali, balki qulay tarzda qabulga yoziladigan bo'lishi kerak
           en: "Medical Center 'Soglom Avlod'",
           uz: "Tibbiyot markazi 'Sog'lom Avlod'",
         },
-        img: "",
+           img: "https://ucarecdn.com/a4e557fc-cc5d-44aa-908c-cd481c8b65b1/-/preview/1000x777/",
         subtitle: {
           ru: "Преимущества: Семейная медицина, качественная диагностика, доступные цены.",
           en: "Advantages: Family medicine, quality diagnostics, and affordable prices.",
@@ -308,7 +308,7 @@ Shifokor nafaqat malakali, balki qulay tarzda qabulga yoziladigan bo'lishi kerak
           en: "Conclusion",
           uz: "Xulosa",
         },
-        img: "",
+           img: "https://ucarecdn.com/a4e557fc-cc5d-44aa-908c-cd481c8b65b1/-/preview/1000x777/",
         subtitle: {
           ru: "Выбор клиники в Ташкенте зависит от ваших потребностей и состояния здоровья. Обращайте внимание на репутацию, отзывы пациентов, квалификацию врачей и уровень сервиса. Только так вы сможете найти медицинский центр, который предложит вам лучшее лечение и комфорт.",
           en: "Choosing a clinic in Tashkent depends on your needs and health condition. Consider the reputation, patient reviews, doctors' qualifications, and level of service. Only then can you find a medical center that offers you the best treatment and comfort.",
@@ -364,7 +364,7 @@ Sizga qulay platformani tanlang va zarur bo'lsa, ro'yxatdan o'ting.`,
           en: "Step 2: Find the Right Doctor",
           uz: "2-qadam: Kerakli shifokorni topish",
         },
-        img: "",
+           img: "https://ucarecdn.com/a4e557fc-cc5d-44aa-908c-cd481c8b65b1/-/preview/1000x777/",
         subtitle: {
           ru: `Используйте фильтры по специальности, местоположению, рейтингу и отзывам пациентов. Обратите внимание на:
 - Квалификацию врача;
@@ -402,7 +402,7 @@ Sizga qulay platformani tanlang va zarur bo'lsa, ro'yxatdan o'ting.`,
           en: "Step 4: Fill in Your Information",
           uz: "4-qadam: Ma'lumotlarni to'ldirish",
         },
-        img: "",
+           img: "https://ucarecdn.com/a4e557fc-cc5d-44aa-908c-cd481c8b65b1/-/preview/1000x777/",
         subtitle: {
           ru: `При записи система может запросить ваши данные:
 - ФИО;
@@ -449,7 +449,7 @@ Sizga qulay platformani tanlang va zarur bo'lsa, ro'yxatdan o'ting.`,
           en: "Step 6: Visit the Doctor",
           uz: "6-qadam: Shifokorni ko'rish",
         },
-        img: "",
+           img: "https://ucarecdn.com/a4e557fc-cc5d-44aa-908c-cd481c8b65b1/-/preview/1000x777/",
         subtitle: {
           ru: `В назначенное время прибывайте в клинику или подключайтесь к онлайн-консультации (если выбран такой формат). При необходимости возьмите с собой документы: паспорт, медицинскую карту, результаты анализов.`,
           en: `At the scheduled time, visit the clinic or join the online consultation (if that option is chosen). Bring your documents if necessary: passport, medical card, test results.`,
@@ -462,7 +462,7 @@ Sizga qulay platformani tanlang va zarur bo'lsa, ro'yxatdan o'ting.`,
           en: "Conclusion",
           uz: "Xulosa",
         },
-        img: "",
+           img: "https://ucarecdn.com/a4e557fc-cc5d-44aa-908c-cd481c8b65b1/-/preview/1000x777/",
         subtitle: {
           ru: `Онлайн-запись к врачу в Узбекистане — это удобный способ сэкономить время и получить медицинскую помощь без лишних ожиданий. Следуя этой инструкции, вы легко запишетесь к нужному специалисту и своевременно получите необходимое лечение.`,
           en: `Booking an appointment with a doctor online in Uzbekistan is a convenient way to save time and receive medical care without long waits. By following this guide, you can easily secure an appointment with the right specialist and get timely treatment.`,
@@ -530,7 +530,7 @@ Kamchiliklari:
           en: "Private Clinics",
           uz: "Xususiy klinikalar",
         },
-        img: "",
+           img: "https://ucarecdn.com/a4e557fc-cc5d-44aa-908c-cd481c8b65b1/-/preview/1000x777/",
         subtitle: {
           ru: `Частные медицинские центры предлагают более комфортные условия и индивидуальный подход к пациентам.
 Плюсы:
@@ -567,7 +567,7 @@ Kamchiliklari:
           en: "Step 4: Filling in the Data",
           uz: "4-qadam: Ma'lumotlarni to'ldirish",
         },
-        img: "",
+           img: "https://ucarecdn.com/a4e557fc-cc5d-44aa-908c-cd481c8b65b1/-/preview/1000x777/",
         subtitle: {
           ru: `При записи система может запросить ваши данные:
 - ФИО;
@@ -614,7 +614,7 @@ Kamchiliklari:
           en: "Step 6: Visiting the Doctor",
           uz: "6-qadam: Shifokorni ko'rish",
         },
-        img: "",
+           img: "https://ucarecdn.com/a4e557fc-cc5d-44aa-908c-cd481c8b65b1/-/preview/1000x777/",
         subtitle: {
           ru: `В назначенное время прибывайте в клинику или подключайтесь к онлайн-консультации (если выбран такой формат). При необходимости возьмите с собой документы: паспорт, медицинскую карту, результаты анализов.`,
           en: `At the scheduled time, visit the clinic or join the online consultation (if that option is chosen). Bring your documents if necessary: passport, medical card, test results.`,
@@ -627,7 +627,7 @@ Kamchiliklari:
           en: "Conclusion",
           uz: "Xulosa",
         },
-        img: "",
+           img: "https://ucarecdn.com/a4e557fc-cc5d-44aa-908c-cd481c8b65b1/-/preview/1000x777/",
         subtitle: {
           ru: `Онлайн-запись к врачу в Узбекистане — это удобный способ сэкономить время и получить медицинскую помощь без лишних ожиданий. Следуя этой инструкции, вы легко запишетесь к нужному специалисту и своевременно получите необходимое лечение.`,
           en: `Booking an appointment with a doctor online in Uzbekistan is a convenient way to save time and receive medical care without long waits. By following this guide, you can easily secure an appointment with the right specialist and get timely treatment.`,
@@ -680,7 +680,7 @@ Kamchiliklari:
           en: "Limitations of Telemedicine",
           uz: "Telemeditsinaning cheklovlari",
         },
-        img: "",
+           img: "https://ucarecdn.com/a4e557fc-cc5d-44aa-908c-cd481c8b65b1/-/preview/1000x777/",
         subtitle: {
           ru: `- Отсутствие физического осмотра – врач не может провести полноценную диагностику.
 - Ограниченные возможности лечения – для некоторых заболеваний требуется очный прием.
@@ -718,7 +718,7 @@ Kamchiliklari:
           en: "Conclusion",
           uz: "Xulosa",
         },
-        img: "",
+           img: "https://ucarecdn.com/a4e557fc-cc5d-44aa-908c-cd481c8b65b1/-/preview/1000x777/",
         subtitle: {
           ru: `Телемедицина в Узбекистане – это удобный и доступный способ получить консультацию врача. Однако для серьезных случаев все же рекомендуется очный прием. Если же вам нужна быстрая консультация по анализам или симптомам, онлайн-врач может стать отличным решением.`,
           en: `Telemedicine in Uzbekistan is a convenient and accessible way to get a doctor's consultation. However, for serious cases, an in-person visit is still recommended. If you need a quick consultation regarding tests or symptoms, an online doctor can be an excellent solution.`,
@@ -733,7 +733,7 @@ Kamchiliklari:
     date: "19.02.2025",
     slug: "kak-proverit-litsenziyu-vracha-ili-kliniki-v-uzbekistane",
     title: {
-      ru: "Как проверить лицензию врача или клиники в Узбекистане?",
+      ru: "Как проверить лицензию врача или клиники в Узбекистане? Топ 5 советов.",
       en: "How to Verify the License of a Doctor or Clinic in Uzbekistan?",
       uz: "O'zbekistonda shifokor yoki klinikaning litsenziyasini qanday tekshirish mumkin?",
     },
@@ -771,7 +771,7 @@ Kamchiliklari:
           en: "2. Contacting the Sanitary Surveillance Agency",
           uz: "2. Sanitariya nazorati agentligiga murojaat qilish",
         },
-        img: "",
+           img: "https://ucarecdn.com/a4e557fc-cc5d-44aa-908c-cd481c8b65b1/-/preview/1000x777/",
         subtitle: {
           ru: `Эта организация контролирует качество медицинских услуг и лицензирование клиник. Можно подать запрос для проверки легальности деятельности учреждения.`,
           en: `This organization oversees the quality of medical services and the licensing of clinics. You can request verification of the facility's legal status.`,
@@ -806,7 +806,7 @@ Kamchiliklari:
           en: "4. Request at the Clinic",
           uz: "4. Klinikada so'rov yuborish",
         },
-        img: "",
+           img: "https://ucarecdn.com/a4e557fc-cc5d-44aa-908c-cd481c8b65b1/-/preview/1000x777/",
         subtitle: {
           ru: `Вы вправе потребовать показать лицензию при посещении клиники. Лицензированные учреждения обязаны предоставлять информацию по первому запросу пациента.`,
           en: `You have the right to request to see the license when visiting a clinic. Licensed facilities are required to provide this information upon a patient's request.`,
@@ -819,7 +819,7 @@ Kamchiliklari:
           en: "5. Reviews and Recommendations",
           uz: "5. Fikrlar va tavsiyalar",
         },
-        img: "",
+           img: "https://ucarecdn.com/a4e557fc-cc5d-44aa-908c-cd481c8b65b1/-/preview/1000x777/",
         subtitle: {
           ru: `Хотя отзывы пациентов не являются официальным подтверждением лицензии, они помогут выявить сомнительные медицинские центры и специалистов без соответствующей аккредитации.`,
           en: `Although patient reviews are not official proof of licensing, they can help identify questionable medical centers and specialists who lack proper accreditation.`,
@@ -832,7 +832,7 @@ Kamchiliklari:
           en: "Conclusion",
           uz: "Xulosa",
         },
-        img: "",
+           img: "https://ucarecdn.com/a4e557fc-cc5d-44aa-908c-cd481c8b65b1/-/preview/1000x777/",
         subtitle: {
           ru: `Проверка лицензии врача или клиники в Узбекистане — это простой, но важный шаг перед выбором медицинского учреждения. Используйте официальные ресурсы, запрашивайте документы и доверяйте только проверенным специалистам.`,
           en: `Verifying the license of a doctor or clinic in Uzbekistan is a simple yet important step before choosing a medical facility. Use official resources, request documents, and trust only verified specialists.`,
@@ -863,7 +863,7 @@ Kamchiliklari:
           en: "Gather Medical Documentation",
           uz: "Tibbiy hujjatlarni to‘plang",
         },
-        img: "",
+           img: "https://ucarecdn.com/a4e557fc-cc5d-44aa-908c-cd481c8b65b1/-/preview/1000x777/",
         subtitle: {
           ru: "Возьмите с собой медицинскую карту, анализы и список принимаемых лекарств.",
           en: "Bring your medical records, test results, and a list of medications.",
@@ -876,7 +876,7 @@ Kamchiliklari:
           en: "Write Down Symptoms and Complaints",
           uz: "Belgilar va shikoyatlaringizni yozib qo‘ying",
         },
-        img: "",
+           img: "https://ucarecdn.com/a4e557fc-cc5d-44aa-908c-cd481c8b65b1/-/preview/1000x777/",
         subtitle: {
           ru: "Опишите, когда начались симптомы, как часто проявляются и что их усиливает.",
           en: "Describe when symptoms started, how often they occur, and what worsens them.",
@@ -889,7 +889,7 @@ Kamchiliklari:
           en: "Prepare Questions for the Doctor",
           uz: "Shifokor uchun savollar tayyorlang",
         },
-        img: "",
+           img: "https://ucarecdn.com/a4e557fc-cc5d-44aa-908c-cd481c8b65b1/-/preview/1000x777/",
         subtitle: {
           ru: "Запишите важные вопросы, чтобы не забыть их задать на приеме.",
           en: "Write down important questions to make sure you ask them during the appointment.",
@@ -902,7 +902,7 @@ Kamchiliklari:
           en: "Check Appointment Details",
           uz: "Qabul tafsilotlarini aniqlang",
         },
-        img: "",
+           img: "https://ucarecdn.com/a4e557fc-cc5d-44aa-908c-cd481c8b65b1/-/preview/1000x777/",
         subtitle: {
           ru: "Узнайте время приема, нужно ли приходить натощак и какие документы взять с собой.",
           en: "Check the appointment time, whether fasting is required, and what documents to bring.",
@@ -915,7 +915,7 @@ Kamchiliklari:
           en: "Be Ready for an Open Discussion",
           uz: "Ochiq suhbatga tayyor bo‘ling",
         },
-        img: "",
+           img: "https://ucarecdn.com/a4e557fc-cc5d-44aa-908c-cd481c8b65b1/-/preview/1000x777/",
         subtitle: {
           ru: "Честно отвечайте на вопросы врача о вашем здоровье и образе жизни.",
           en: "Answer the doctor's questions honestly about your health and lifestyle.",
@@ -928,7 +928,7 @@ Kamchiliklari:
           en: "Take Notes or Write Down Recommendations",
           uz: "Daftar oling yoki tavsiyalarni yozib qo‘ying",
         },
-        img: "",
+           img: "https://ucarecdn.com/a4e557fc-cc5d-44aa-908c-cd481c8b65b1/-/preview/1000x777/",
         subtitle: {
           ru: "Фиксируйте основные моменты приема, чтобы не забыть важные рекомендации.",
           en: "Write down key points from the appointment to remember important recommendations.",
@@ -940,7 +940,7 @@ Kamchiliklari:
 
   // ***** #8 *****
   {
-    date: "",
+    date: "15.02.2025",
     slug: "preventive-medical-checkups",
     title: {
       ru: "Что важно знать о профилактических медицинских осмотрах?",
@@ -959,7 +959,7 @@ Kamchiliklari:
           en: "Why Are Preventive Checkups Necessary?",
           uz: "Profilaktik ko‘riklar nima uchun kerak?",
         },
-        img: "",
+           img: "https://ucarecdn.com/a4e557fc-cc5d-44aa-908c-cd481c8b65b1/-/preview/1000x777/",
         subtitle: {
           ru: "Они помогают выявлять скрытые болезни, контролировать основные показатели здоровья и корректировать образ жизни.",
           en: "They help detect hidden diseases, monitor key health indicators, and adjust lifestyle habits.",
@@ -972,7 +972,7 @@ Kamchiliklari:
           en: "How Often Should You Have a Checkup?",
           uz: "Qanchalik tez-tez tibbiy ko‘rikdan o‘tish kerak?",
         },
-        img: "",
+           img: "https://ucarecdn.com/a4e557fc-cc5d-44aa-908c-cd481c8b65b1/-/preview/1000x777/",
         subtitle: {
           ru: "Частота зависит от возраста и состояния здоровья: детям – ежегодно, взрослым до 40 лет – раз в 1-2 года, после 40 лет – ежегодно.",
           en: "The frequency depends on age and health status: children – annually, adults under 40 – every 1-2 years, after 40 – annually.",
@@ -985,7 +985,7 @@ Kamchiliklari:
           en: "What Tests Are Included in a Preventive Checkup?",
           uz: "Profilaktik tibbiy ko‘rik nimalarni o‘z ichiga oladi?",
         },
-        img: "",
+           img: "https://ucarecdn.com/a4e557fc-cc5d-44aa-908c-cd481c8b65b1/-/preview/1000x777/",
         subtitle: {
           ru: "Включает анализы крови и мочи, измерение давления, флюорографию, осмотр терапевта и других специалистов.",
           en: "Includes blood and urine tests, blood pressure measurement, fluorography, and specialist consultations.",
@@ -998,7 +998,7 @@ Kamchiliklari:
           en: "How to Prepare for a Checkup?",
           uz: "Tibbiy ko‘rikka qanday tayyorgarlik ko‘rish kerak?",
         },
-        img: "",
+           img: "https://ucarecdn.com/a4e557fc-cc5d-44aa-908c-cd481c8b65b1/-/preview/1000x777/",
         subtitle: {
           ru: "Приходите натощак, избегайте стресса, подготовьте список принимаемых лекарств и хронических заболеваний.",
           en: "Come fasting, avoid stress, prepare a list of medications and chronic diseases.",
@@ -1011,7 +1011,7 @@ Kamchiliklari:
           en: "Where to Get a Preventive Checkup in Tashkent?",
           uz: "Toshkentda qayerda profilaktik ko‘rikdan o‘tish mumkin?",
         },
-        img: "",
+           img: "https://ucarecdn.com/a4e557fc-cc5d-44aa-908c-cd481c8b65b1/-/preview/1000x777/",
         subtitle: {
           ru: "В государственных и частных клиниках, многие центры предлагают комплексные программы обследования.",
           en: "In public and private clinics, many centers offer comprehensive checkup programs.",
@@ -1024,7 +1024,7 @@ Kamchiliklari:
           en: "Conclusion",
           uz: "Xulosa",
         },
-        img: "",
+           img: "https://ucarecdn.com/a4e557fc-cc5d-44aa-908c-cd481c8b65b1/-/preview/1000x777/",
         subtitle: {
           ru: "Регулярные осмотры помогают избежать серьезных проблем со здоровьем и своевременно выявлять заболевания.",
           en: "Regular checkups help prevent serious health problems and detect diseases in time.",
@@ -1036,7 +1036,7 @@ Kamchiliklari:
 
   // ***** #9 *****
   {
-    date: "",
+    date: "30.01.2025",
     slug: "diagnostika-tashkent",
     title: {
       ru: "Где сделать качественное УЗИ, МРТ и КТ в Ташкенте? Обзор лучших диагностических центров",
@@ -1055,7 +1055,7 @@ Kamchiliklari:
           en: "What to Look for When Choosing a Diagnostic Center?",
           uz: "Diagnostika markazini tanlashda nimaga e'tibor berish kerak?",
         },
-        img: "",
+           img: "https://ucarecdn.com/a4e557fc-cc5d-44aa-908c-cd481c8b65b1/-/preview/1000x777/",
         subtitle: {
           ru: `При поиске клиники для УЗИ, МРТ или КТ важно учитывать несколько факторов: 
          - Оборудование – современные аппараты обеспечивают более точные результаты.
@@ -1072,7 +1072,7 @@ Kamchiliklari:
           en: "1. International Medical Center IMC",
           uz: "1. Xalqaro tibbiyot markazi IMC",
         },
-        img: "",
+           img: "https://ucarecdn.com/a4e557fc-cc5d-44aa-908c-cd481c8b65b1/-/preview/1000x777/",
         subtitle: {
           ru: "Передовой центр диагностики с высокоточными аппаратами и квалифицированными врачами.",
           en: "A leading diagnostic center with high-precision equipment and qualified doctors.",
@@ -1085,7 +1085,7 @@ Kamchiliklari:
           en: "2. AKFA Medline Clinic",
           uz: "2. AKFA Medline klinikasi",
         },
-        img: "",
+           img: "https://ucarecdn.com/a4e557fc-cc5d-44aa-908c-cd481c8b65b1/-/preview/1000x777/",
         subtitle: {
           ru: "Многопрофильное учреждение с современным оборудованием и точной диагностикой.",
           en: "A multidisciplinary institution with modern equipment and accurate diagnostics.",
@@ -1098,7 +1098,7 @@ Kamchiliklari:
           en: "3. Eurosonography",
           uz: "3. Yevrosonografiya",
         },
-        img: "",
+           img: "https://ucarecdn.com/a4e557fc-cc5d-44aa-908c-cd481c8b65b1/-/preview/1000x777/",
         subtitle: {
           ru: "Специализируется на УЗИ с использованием аппаратов экспертного класса.",
           en: "Specializes in ultrasound diagnostics using expert-class equipment.",
@@ -1111,7 +1111,7 @@ Kamchiliklari:
           en: "4. Tashkent Medical Center",
           uz: "4. Toshkent tibbiyot markazi",
         },
-        img: "",
+           img: "https://ucarecdn.com/a4e557fc-cc5d-44aa-908c-cd481c8b65b1/-/preview/1000x777/",
         subtitle: {
           ru: "Предлагает широкий спектр диагностических услуг, включая МРТ и КТ.",
           en: "Offers a wide range of diagnostic services, including MRI and CT scans.",
@@ -1124,7 +1124,7 @@ Kamchiliklari:
           en: "5. Vita Med",
           uz: "5. Vita Med",
         },
-        img: "",
+           img: "https://ucarecdn.com/a4e557fc-cc5d-44aa-908c-cd481c8b65b1/-/preview/1000x777/",
         subtitle: {
           ru: "Современный центр с оперативным обслуживанием и внимательным подходом к пациентам.",
           en: "A modern center with fast service and a patient-centered approach.",
@@ -1136,7 +1136,7 @@ Kamchiliklari:
 
   // ***** #9 *****
   {
-    date: "",
+    date: "15.01.2025",
     slug: "stomatologiya-tashkent",
     title: {
       ru: "Топ-5 стоматологических клиник Ташкента: где лечить зубы?",
@@ -1155,7 +1155,7 @@ Kamchiliklari:
           en: "1. MyDent Clinic",
           uz: "1. MyDent Clinic",
         },
-        img: "",
+           img: "https://ucarecdn.com/a4e557fc-cc5d-44aa-908c-cd481c8b65b1/-/preview/1000x777/",
         subtitle: {
           ru: "Одна из ведущих стоматологических клиник Ташкента, предлагающая полный спектр услуг — от профессиональной гигиены до сложной хирургии. Использует новейшие технологии и материалы, а также предлагает лечение без боли.",
           en: "One of the leading dental clinics in Tashkent, offering a full range of services from professional hygiene to complex surgery. Uses the latest technologies and materials and offers pain-free treatment.",
@@ -1168,7 +1168,7 @@ Kamchiliklari:
           en: "2. Dental House",
           uz: "2. Dental House",
         },
-        img: "",
+           img: "https://ucarecdn.com/a4e557fc-cc5d-44aa-908c-cd481c8b65b1/-/preview/1000x777/",
         subtitle: {
           ru: "Современная клиника с опытными врачами и передовым оборудованием. Специализируется на эстетической стоматологии, имплантации и протезировании.",
           en: "A modern clinic with experienced doctors and advanced equipment. Specializes in aesthetic dentistry, implantation, and prosthetics.",
@@ -1181,7 +1181,7 @@ Kamchiliklari:
           en: "3. Smile Expert",
           uz: "3. Smile Expert",
         },
-        img: "",
+           img: "https://ucarecdn.com/a4e557fc-cc5d-44aa-908c-cd481c8b65b1/-/preview/1000x777/",
         subtitle: {
           ru: "Популярная клиника с широким спектром стоматологических услуг. Отличается высоким качеством работы и индивидуальным подходом к каждому пациенту.",
           en: "A popular clinic with a wide range of dental services. Known for its high-quality work and personalized approach to each patient.",
@@ -1194,7 +1194,7 @@ Kamchiliklari:
           en: "4. Neo Dental",
           uz: "4. Neo Dental",
         },
-        img: "",
+           img: "https://ucarecdn.com/a4e557fc-cc5d-44aa-908c-cd481c8b65b1/-/preview/1000x777/",
         subtitle: {
           ru: "Клиника с международными стандартами, предлагающая инновационные методы лечения. Специализируется на ортодонтии, имплантации и хирургической стоматологии.",
           en: "A clinic with international standards offering innovative treatment methods. Specializes in orthodontics, implantation, and surgical dentistry.",
@@ -1207,7 +1207,7 @@ Kamchiliklari:
           en: "5. Prime Dental",
           uz: "5. Prime Dental",
         },
-        img: "",
+           img: "https://ucarecdn.com/a4e557fc-cc5d-44aa-908c-cd481c8b65b1/-/preview/1000x777/",
         subtitle: {
           ru: "Одна из лучших клиник в городе, известная своими профессиональными врачами и комфортной атмосферой. Использует цифровые технологии для точной диагностики и лечения.",
           en: "One of the best clinics in the city, known for its professional doctors and comfortable atmosphere. Uses digital technologies for precise diagnostics and treatment.",
@@ -1219,7 +1219,7 @@ Kamchiliklari:
 
   // ***** 10 *****
   {
-    date: "",
+    date: "10.01.2025",
     slug: "eko-uzbekistan",
     title: {
       ru: "Лучшие центры ЭКО в Узбекистане: стоимость и особенности процедуры",
@@ -1238,7 +1238,7 @@ Kamchiliklari:
           en: "1. Embryo Reproduction Center",
           uz: "1. 'Embryo' reproduksiya markazi",
         },
-        img: "",
+        img: "https://ucarecdn.com/a4e557fc-cc5d-44aa-908c-cd481c8b65b1/-/preview/1000x777/",
         subtitle: {
           ru: "Один из ведущих ЭКО-центров в Ташкенте, использующий передовые методы лечения бесплодия. Высокий процент успешных программ.",
           en: "One of the leading IVF centers in Tashkent, utilizing advanced infertility treatment methods. High success rates.",
@@ -1251,7 +1251,7 @@ Kamchiliklari:
           en: "2. Madina IVF Clinic",
           uz: "2. 'Madina IVF' klinikasi",
         },
-        img: "",
+           img: "https://ucarecdn.com/a4e557fc-cc5d-44aa-908c-cd481c8b65b1/-/preview/1000x777/",
         subtitle: {
           ru: "Современное оборудование и квалифицированные специалисты. Полный спектр услуг – от диагностики до имплантации эмбриона.",
           en: "Modern equipment and qualified specialists. Full range of services from diagnostics to embryo implantation.",
@@ -1264,7 +1264,7 @@ Kamchiliklari:
           en: "3. International Center for Reproductive Medicine (ICRM)",
           uz: "3. Xalqaro reproduktiv tibbiyot markazi (ICRM)",
         },
-        img: "",
+           img: "https://ucarecdn.com/a4e557fc-cc5d-44aa-908c-cd481c8b65b1/-/preview/1000x777/",
         subtitle: {
           ru: "Работает по международным стандартам. Возможность проведения сложных репродуктивных программ.",
           en: "Operates according to international standards. Offers complex reproductive programs.",
@@ -1277,7 +1277,7 @@ Kamchiliklari:
           en: "4. Nihol IVF",
           uz: "4. 'Nihol IVF'",
         },
-        img: "",
+           img: "https://ucarecdn.com/a4e557fc-cc5d-44aa-908c-cd481c8b65b1/-/preview/1000x777/",
         subtitle: {
           ru: "Доступные цены на программы ЭКО. Использование современных методик для повышения успешности.",
           en: "Affordable prices for IVF programs. Uses modern methods to increase success rates.",
@@ -1290,7 +1290,7 @@ Kamchiliklari:
           en: "5. Avitsenna Clinic",
           uz: "5. 'Avitsenna' klinikasi",
         },
-        img: "",
+           img: "https://ucarecdn.com/a4e557fc-cc5d-44aa-908c-cd481c8b65b1/-/preview/1000x777/",
         subtitle: {
           ru: "Полный спектр услуг по лечению бесплодия. Возможность криоконсервации эмбрионов и донорских программ.",
           en: "Full range of infertility treatments. Offers embryo cryopreservation and donor programs.",
@@ -1303,8 +1303,8 @@ Kamchiliklari:
   // ***** 11 *****
 
   {
-    date: "121212",
-    slug: "diagnostika-tashkent",
+    date: "05.01.2025",
+    slug: "top-10-analizov-kotorie-stoit-sdavat-raz-v-god",
     title: {
       ru: "ТОП-10 анализов, которые стоит сдавать раз в год",
       en: "Top 10 Tests to Take Annually",
@@ -1322,7 +1322,7 @@ Kamchiliklari:
           en: "1. Complete Blood Count (CBC)",
           uz: "1. Umumiy qon tahlili (UQT)",
         },
-        img: "https://example.com/cbc.jpg",
+        img: "https://ucarecdn.com/a4e557fc-cc5d-44aa-908c-cd481c8b65b1/-/preview/1000x777/",
         subtitle: {
           ru: "Помогает оценить общее состояние здоровья, выявить анемию, воспалительные процессы и другие патологии.",
           en: "Helps assess overall health, detect anemia, inflammation, and other pathologies.",
@@ -1335,7 +1335,7 @@ Kamchiliklari:
           en: "2. Biochemical Blood Test",
           uz: "2. Biokimyoviy qon tahlili",
         },
-        img: "https://example.com/biochemical.jpg",
+        img: "https://ucarecdn.com/a4e557fc-cc5d-44aa-908c-cd481c8b65b1/-/preview/1000x777/",
         subtitle: {
           ru: "Определяет уровень глюкозы, холестерина, белков, ферментов печени и почек.",
           en: "Determines glucose, cholesterol, protein levels, and liver and kidney enzymes.",
@@ -1348,7 +1348,7 @@ Kamchiliklari:
           en: "3. Blood Sugar Test",
           uz: "3. Qon shakarini tekshirish",
         },
-        img: "https://example.com/blood-sugar.jpg",
+        img: "https://ucarecdn.com/a4e557fc-cc5d-44aa-908c-cd481c8b65b1/-/preview/1000x777/",
         subtitle: {
           ru: "Позволяет вовремя обнаружить преддиабетическое состояние и диабет.",
           en: "Helps detect prediabetes and diabetes in time.",
@@ -1361,7 +1361,7 @@ Kamchiliklari:
           en: "4. Lipid Profile",
           uz: "4. Lipid profili",
         },
-        img: "https://example.com/lipid-profile.jpg",
+        img: "https://ucarecdn.com/a4e557fc-cc5d-44aa-908c-cd481c8b65b1/-/preview/1000x777/",
         subtitle: {
           ru: "Определяет уровень хорошего и плохого холестерина, что важно для профилактики атеросклероза и сердечно-сосудистых заболеваний.",
           en: "Determines good and bad cholesterol levels, important for preventing atherosclerosis and cardiovascular diseases.",
@@ -1374,7 +1374,7 @@ Kamchiliklari:
           en: "5. General Urine Test",
           uz: "5. Umumiy siydik tahlili",
         },
-        img: "https://example.com/urine-test.jpg",
+        img: "https://ucarecdn.com/a4e557fc-cc5d-44aa-908c-cd481c8b65b1/-/preview/1000x777/",
         subtitle: {
           ru: "Помогает выявить инфекции мочевыводящих путей, болезни почек и другие нарушения.",
           en: "Helps detect urinary tract infections, kidney diseases, and other disorders.",
@@ -1385,8 +1385,8 @@ Kamchiliklari:
   },
   // ***** 12 *****
   {
-    date: "",
-    slug: "semeynyy-vrach",
+    date: "01.01.2025",
+    slug: "kak-vybrat-semeynogo-vracha",
     title: {
       ru: "Как правильно выбрать семейного врача?",
       en: "How to Choose the Right Family Doctor?",
@@ -1404,7 +1404,7 @@ Kamchiliklari:
           en: "1. Qualification and Experience",
           uz: "1. Malaka va tajriba",
         },
-        img: "https://example.com/qualification.jpg",
+        img: "https://ucarecdn.com/a4e557fc-cc5d-44aa-908c-cd481c8b65b1/-/preview/1000x777/",
         subtitle: {
           ru: "Обратите внимание на образование, стаж работы и специализацию врача.",
           en: "Pay attention to the doctor's education, work experience, and specialization.",
@@ -1417,7 +1417,7 @@ Kamchiliklari:
           en: "2. Patient Reviews",
           uz: "2. Bemorlarning fikrlari",
         },
-        img: "https://example.com/reviews.jpg",
+         img: "https://ucarecdn.com/a4e557fc-cc5d-44aa-908c-cd481c8b65b1/-/preview/1000x777/",
         subtitle: {
           ru: "Отзывы помогут понять, насколько врач внимателен и компетентен.",
           en: "Reviews help understand how attentive and competent the doctor is.",
@@ -1430,7 +1430,7 @@ Kamchiliklari:
           en: "3. Communication Skills and Individual Approach",
           uz: "3. Muloqot qobiliyati va individual yondashuv",
         },
-        img: "https://example.com/communication.jpg",
+           img: "https://ucarecdn.com/a4e557fc-cc5d-44aa-908c-cd481c8b65b1/-/preview/1000x777/",
         subtitle: {
           ru: "Важно, чтобы врач умел доступно объяснять медицинские термины.",
           en: "It is important for the doctor to explain medical terms clearly.",
@@ -1443,7 +1443,7 @@ Kamchiliklari:
           en: "4. Accessibility and Appointment Convenience",
           uz: "4. Mavjudlik va qabulga yozilish qulayligi",
         },
-        img: "https://example.com/appointment.jpg",
+          img: "https://ucarecdn.com/a4e557fc-cc5d-44aa-908c-cd481c8b65b1/-/preview/1000x777/",
         subtitle: {
           ru: "Проверьте, насколько легко записаться на приём и время ожидания.",
           en: "Check how easy it is to make an appointment and waiting times.",
@@ -1456,7 +1456,7 @@ Kamchiliklari:
           en: "5. Comprehensive Health Approach",
           uz: "5. Sog‘liqni kompleks yondashuv",
         },
-        img: "https://example.com/health-approach.jpg",
+        img: "https://ucarecdn.com/a4e557fc-cc5d-44aa-908c-cd481c8b65b1/-/preview/1000x777/",
         subtitle: {
           ru: "Врач должен не только лечить, но и давать профилактические рекомендации.",
           en: "The doctor should not only treat but also provide preventive recommendations.",
@@ -1468,8 +1468,8 @@ Kamchiliklari:
 
   // ***** 12 *****
   {
-    date: "",
-    slug: "semeynyy-vrach",
+    date: "16.01.2025",
+    slug: "vaktsinatsiya-v-uzbekistane",
     title: {
       ru: "Вакцинация в Узбекистане: какие прививки нужны детям и взрослым?",
       en: "How to Choose the Right Family Doctor?",
@@ -1487,7 +1487,7 @@ Kamchiliklari:
           en: "1. Qualification and Experience",
           uz: "1. Malaka va tajriba",
         },
-        img: "https://example.com/qualification.jpg",
+        img: "https://ucarecdn.com/a4e557fc-cc5d-44aa-908c-cd481c8b65b1/-/preview/1000x777/",
         subtitle: {
           ru: `Согласно Национальному календарю, дети получают следующие прививки:
           - Новорожденные (в роддоме):
@@ -1528,7 +1528,7 @@ Kamchiliklari:
           en: "2. Patient Reviews",
           uz: "2. Bemorlarning fikrlari",
         },
-        img: "https://example.com/reviews.jpg",
+         img: "https://ucarecdn.com/a4e557fc-cc5d-44aa-908c-cd481c8b65b1/-/preview/1000x777/",
         subtitle: {
           ru: `Для поддержания иммунитета взрослым рекомендуется:
 
@@ -1549,7 +1549,7 @@ Kamchiliklari:
           en: "3. Communication Skills and Individual Approach",
           uz: "3. Muloqot qobiliyati va individual yondashuv",
         },
-        img: "https://example.com/communication.jpg",
+           img: "https://ucarecdn.com/a4e557fc-cc5d-44aa-908c-cd481c8b65b1/-/preview/1000x777/",
         subtitle: {
           ru: "Прививки можно сделать в государственных поликлиниках бесплатно (по национальному календарю) или в частных медицинских центрах на платной основе.",
           en: "It is important for the doctor to explain medical terms clearly.",
@@ -1562,7 +1562,7 @@ Kamchiliklari:
           en: "4. Accessibility and Appointment Convenience",
           uz: "4. Mavjudlik va qabulga yozilish qulayligi",
         },
-        img: "https://example.com/appointment.jpg",
+          img: "https://ucarecdn.com/a4e557fc-cc5d-44aa-908c-cd481c8b65b1/-/preview/1000x777/",
         subtitle: {
           ru: "Вакцинация – это надежный способ защиты от серьезных инфекционных заболеваний. Соблюдение графика прививок помогает предотвратить вспышки эпидемий и укрепить коллективный иммунитет. Проверьте свой прививочный статус и позаботьтесь о своем здоровье вовремя!",
           en: "Check how easy it is to make an appointment and waiting times.",
@@ -1573,8 +1573,8 @@ Kamchiliklari:
   },
   // ***** 13 *****
   {
-    date: "",
-    slug: "semeynyy-vrach",
+    date: "15.02.2025",
+    slug: "zdorovyy-obraz-zhizni",
     title: {
       ru: "Как распознать симптомы серьезных заболеваний на ранних стадиях?",
       en: "How to recognize the symptoms of serious diseases at an early stage?",
@@ -1592,7 +1592,7 @@ Kamchiliklari:
           en: "1. Mandatory vaccinations for children",
           uz: "1. Bolalar uchun majburiy emlashlar",
         },
-        img: "https://example.com/qualification.jpg",
+        img: "https://ucarecdn.com/a4e557fc-cc5d-44aa-908c-cd481c8b65b1/-/preview/1000x777/",
         subtitle: {
           ru: "Согласно Национальному календарю, дети получают следующие прививки:\n\n- Новорожденные (в роддоме):\n    - БЦЖ (против туберкулёза);\n    - Гепатит B (первая доза).\n- 2 месяца:\n    - Гепатит B (вторая доза);\n    - АКДС (коклюш, дифтерия, столбняк);\n    - Полиомиелит (оральная или инактивированная вакцина);\n    - Хиб-инфекция (гемофильная инфекция).\n- 3 месяца:\n    - Вторая доза АКДС;\n    - Вторая доза полиомиелита;\n    - Вторая доза Хиб-инфекции.\n- 4 месяца:\n    - Третья доза АКДС;\n    - Третья доза полиомиелита;\n    - Третья доза Хиб-инфекции.\n- 12 месяцев:\n    - Корь, краснуха, паротит (КПК);\n    - Гепатит B (третья доза).\n- 18 месяцев:\n    - Ревакцинация АКДС;\n    - Ревакцинация полиомиелита.\n- 6 лет:\n    - Вторая доза КПК;\n    - Ревакцинация от дифтерии и столбняка (АДС).\n- 14 лет:\n    - Повторная ревакцинация от дифтерии и столбняка (АДС-М).",
           en: "According to the National Immunization Schedule, children receive the following vaccinations:\n\n- Newborns (at the maternity hospital):\n    - BCG (against tuberculosis);\n    - Hepatitis B (first dose).\n- 2 months:\n    - Hepatitis B (second dose);\n    - DTP (whooping cough, diphtheria, tetanus);\n    - Polio (oral or inactivated vaccine);\n    - Hib infection (Haemophilus influenzae type B).\n- 3 months:\n    - Second dose of DTP;\n    - Second dose of polio;\n    - Second dose of Hib infection.\n- 4 months:\n    - Third dose of DTP;\n    - Third dose of polio;\n    - Third dose of Hib infection.\n- 12 months:\n    - Measles, rubella, mumps (MMR);\n    - Hepatitis B (third dose).\n- 18 months:\n    - DTP booster;\n    - Polio booster.\n- 6 years:\n    - Second dose of MMR;\n    - Diphtheria and tetanus booster (DT).\n- 14 years:\n    - Additional diphtheria and tetanus booster (DT-M).",
@@ -1603,8 +1603,8 @@ Kamchiliklari:
   },
   // ***** 13 *****
   {
-    date: "",
-    slug: "semeynyy-vrach",
+    date: "01.04.2025",
+    slug: "rekomendatsii-po-zdorovyu",
     title: {
       ru: "Здоровый образ жизни: как поддерживать свое здоровье без частых визитов к врачу?",
       en: "Healthy Lifestyle: How to Maintain Your Health Without Frequent Doctor Visits?",
@@ -1622,7 +1622,7 @@ Kamchiliklari:
           en: "1. Maintain a Balanced Diet",
           uz: "1. Muvozanatli ovqatlanishni saqlang",
         },
-        img: "https://example.com/qualification.jpg",
+        img: "https://ucarecdn.com/a4e557fc-cc5d-44aa-908c-cd481c8b65b1/-/preview/1000x777/",
         subtitle: {
           ru: "Рацион должен включать:\n- свежие овощи и фрукты (источник витаминов и клетчатки);\n- нежирные белки (курица, рыба, бобовые);\n- полезные жиры (орехи, авокадо, оливковое масло);\n- цельнозерновые продукты (гречка, бурый рис, овсянка);\n- достаточное количество воды (не менее 1,5–2 литров в день).",
           en: "Your diet should include:\n- Fresh vegetables and fruits (source of vitamins and fiber);\n- Lean proteins (chicken, fish, legumes);\n- Healthy fats (nuts, avocado, olive oil);\n- Whole grains (buckwheat, brown rice, oatmeal);\n- Sufficient water intake (at least 1.5–2 liters per day).",
@@ -1635,7 +1635,7 @@ Kamchiliklari:
           en: "2. Stay Physically Active",
           uz: "2. Jismoniy faollikni saqlang",
         },
-        img: "https://example.com/qualification.jpg",
+        img: "https://ucarecdn.com/a4e557fc-cc5d-44aa-908c-cd481c8b65b1/-/preview/1000x777/",
         subtitle: {
           ru: "Регулярные занятия спортом укрепляют сердечно-сосудистую систему, улучшают настроение и помогают поддерживать вес. Достаточно 30 минут умеренной активности (ходьба, плавание, йога) 5 раз в неделю.",
           en: "Regular physical activity strengthens the cardiovascular system, improves mood, and helps maintain weight. Just 30 minutes of moderate activity (walking, swimming, yoga) five times a week is enough.",
