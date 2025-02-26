@@ -1603,44 +1603,45 @@ Kamchiliklari:
   },
   // ***** 13 *****
   {
-    "date": "",
-    "slug": "semeynyy-vrach",
-    "title": {
-      "ru": "Здоровый образ жизни: как поддерживать свое здоровье без частых визитов к врачу?",
-      "en": "Healthy Lifestyle: How to Maintain Your Health Without Frequent Doctor Visits?",
-      "uz": "Sog‘lom turmush tarzi: Shifokorga tez-tez borishni talab qilmaydigan sog‘liqni qanday saqlash mumkin?"
+    date: "",
+    slug: "semeynyy-vrach",
+    title: {
+      ru: "Здоровый образ жизни: как поддерживать свое здоровье без частых визитов к врачу?",
+      en: "Healthy Lifestyle: How to Maintain Your Health Without Frequent Doctor Visits?",
+      uz: "Sog‘lom turmush tarzi: Shifokorga tez-tez borishni talab qilmaydigan sog‘liqni qanday saqlash mumkin?",
     },
-    "description": {
-      "ru": "Здоровье – это не только отсутствие болезней, но и активный образ жизни, правильное питание и забота о своем физическом и психоэмоциональном состоянии. Соблюдение нескольких простых правил поможет вам чувствовать себя хорошо без необходимости частых визитов к врачу.",
-      "en": "Health is not just the absence of diseases but also an active lifestyle, proper nutrition, and taking care of your physical and emotional well-being. Following a few simple rules will help you feel good without the need for frequent doctor visits.",
-      "uz": "Sog‘liq – bu nafaqat kasalliklarning yo‘qligi, balki faol turmush tarzi, to‘g‘ri ovqatlanish va jismoniy hamda ruhiy holatga g‘amxo‘rlik qilishdir. Bir nechta oddiy qoidalarga rioya qilish sizga tez-tez shifokorga borishga hojat qoldirmasdan o‘zingizni yaxshi his qilishga yordam beradi."
+    description: {
+      ru: "Здоровье – это не только отсутствие болезней, но и активный образ жизни, правильное питание и забота о своем физическом и психоэмоциональном состоянии. Соблюдение нескольких простых правил поможет вам чувствовать себя хорошо без необходимости частых визитов к врачу.",
+      en: "Health is not just the absence of diseases but also an active lifestyle, proper nutrition, and taking care of your physical and emotional well-being. Following a few simple rules will help you feel good without the need for frequent doctor visits.",
+      uz: "Sog‘liq – bu nafaqat kasalliklarning yo‘qligi, balki faol turmush tarzi, to‘g‘ri ovqatlanish va jismoniy hamda ruhiy holatga g‘amxo‘rlik qilishdir. Bir nechta oddiy qoidalarga rioya qilish sizga tez-tez shifokorga borishga hojat qoldirmasdan o‘zingizni yaxshi his qilishga yordam beradi.",
     },
-    "option": [
+    option: [
       {
-        "title": {
-          "ru": "1. Соблюдайте сбалансированное питание",
-          "en": "1. Maintain a Balanced Diet",
-          "uz": "1. Muvozanatli ovqatlanishni saqlang"
+        title: {
+          ru: "1. Соблюдайте сбалансированное питание",
+          en: "1. Maintain a Balanced Diet",
+          uz: "1. Muvozanatli ovqatlanishni saqlang",
         },
-        "img": "https://example.com/qualification.jpg",
-        "subtitle": {
-          "ru": "Рацион должен включать:\n- свежие овощи и фрукты (источник витаминов и клетчатки);\n- нежирные белки (курица, рыба, бобовые);\n- полезные жиры (орехи, авокадо, оливковое масло);\n- цельнозерновые продукты (гречка, бурый рис, овсянка);\n- достаточное количество воды (не менее 1,5–2 литров в день).",
-          "en": "Your diet should include:\n- Fresh vegetables and fruits (source of vitamins and fiber);\n- Lean proteins (chicken, fish, legumes);\n- Healthy fats (nuts, avocado, olive oil);\n- Whole grains (buckwheat, brown rice, oatmeal);\n- Sufficient water intake (at least 1.5–2 liters per day).",
-          "uz": "Sizning ratsioningiz quyidagilarni o‘z ichiga olishi kerak:\n- Yangi sabzavotlar va mevalar (vitaminlar va tolalar manbai);\n- Yog‘siz oqsillar (tovuq, baliq, dukkakli mahsulotlar);\n- Foydali yog‘lar (yong‘oq, avakado, zaytun moyi);\n- Butun don mahsulotlari (grechka, jigarrang guruch, suli yormasi);\n- Yetarli miqdorda suv iste’moli (kuniga kamida 1,5–2 litr)."
-        }
+        img: "https://example.com/qualification.jpg",
+        subtitle: {
+          ru: "Рацион должен включать:\n- свежие овощи и фрукты (источник витаминов и клетчатки);\n- нежирные белки (курица, рыба, бобовые);\n- полезные жиры (орехи, авокадо, оливковое масло);\n- цельнозерновые продукты (гречка, бурый рис, овсянка);\n- достаточное количество воды (не менее 1,5–2 литров в день).",
+          en: "Your diet should include:\n- Fresh vegetables and fruits (source of vitamins and fiber);\n- Lean proteins (chicken, fish, legumes);\n- Healthy fats (nuts, avocado, olive oil);\n- Whole grains (buckwheat, brown rice, oatmeal);\n- Sufficient water intake (at least 1.5–2 liters per day).",
+          uz: "Sizning ratsioningiz quyidagilarni o‘z ichiga olishi kerak:\n- Yangi sabzavotlar va mevalar (vitaminlar va tolalar manbai);\n- Yog‘siz oqsillar (tovuq, baliq, dukkakli mahsulotlar);\n- Foydali yog‘lar (yong‘oq, avakado, zaytun moyi);\n- Butun don mahsulotlari (grechka, jigarrang guruch, suli yormasi);\n- Yetarli miqdorda suv iste’moli (kuniga kamida 1,5–2 litr).",
+        },
       },
       {
-        "title": {
-          "ru": "2. Поддерживайте физическую активность",
-          "en": "2. Stay Physically Active",
-          "uz": "2. Jismoniy faollikni saqlang"
+        title: {
+          ru: "2. Поддерживайте физическую активность",
+          en: "2. Stay Physically Active",
+          uz: "2. Jismoniy faollikni saqlang",
         },
-        "img": "https://example.com/qualification.jpg",
-        "subtitle": {
-          "ru": "Регулярные занятия спортом укрепляют сердечно-сосудистую систему, улучшают настроение и помогают поддерживать вес. Достаточно 30 минут умеренной активности (ходьба, плавание, йога) 5 раз в неделю.",
-          "en": "Regular physical activity strengthens the cardiovascular system, improves mood, and helps maintain weight. Just 30 minutes of moderate activity (walking, swimming, yoga) five times a week is enough.",
-          "uz": "Muntazam jismoniy faollik yurak-qon tomir tizimini mustahkamlaydi, kayfiyatni yaxshilaydi va vaznni nazorat qilishga yordam beradi. Haftada besh marta 30 daqiqalik o‘rtacha jismoniy faollik (yurish, suzish, yoga) kifoya qiladi."
-        }
-      }
-    ]
-}
+        img: "https://example.com/qualification.jpg",
+        subtitle: {
+          ru: "Регулярные занятия спортом укрепляют сердечно-сосудистую систему, улучшают настроение и помогают поддерживать вес. Достаточно 30 минут умеренной активности (ходьба, плавание, йога) 5 раз в неделю.",
+          en: "Regular physical activity strengthens the cardiovascular system, improves mood, and helps maintain weight. Just 30 minutes of moderate activity (walking, swimming, yoga) five times a week is enough.",
+          uz: "Muntazam jismoniy faollik yurak-qon tomir tizimini mustahkamlaydi, kayfiyatni yaxshilaydi va vaznni nazorat qilishga yordam beradi. Haftada besh marta 30 daqiqalik o‘rtacha jismoniy faollik (yurish, suzish, yoga) kifoya qiladi.",
+        },
+      },
+    ],
+  },
+];
