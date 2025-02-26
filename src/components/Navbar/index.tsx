@@ -47,9 +47,9 @@ const Header = () => {
           </select>
           <FaAngleDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-[#0129E3] pointer-events-none" />
         </div>
-        <button className="border border-[#0129E3] text-white bg-[#0129E3] px-4 py-2 rounded-3xl font-semibold text-[16px] hover:bg-white transition duration-200 hover:text-[#0129E3]">
+        <a href="https://admin.med-yordam.uz/ru/register" target="_blank" className="border border-[#0129E3] text-white bg-[#0129E3] px-4 py-2 rounded-3xl font-semibold text-[16px] hover:bg-white transition duration-200 hover:text-[#0129E3]">
           Регистрация
-        </button>
+        </a>
       </div>
 
       <button
