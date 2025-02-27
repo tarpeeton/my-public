@@ -10,7 +10,7 @@ export const Header = () => {
         {/* Текстовая часть */}
         <div className="flex-1">
           <Card className="bg-white  rounded-xl shadow-lg">
-            <CardContent>
+            <CardContent className="pt-[24px]">
               <h1 className="text-3xl md:text-4xl font-bold text-black mt-4 md:mt-0">
                 Найдите лучших врачей и клиники рядом с вами
               </h1>
