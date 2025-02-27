@@ -22,7 +22,7 @@ export default function DoctorsCarousel() {
       try {
         const res = await axios.get('https://medyordam.result-me.uz/api/doctor' , {headers: {"Accept-Language": ""}})
 
-        setDoctors(res.data.data)
+        setDoctors(res.data.data || [])
       } catch (error) {
         console.log(error)
       }
@@ -64,7 +64,7 @@ export default function DoctorsCarousel() {
               <div className="p-4">
               {doctor.speciality.map((item , index) => (
                <span key={index} className="bg-[#CFFAFE] px-3 py-1.5 rounded-md text-sm font-semibold">
-                    {item.name[locale]}
+                    {item.name[locale]} f
                 </span>
               ))}
                
@@ -72,7 +72,7 @@ export default function DoctorsCarousel() {
                 <p className="text-sm text-gray-500 mt-1">{doctor.city.name.ru}</p>
                 <div className="flex items-center text-sm mt-2">
                   <FaLocationDot className="w-5 h-5 text-blue-500 mr-1" />
-                  {doctor.receptionTime[0].address[locale]}
+                  {doctor.receptionTime[0]?.address[locale] || ""}
                 </div>
                 <Link
                 href={`/doctors/${doctor.slug}`}
