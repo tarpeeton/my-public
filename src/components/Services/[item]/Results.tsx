@@ -13,7 +13,8 @@ import { FaArrowRight } from "react-icons/fa";
 import { StarRating } from "@/components/Clinics/Clinics";
 import { useLocale } from "next-intl";
 import { ClinickAppLicationModal } from "@/components/Modals/ClinickApplicationModal";
-
+import { FaAngleDown } from "react-icons/fa6";
+import { transformedPrice } from "./itemServices";
 
 interface IDoctorResponse {
   data: IDoctorFull[];
@@ -25,8 +26,10 @@ interface IClinickResponse {
 export const Result = () => {
   const { setDoctors, setClinick, clinick, filterClinickByService } =
     useDoctorStore();
-    const [openAppLication , setOpenApplication] = useState(false)
-    const [clinickID , setClinickID] = useState(0)
+  const [openAppLication, setOpenApplication] = useState(false);
+  const [clinickID, setClinickID] = useState(0);
+  const [openServices, setOpenServices] = useState<Record<number, boolean>>({});
+
 
   const locale = useLocale();
   const serviceIdLS =
@@ -49,13 +52,10 @@ export const Result = () => {
     filterClinickByService(Number(serviceId));
   }, []);
 
-
   const handleOpenAppLicationModal = (id: number) => {
     setClinickID(id);
     setOpenApplication(true);
   };
-
-
 
   useEffect(() => {
     const fetchAllClincik = async () => {
@@ -116,9 +116,10 @@ export const Result = () => {
             </div>
             <div className="flex-grow" />
 
-            <button 
-            onClick={() => handleOpenAppLicationModal(item.id)}
-            className="mt-auto bg-[#0129E3] text-white flex items-center justify-center rounded-full px-10 py-1 text-sm h-12 w-44">
+            <button
+              onClick={() => handleOpenAppLicationModal(item.id)}
+              className="mt-auto font-semibold bg-[#0129E3] text-white flex items-center justify-center rounded-full px-10 py-1 text-sm h-12 w-44"
+            >
               {locale === "ru"
                 ? "Записаться"
                 : locale === "uz"
@@ -158,6 +159,82 @@ export const Result = () => {
                     : "reviews"}
               </p>
             </div>
+            <div className="w-full relative">
+              <button
+               onClick={() =>
+                setOpenServices((prev) => ({
+                  ...prev,
+                  [item.id]: !prev[item.id],
+                }))
+              }
+              
+                className="flex w-full items-center flex-row border border-[#E8E8E8] rounded-[10px] px-2 py-4"
+              >
+                {[...item.services]
+                  .sort((a, b) => {
+                    if (
+                      a.service.categoryId === serviceId &&
+                      b.service.categoryId !== serviceId
+                    )
+                      return -1;
+                    if (
+                      a.service.categoryId !== serviceId &&
+                      b.service.categoryId === serviceId
+                    )
+                      return 1;
+                    return 0;
+                  })
+                  .slice(0, 1)
+                  .map((s, index) => {
+                    const formattedPrice = transformedPrice(s.price);
+
+                    return (
+                      <div
+                        key={index}
+                        className="flex  items-center flex-row flex-nowrap w-full "
+                      >
+                        <p className="flex items-start lg:text-[17px] text-[#7C7C7C] font-medium flex-col gap-2">
+                          {s.service.name.ru}
+                          <span className="ml-2 text-sm  lg:text-[17px] font-medium text-[#7C7C7C]">
+                          {locale === "ru"
+                            ? ` ${formattedPrice} сум`
+                            : locale === "uz"
+                              ? ` ${formattedPrice} so'm`
+                              : ` ${formattedPrice} uzs`}
+                          </span>
+                        </p>
+                      </div>
+                    );
+                  })}
+                <FaAngleDown
+                  className={`text-[#7C7C7C]  transition-all duration-300 ease-out ${openServices[item.id] ? "rotate-180" : ""}`}
+                />
+              </button>
+              {openServices[item.id] && (
+                <div className="w-full border rounded-[12px] border-[#E8E8E8] mt-2">
+                  {item.services.map((service, index) => {
+                    const formattedPrice = transformedPrice(service.price);
+                    return (
+                      <div
+                        key={index}
+                        className="px-2 py-2 border-b border-b-[#E8E8E8]"
+                      >
+                        <p className="text-[#7C7C7C] font-medium lg:text-[17px]">
+                          {service.service.name[locale]}
+                        </p>
+                        <p className="text-[#7C7C7C] font-medium lg:text-[17px]">
+                          {locale === "ru"
+                            ? ` ${formattedPrice} сум`
+                            : locale === "uz"
+                              ? ` ${formattedPrice} so'm`
+                              : ` ${formattedPrice} uzs`}
+                        </p>
+                      </div>
+                    );
+                  })}
+                </div>
+              )}
+            </div>
           </div>
 
           <div className="flex-1 h-full w-full overflow-hidden">
@@ -189,8 +266,12 @@ export const Result = () => {
           </div>
         </Card>
       ))}
-       <ClinickAppLicationModal type="CLINCIK" clinickID={clinickID} open={openAppLication} setClose={() => setOpenApplication(false)} />
-
+      <ClinickAppLicationModal
+        type="CLINCIK"
+        clinickID={clinickID}
+        open={openAppLication}
+        setClose={() => setOpenApplication(false)}
+      />
     </section>
   );
 };

@@ -8,9 +8,9 @@ export default async function Home() {
       "https://medyordam.result-me.uz/api/service-category"
     );
     return (
-      <div>
-        <MainServices data={apiResponse?.data || []}  totalElements={apiResponse?.pagination?.totalElements || 0}/>
-      </div>
+      <section>
+        <MainServices data={apiResponse?.data || []}  totalElements={apiResponse.data.length}/>
+      </section>
     );
   } catch (error) {
     console.error("Failed to fetch professional data", error);

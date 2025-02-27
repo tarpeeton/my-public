@@ -10,6 +10,7 @@ export interface ServiceData {
       ru: string;
       en: string;
     };
+    categorySlug: string
   }
   export interface IPagination {
     currentPage?: number;

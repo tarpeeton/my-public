@@ -6,14 +6,22 @@ import { ServiceData } from "../types/service";
 import { GrLinkNext } from "react-icons/gr";
 import { Pagination } from "../Paginations";
 import { ItemsPerPageSelect } from "../Select";
-import { useRouter } from "next/navigation";
 import BreacdCrambs from "@/components/bread-crumb";
 import { ServiceName } from "./Banner";
 import { useDoctorStore } from "@/store/Doctors";
+import { usePathname, useRouter } from "next/navigation";
+
 interface IServicesProps {
   serviceData: ServiceData[];
   total: number;
 }
+
+export const transformedPrice = (price: number | null): string => {
+  if (price === null) return "";
+  return new Intl.NumberFormat("ru-RU", {
+    maximumFractionDigits: 0,
+  }).format(price);
+};
 
 export const ItemServices = ({ serviceData, total }: IServicesProps) => {
   const locale = useLocale() as "ru" | "uz" | "en";
@@ -21,7 +29,10 @@ export const ItemServices = ({ serviceData, total }: IServicesProps) => {
   const { getMinPriceByServiceId } = useDoctorStore();
   const [perPage, setPerPage] = useState(9);
   const router = useRouter();
+  const pathname = usePathname();
   const totalPages = Math.ceil(total / perPage);
+
+  
   const [serviceName, setServiceName] = useState<ServiceName>({
     ru: "Услуги",
     uz: "Xizmatlar",
@@ -47,10 +58,12 @@ export const ItemServices = ({ serviceData, total }: IServicesProps) => {
 
   const handleLink = (
     id: number,
-    name: { ru: string; uz: string; en: string }
+    name: { ru: string; uz: string; en: string },
+    slug: string
   ) => {
     localStorage.setItem("serviceName", JSON.stringify(name));
-    router.push(`services/${id}`);
+    const currentPath = pathname.replace(/\/$/, "");
+    router.push(`${currentPath}/${slug}`);
   };
 
   useEffect(() => {
@@ -64,13 +77,6 @@ export const ItemServices = ({ serviceData, total }: IServicesProps) => {
       }
     }
   }, []);
-
-  const transformedPrice = (price: number | null): string => {
-    if (price === null) return "";
-    return new Intl.NumberFormat("ru-RU", {
-      maximumFractionDigits: 0,
-    }).format(price);
-  };
 
   return (
     <section>
@@ -119,7 +125,9 @@ export const ItemServices = ({ serviceData, total }: IServicesProps) => {
               </div>
               <div className="absolute   flex group justify-center bottom-0 lg:bottom-1 lg:right-2 right-0 border-l border-t  border-tl-[#E8E8E8] rounded-full  bg-white z-10 w-[70px] h-[70px] md:w-[80px] md:h-[80px] flex-row items-center ">
                 <button
-                  onClick={() => handleLink(service.id, service.name)}
+                  onClick={() =>
+                    handleLink(service.categoryId, service.name, service.slug)
+                  }
                   className="border w-[40px] lg:w-[55px] lg:h-[55px] flex items-center justify-center h-[40px] bg-numberOrBg border-[#E8E8E8] rounded-full"
                 >
                   <GrLinkNext className="text-white group-hover:ml-[8px] transition-all duration-100" />

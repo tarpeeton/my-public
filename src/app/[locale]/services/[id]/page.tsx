@@ -3,13 +3,13 @@ import { ServiceItemMain } from "@/components/Services/[item]/Main";
 
 interface PageProps {
   params: {
-    id: number; 
+    slug: string; 
   };
 }
 
 export default async function Page({ params }: PageProps) {
-  const { id } = params;
-
+  const { slug } = params;
+  
   try {
     const { data } = await axios.get(
       `https://medyordam.result-me.uz/api/service?categoryId=${id}`
