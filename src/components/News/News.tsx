@@ -79,14 +79,14 @@ export default function NewsCard() {
               <div className="relative bg-white shadow hover:shadow-md rounded-[25px] p-6 w-full mb-3">
                 
                 <span className="text-blue-600 text-sm font-semibold">
-                  {news.author} • {news.date}
+                  {news.date}
                 </span>
 
                 <h2 className="text-xl font-semibold mt-2">{news.title}</h2>
 
                 <p className="text-gray-500 text-sm mt-2">{news.description}</p>
 
-                <div className="relative w-full h-[180px] mt-4 overflow-hidden rounded-lg z-10 inverted-card-news">
+                <div className="relative w-full h-[180px] mt-4 overflow-hidden rounded-lg z-10 inverted-card">
                   <Image
                     src={news.image}
                     alt="news"
