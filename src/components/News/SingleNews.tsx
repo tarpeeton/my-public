@@ -15,7 +15,7 @@ export default function NewsPage() {
   const locale = useLocale() as "ru" | "uz" | "en"
 
 
-  const [data , setData] = useState<INewsData | {}>({})
+  const [data , setData] = useState<INewsData | []>([])
 
   useEffect(() => {
     const dataSingle = NEWS_DATA.filter((item) => item.slug === slug)
@@ -41,7 +41,6 @@ export default function NewsPage() {
       <div className="text-sm text-[#0129E3] font-semibold mb-4">
         Zandra Wu • 18 Янв 2024
       </div>
-
 
 
 

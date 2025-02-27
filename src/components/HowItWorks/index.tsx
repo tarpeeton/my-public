@@ -91,7 +91,7 @@ const getNumIcon = (index: number) => {
   return nums[index];
 };
 
-const HowItWorks = () => {
+const HowItWorksDesktop = () => {
   return (
     <div className="w-full bg-white mb-64">
       <div className="max-w-7xl mx-auto px-4 py-12 md:px-16">
@@ -166,4 +166,4 @@ const HowItWorks = () => {
   );
 };
 
-export default HowItWorks;
+export default HowItWorksDesktop;
