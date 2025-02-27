@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 import { FaPhone } from "react-icons/fa6";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import { FaArrowRight } from "react-icons/fa";
 import { FaStar } from "react-icons/fa";
 
@@ -22,6 +22,7 @@ const clinics: {
   rating: number;
   reviews: number;
   phone: string;
+  slug: string;
   address: string;
   location: [number, number];
 }[] = [
@@ -35,6 +36,7 @@ const clinics: {
     phone: "+998 (99) 838 80 78",
     address: "ул. Ховос д. 22",
     location: [41.2795, 69.2401],
+    slug: "intermed"
   },
   {
     id: 2,
@@ -46,6 +48,8 @@ const clinics: {
     phone: "+998 (99) 838 80 78",
     address: "ул. Ховос д. 22",
     location: [41.2965, 69.2401],
+    slug: "intermed"
+
   },
   {
     id: 3,
@@ -57,6 +61,8 @@ const clinics: {
     phone: "+998 (99) 838 80 78",
     address: "ул. Ховос д. 22",
     location: [41.2995, 79.1411],
+    slug: "intermed"
+
   },
   {
     id: 4,
@@ -68,12 +74,14 @@ const clinics: {
     phone: "+998 (99) 838 80 78",
     address: "ул. Ховос д. 22",
     location: [41.2995, 69.1491],
+    slug: "intermed"
+
   },
 ];
 
 
 
-const StarRating = ({ rating }) => {
+export const StarRating = ({ rating }) => {
   return (
     <div className="flex items-center space-x-1">
       {[...Array(5)].map((_, i) => {
@@ -129,9 +137,9 @@ export default function ClinicsPage() {
               </div>
               <div className="flex-grow" />
 
-              <Button className="mt-auto bg-[#0129E3] rounded-full px-10 py-1 text-sm h-12 w-44">
+              <Link href={`/clinick/${clinic.slug}`} className="mt-auto bg-[#0129E3] text-white flex items-center justify-center rounded-full px-10 py-1 text-sm h-12 w-44">
                 Подробнее
-              </Button>
+              </Link>
             </div>
 
             <div className="flex-1 flex flex-col gap-4">
@@ -157,7 +165,7 @@ export default function ClinicsPage() {
               <p className="text-gray-500">{clinic.address}</p>
               <div className="flex items-center gap-2 flex-nowrap mb-5 mt-1">
                 <Link
-                  href="#"
+                  href={`/clinick/${clinic.slug}`}
                   className="text-blue-600 hover:underline font-semibold"
                 >
                   Открыть в Яндекс картах

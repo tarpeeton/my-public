@@ -5,6 +5,7 @@ import {
   FaFacebook,
 } from "react-icons/fa";
 import Image from "next/image";
+import { Link } from "@/i18n/routing";
 
 const Footer = () => {
   return (
@@ -22,27 +23,25 @@ const Footer = () => {
           <p className="text-sm mt-2">Консультации от врачей</p>
         </div>
         <div>
-          <h3 className="font-medium text-[#F8F8F8] text-sm">Выполнить</h3>
           <ul className="mt-2 space-y-2">
             <li>
-              <a href="#" className="hover:text-blue-400">
+              <Link href="/clinick" className="hover:text-blue-400">
                 Клиники
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="hover:text-blue-400">
+              <Link href="/doctors" className="hover:text-blue-400">
                 Врачи
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="hover:text-blue-400">
+              <Link href="/services" className="hover:text-blue-400">
                 Услуги
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
         <div>
-          <h3 className="font-medium text-[#F8F8F8] text-sm">Выполнить</h3>
           <ul className="mt-2 space-y-2">
             <li>
               <a href="#" className="hover:text-blue-400">
@@ -50,19 +49,19 @@ const Footer = () => {
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-blue-400">
+              <a href="https://admin.med-yordam.uz/ru/register" target="_blank" className="hover:text-blue-400">
                 Регистрация
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-blue-400">
+              <a href="https://admin.med-yordam.uz/ru/login" target="_blank" className="hover:text-blue-400">
                 Вход в личный кабинет
               </a>
             </li>
           </ul>
         </div>
         <div className="flex flex-col items-start mt-4">
-          <p className="text-lg">+998 (99) 838 80 78</p>
+          <Link href={'tel:+998998388078'} className="text-lg">+998 (99) 838 80 78</Link>
           <div className="flex space-x-7 mt-2">
             <a href="#" className="text-white hover:text-blue-400">
               <FaInstagram size={20} />
@@ -80,7 +79,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="border-t border-gray-700 mt-6 pt-4 text-sm flex justify-between items-center">
-        <p>MedYordam 2024 - Все права защищены</p>
+        <p>Med Yordam 2024 - Все права защищены</p>
         <div>
           <a href="#" className="hover:text-blue-400">
             Обработка данных

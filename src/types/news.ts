@@ -1,8 +1,4 @@
-interface IMultiLang {
-  ru: string;
-  uz: string;
-  en: string;
-}
+import { IMultiLang } from "./Doctor";
 
 export interface INewsData {
   date: string;
