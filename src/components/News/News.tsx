@@ -86,7 +86,7 @@ export default function NewsCard() {
 
                 <p className="text-gray-500 text-sm mt-2">{news.description}</p>
 
-                <div className="relative w-full h-[180px] mt-4 overflow-hidden rounded-lg z-10 inverted-card-news">
+                <div className="relative w-full h-[180px] mt-4 overflow-hidden rounded-lg z-10 inverted-card">
                   <Image
                     src={news.image}
                     alt="news"
