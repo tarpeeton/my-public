@@ -18,7 +18,7 @@ export const Header = () => {
                 Med Yordam — это современная платформа, которая объединяет
                 врачей, клиники и пациентов.
               </p>
-              <Button className="mt-4 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 text-lg">
+              <Button className="mt-4 bg-[#0129E3] hover:bg-blue-700 text-white px-6 py-3 text-lg rounded-3xl">
                 Найти врача
               </Button>
             </CardContent>

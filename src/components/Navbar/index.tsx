@@ -22,8 +22,9 @@ const Header = () => {
     <header className="flex justify-between items-center px-4 md:px-10 py-4 bg-white sticky top-0 z-50 shadow-md">
 
       <div className="flex items-center gap-2">
-        <Image src="/Union.png" alt="Логотип" width={40} height={40} />
-        <span className="text-2xl font-bold">Med Yordam</span>
+        <Link href={"/"}>
+        <Image src="/Logo.png" alt="Логотип" width={200} height={200} />
+        </Link>
       </div>
 
       {/* Десктопное меню */}

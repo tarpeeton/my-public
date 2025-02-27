@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import {
   Accordion,
@@ -7,7 +7,7 @@ import {
   AccordionContent,
 } from "@/components/ui/accordion";
 import { useState } from "react";
-import clsx from "clsx"; 
+import "./faq.css";
 
 const faqItems = [
   {
@@ -43,10 +43,10 @@ const faqItems = [
 ];
 
 export default function FAQ() {
-  const [openIndex, setOpenIndex] = useState<number | null>(null); 
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const handleToggle = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index); 
+    setOpenIndex(openIndex === index ? null : index);
   };
 
   return (
@@ -55,30 +55,25 @@ export default function FAQ() {
         FAQ
       </span>
       <div className="flex items-center space-x-3 mb-6">
-        <h2 className="text-2xl font-bold">Часто задаваемые вопросы</h2>
+        <h2 className="text-4xl font-bold">Часто задаваемые вопросы</h2>
       </div>
       <Accordion type="single" collapsible className="space-y-4">
         {faqItems.map((item, index) => (
-          <AccordionItem
-            key={index}
-            value={`item-${index}`}
-            className="border rounded-lg transition-all duration-300"
-          >
-            <AccordionTrigger
-              className={clsx(
-                "px-6 py-4 text-lg font-medium text-start transition-colors duration-300 hover:no-underline",
-                openIndex === index ? "text-blue-600" : "text-black"
-              )}
-              onClick={() => handleToggle(index)}
-            >
-              {item.question}
-            </AccordionTrigger>
-            <AccordionContent
-              className="px-6 py-4 text-gray-600 shadow-md rounded-b-lg bg-white text-start"
-            >
-              {item.answer}
-            </AccordionContent>
-          </AccordionItem>
+         <AccordionItem
+         key={index}
+         value={`item-${index}`}
+         className="border rounded-lg transition-all duration-300 py-2 
+         data-[state=open]:shadow-[0_12px_20px_0_rgba(1,41,227,0.09)] data-[state=open]:bg-white"
+
+       >
+         <AccordionTrigger className="px-6 py-4 text-lg font-semibold text-start hover:no-underline">
+           {item.question}
+         </AccordionTrigger>
+         <AccordionContent className="px-6 py-4 text-gray-600 bg-white text-start text-base">
+           {item.answer}
+         </AccordionContent>
+       </AccordionItem>
+       
         ))}
       </Accordion>
     </div>
