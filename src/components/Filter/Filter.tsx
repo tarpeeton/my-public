@@ -14,9 +14,11 @@ import {
 } from "../ui/select";
 import { Button } from "../ui/button";
 import { useSpecialityStore } from "@/store/FilterDoctorClinick";
+import Image from "next/image";
 
 const Filter = () => {
   const t = useTranslations("Doctor");
+  const locale = useLocale()
   const {
     fetchSpecialities,
     specialities,
@@ -31,8 +33,8 @@ const Filter = () => {
     setName,
     setDoctorNameOrClinick,
     searchingName,
+    getFilteredAll,
   } = useSpecialityStore();
-  const locale = useLocale();
 
   useEffect(() => {
     fetchSpecialities();
@@ -122,11 +124,26 @@ const Filter = () => {
             </Select>
 
             {/* Кнопка поиска */}
-            <Button className="bg-[#0129E3] text-white hover:bg-[#0129E3] flex items-center">
+            <Button
+              type="button"
+              onClick={() => {
+                const filteredData = getFilteredAll();
+                console.log("Filtered data:", filteredData);
+              }}
+              className="bg-[#0129E3] text-white hover:bg-[#0129E3] flex items-center"
+            >
               <Search className="mr-2" /> {t("search")}
             </Button>
           </div>
         </form>
+      </div>
+      <div className="w-full  flex items-center justify-center">
+              <div className="lg:w-[500px] flex items-center justify-center flex-col">
+                <Image alt="no result image" quality={100} width={1200} height={1200} src={'https://ucarecdn.com/14d0b10b-8127-49ac-928c-380cce31be91/-/preview/1000x800/'} />
+              <p className="text-[18px] text-[#050B2B] md:text-[20px] lg:text-[24px] font-medium">
+                {locale === "ru" ? "Ничего не нашлось по вашему запросу" : locale === "uz"  ? "Sizning so'rovingiz bo'yicha hech narsa topilmadi" : "Nothing found for your request"}
+              </p>
+              </div>
       </div>
     </div>
   );
