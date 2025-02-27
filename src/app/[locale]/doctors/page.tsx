@@ -1,6 +1,5 @@
 "use client";
-
-import { Button } from "@/components/ui/button";
+import { useEffect , useState } from "react";
 import { FiArrowRight } from "react-icons/fi";
 import { FaLocationDot } from "react-icons/fa6";
 import Image from "next/image";
@@ -80,6 +79,7 @@ export default function DoctorsCarousel() {
                 <Image
                   src={doctor.photo?.url || "/fallback.jpg"}
                   alt={doctor.name}
+
                   fill={true}
                   className="rounded-t-2xl object-cover object-top"
                 />
@@ -116,11 +116,12 @@ export default function DoctorsCarousel() {
                     Подробнее <FiArrowRight className="w-4 ml-1" />
                   </Link>
                 </div>
+
               </div>
             </div>
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }

@@ -79,7 +79,7 @@ export default function NewsCard() {
               <div className="relative bg-white shadow hover:shadow-md rounded-[25px] p-6 w-full mb-3">
                 
                 <span className="text-blue-600 text-sm font-semibold">
-                  {news.author} • {news.date}
+                  {news.date}
                 </span>
 
                 <h2 className="text-xl font-semibold mt-2">{news.title}</h2>

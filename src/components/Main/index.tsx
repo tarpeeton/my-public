@@ -1,4 +1,4 @@
-import React from "react";
+
 import Header from "../Header";
 import Filter from "../Filter/Filter";
 import Advantages from "../Advantages/index";
@@ -11,6 +11,8 @@ import News from "../News/News";
 import Discount from "../Discount/Discount";
 import HowItWorks from "../HowItWorks";
 import LogosAnimation from "../LogosAnimation/LogoAnim";
+
+
 
 const Main = () => {
   return (

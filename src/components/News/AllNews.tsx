@@ -67,7 +67,7 @@ export default function NewsPage() {
 
             <div className="relative w-full h-[180px] mt-4 overflow-hidden rounded-lg">
               <Image
-                src={news.option[0].img}
+                src={news.option[0].img || news.option[1].img || news.option[2].img || ""}
                 alt="news"
                 fill
                 objectFit="cover"
