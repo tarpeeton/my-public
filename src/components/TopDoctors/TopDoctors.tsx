@@ -115,6 +115,7 @@ export default function DoctorsCarousel() {
                       ? doctor.morespec.slice(0, 50) + "..."
                       : doctor.morespec}
                   </p>
+                  
                   <div className="flex items-center text-sm mt-2">
                     <FaLocationDot className="w-5 h-5 text-blue-500 mr-1" />
                     {doctor.location || "Неизвестный адрес"}

@@ -8,7 +8,7 @@ import { MdMoneyOff } from "react-icons/md";
 
 export default function TelegramBotSection() {
   return (
-    <div className="flex justify-center px-5 lg:px-16 mt-24 mb-5">
+    <div className="flex justify-center px-5 md:px-16 mt-44 mb-24">
       <div className="lg:h-[400px] lg:w-[1400px] lg:relative lg:flex lg:flex-row lg:items-center bg-gradient-to-r from-[#379FF2] to-[#022FE4] rounded-3xl shadow-lg text-white  p-8  max-w-8xl">
         <div className="relative  flex justify-center -ml-24 ">
           <Image
@@ -49,7 +49,7 @@ export default function TelegramBotSection() {
           </ul>
 
         </div>
-        <button className="bg-white text-blue-600 py-3 rounded-full text-medium font-semibold hover:bg-gray-200 transition duration-300 lg:self-end px-10 mt-4 w-full lg:w-auto">
+        <button className="md:mb-4 bg-white text-[#0129E3] py-3 rounded-full text-medium font-semibold hover:bg-gray-200 transition duration-300 lg:self-end px-10 mt-4 w-full lg:w-auto">
           Перейти к боту
         </button>
       </div>

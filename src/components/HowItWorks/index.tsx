@@ -9,13 +9,13 @@ const stepsData = {
       position: "bottom-extra",
     },
     {
-      title: "Поиск врача",
+      title: "Обновления",
       description:
         "Обновляйте информацию, редактируйте контакты и график работы",
       position: "bottom",
     },
     {
-      title: "Назначить встречу",
+      title: "Получайте пациентов",
       description:
         "Получайте запросы и записывайте пациентов через платформу и Telegram",
       position: "top",
@@ -23,20 +23,20 @@ const stepsData = {
   ],
   patient: [
     {
-      title: "Регистрация",
-      description: "Пройдите верификацию и заполните свою карточку врача",
+      title: "Поиск врача",
+      description: "ищите проверенных специалистов в любой точке города",
       position: "bottom-extra",
     },
     {
-      title: "Поиск врача",
+      title: "Поиск услуг",
       description:
-        "Обновляйте информацию, редактируйте контакты и график работы",
+        "выберите подходящую вам услугу с возможностью поиска услуг и врачей на карте",
       position: "bottom",
     },
     {
       title: "Назначить встречу",
       description:
-        "Получайте запросы и записывайте пациентов через платформу и Telegram",
+        "запишитесь к понравившемуся специалисту и он обязательно свяжется с вами",
       position: "top",
     },
   ],
@@ -47,13 +47,12 @@ const stepsData = {
       position: "bottom-extra",
     },
     {
-      title: "Поиск врача",
-      description:
-        "Обновляйте информацию, редактируйте контакты и график работы",
+      title: "Обновления",
+      description: "обновляйте информацию о клинике и добавляйте своих врачей",
       position: "bottom",
     },
     {
-      title: "Назначить встречу",
+      title: "Получайте пациентов",
       description:
         "Получайте запросы и записывайте пациентов через платформу и Telegram",
       position: "top",
@@ -105,10 +104,25 @@ const HowItWorksDesktop = () => {
                 <h2 className="text-4xl font-bold">Как это работает</h2>
               </div>
             </div>
-            <TabsList className="flex gap-4">
-              <TabsTrigger value="doctor">Врач</TabsTrigger>
-              <TabsTrigger value="patient">Пациент</TabsTrigger>
-              <TabsTrigger value="clinic">Клиника</TabsTrigger>
+            <TabsList className="flex gap-1 p-1 rounded-2xl ">
+              <TabsTrigger
+                value="doctor"
+                className="border-gray-200 rounded-l-2xl flex-1 data-[state=active]:border-2 data-[state=active]:border-[#0129E3] data-[state=active]:bg-white"
+              >
+                Врач
+              </TabsTrigger>
+              <TabsTrigger
+                value="patient"
+                className="border-gray-200 flex-1 data-[state=active]:border-2 data-[state=active]:border-[#0129E3] data-[state=active]:bg-white"
+              >
+                Пациент
+              </TabsTrigger>
+              <TabsTrigger
+                value="clinic"
+                className="border-gray-200 rounded-r-2xl flex-1 data-[state=active]:border-2 data-[state=active]:border-[#0129E3] bg-white"
+              >
+                Клиника
+              </TabsTrigger>
             </TabsList>
           </div>
 
@@ -125,7 +139,7 @@ const HowItWorksDesktop = () => {
               <TabsContent
                 key={key}
                 value={key}
-                className="relative z-10 flex justify-between"
+                className="relative z-10  justify-between min-h-[300px] transition-all duration-300 ease-in-out hidden data-[state=active]:flex"
               >
                 {steps.map((step, index) => (
                   <div
