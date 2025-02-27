@@ -10,8 +10,8 @@ export default function NewsPage() {
   const { slug } = useParams();
   const locale = useLocale() as "ru" | "uz" | "en";
   console.log(slug, "SLUG");
-
   const [data, setData] = useState<INewsData | {}>({});
+
 
   useEffect(() => {
     const dataSingle = NEWS_DATA.filter((item) => item.slug === slug);
@@ -35,7 +35,10 @@ export default function NewsPage() {
 
       {/* OPTIONLARNI MAP QILASIZ AGAR RASM BOLSA RASMINI KORSATASIZ AGAR BOLMASA KORSTMAYSIN ?? && ORQALI ISHLANG */}
 
+</div>
+
       <div></div>
+
       <div className="w-full h-[400px] md:h-[635px] overflow-hidden rounded-3xl">
         <Image
           src="/single-news.jpg"
