@@ -1,11 +1,12 @@
 "use client";
 
 import Image from "next/image";
+import useSwiperNavigation from "@/hooks/useSwiperPrevNext";
 import { HiArrowRight } from "react-icons/hi";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
-import { Navigation } from "swiper/modules";
+import { FaChevronLeft , FaChevronRight } from "react-icons/fa6";
 import "./spec.css";
 
 const cards = [
@@ -15,6 +16,8 @@ const cards = [
 ];
 
 export default function SpecializationCards() {
+  const { swiperRef, handlePrev, handleNext } = useSwiperNavigation();
+
   return (
     <div className="lg:px-[100px] mt-24">
       <div className="w-full px-6">
@@ -22,24 +25,42 @@ export default function SpecializationCards() {
         <span className="bg-button-gradient mb-2 text-white px-1 py-1.5 rounded-md text-sm font-semibold inline-block -rotate-[5deg]">
           Специализация
         </span>
-        <h2 className="text-4xl font-semibold mb-4">Популярные направления</h2>
-        
+        <div className="flex flex-row justify-between">
+          <h2 className="text-4xl font-semibold mb-4">
+            Популярные направления
+          </h2>
+          <div className="flex flex-row items-center gap-2 ">
+          <button
+              onClick={handlePrev}
+              className="hover:bg-blue-500 duration-100 md:w-14 w-10 h-10 flex items-center justify-center md:h-14 rounded-full bg-[#0129E3] text-white"
+            >
+              <FaChevronLeft />
+            </button>
+            <button
+              onClick={handleNext}
+              className="hover:bg-blue-500 duration-100 md:w-14 w-10 h-10 flex items-center justify-center md:h-14 rounded-full bg-[#0129E3] text-white"
+            >
+              <FaChevronRight />
+            </button>
+          </div>
+        </div>
+
         {/* Swiper для карточек */}
         <Swiper
-          modules={[Navigation]}
+         
           spaceBetween={20}
-          navigation
-          loop={true}
+          onSwiper={(swiper) => (swiperRef.current = swiper)}
           breakpoints={{
-            320: { slidesPerView: 1 }, // Мобильные устройства
-            768: { slidesPerView: 2 }, // Планшеты
-            1024: { slidesPerView: 3 }, // Десктоп
+            320: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+            1420: { slidesPerView: 4 },
           }}
         >
           {cards.map((item, index) => (
             <SwiperSlide key={index}>
-              <div className="relative">
-                <div className="relative  h-[250px] bg-teal-500 p-4 flex flex-col justify-between inverted-radius overflow-hidden">
+              <div className="relative w-full">
+                <div className="relative h-[250px] bg-teal-500 p-4 flex flex-col justify-between inverted-radius overflow-hidden">
                   <h3 className="text-lg text-end font-semibold text-white absolute top-4 right-4 z-10">
                     {item.title}
                   </h3>

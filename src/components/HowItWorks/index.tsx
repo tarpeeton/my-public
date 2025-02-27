@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 
 const stepsData = {
@@ -59,11 +59,7 @@ const stepsData = {
       position: "top",
     },
   ],
- 
 };
-
-
-
 
 const getStepIcon = (index: number) => {
   const icons = [
@@ -99,18 +95,22 @@ const HowItWorks = () => {
   return (
     <div className="w-full bg-white mb-64">
       <div className="max-w-7xl mx-auto px-4 py-12 md:px-16">
-       
-
         <Tabs defaultValue="doctor">
           <div className="flex flex-row items-center justify-between">
-          <h2 className="text-2xl font-bold">Как это работает</h2>
-          <TabsList className="flex gap-4">
-            <TabsTrigger value="doctor">Врач</TabsTrigger>
-            <TabsTrigger value="patient">Пациент</TabsTrigger>
-            <TabsTrigger value="clinic">Клиника</TabsTrigger>
-          </TabsList>
+            <div>
+              <span className="bg-button-gradient mb-2 text-white px-4 py-1 rounded-md text-sm font-semibold inline-block -rotate-[5deg]">
+                Шаги
+              </span>
+              <div className="flex flex-row justify-between items-center mb-4 relative">
+                <h2 className="text-4xl font-bold">Как это работает</h2>
+              </div>
+            </div>
+            <TabsList className="flex gap-4">
+              <TabsTrigger value="doctor">Врач</TabsTrigger>
+              <TabsTrigger value="patient">Пациент</TabsTrigger>
+              <TabsTrigger value="clinic">Клиника</TabsTrigger>
+            </TabsList>
           </div>
-      
 
           <div className="relative mt-16">
             <div className="absolute top-24 left-0 w-full">

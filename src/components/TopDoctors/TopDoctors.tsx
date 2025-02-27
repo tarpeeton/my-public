@@ -5,18 +5,21 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation, Autoplay } from "swiper/modules";
 import { Button } from "@/components/ui/button";
-import { FiArrowRight, FiArrowLeft } from "react-icons/fi";
+import { FaChevronLeft , FaChevronRight } from "react-icons/fa6";
 import { FaLocationDot } from "react-icons/fa6";
 import Image from "next/image";
 import { FaStar } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useLocale } from "next-intl";
+import useSwiperNavigation from "@/hooks/useSwiperPrevNext";
+import { FiArrowRight } from "react-icons/fi";
 
 export default function DoctorsCarousel() {
   const [doctors, setDoctors] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const { swiperRef, handlePrev, handleNext } = useSwiperNavigation();
   const locale = useLocale() as "ru" | "uz" | "en";
 
   useEffect(() => {
@@ -40,7 +43,7 @@ export default function DoctorsCarousel() {
     }
     fetchDoctors();
   }, []);
-  
+
   if (loading) return <p>Загрузка...</p>;
   if (error) return <p className="text-red-500">{error}</p>;
 
@@ -52,26 +55,27 @@ export default function DoctorsCarousel() {
         </span>
         <div className="flex justify-between items-center mb-4 relative">
           <h2 className="text-4xl font-semibold">Топ 10 врачей Ташкента</h2>
-          <div className="lg:absolute lg:top-0 lg:right-0 lg:flex lg:gap-2 hidden">
-            <div
-              id="doctors-prev"
-              className="swiper-button-prev !w-10 !h-10 bg-[#6236ff] text-white rounded-full flex items-center justify-center shadow-lg"
+
+          <div className="flex flex-row items-center gap-2">
+            <button
+              onClick={handlePrev}
+              className="hover:bg-blue-500 duration-100 md:w-14 w-10 h-10 flex items-center justify-center md:h-14 rounded-full bg-[#0129E3] text-white"
             >
-              <FiArrowLeft className="w-5 h-5" />
-            </div>
-            <div
-              id="doctors-next"
-              className="swiper-button-next !w-10 !h-10 bg-[#6236ff] text-white rounded-full flex items-center justify-center shadow-lg"
+              <FaChevronLeft />
+            </button>
+            <button
+              onClick={handleNext}
+              className="hover:bg-blue-500 duration-100 md:w-14 w-10 h-10 flex items-center justify-center md:h-14 rounded-full bg-[#0129E3] text-white"
             >
-              <FiArrowRight className="w-5 h-5" />
-            </div>
+              <FaChevronRight />
+            </button>
           </div>
         </div>
-
         <Swiper
-          modules={[Navigation, Autoplay]}
           loop={true}
           spaceBetween={20}
+          onSwiper={(swiper) => (swiperRef.current = swiper)}
+          modules={[Navigation, Autoplay]}
           navigation={{
             nextEl: "#doctors-next",
             prevEl: "#doctors-prev",
@@ -84,14 +88,13 @@ export default function DoctorsCarousel() {
           }}
         >
           {doctors.map((doctor, index) => (
-            <SwiperSlide key={index}>
-              <div className="px-5 lg:min-h-[510px] bg-white rounded-2xl overflow-hidden mb-10 shadow-sm hover:shadow-md duration-200 flex flex-col justify-between">
+            <SwiperSlide key={index} className="px-5 md:px-0">
+              <div className="lg:min-h-[510px] bg-white rounded-2xl overflow-hidden mb-10 shadow-sm hover:shadow-md duration-200 flex flex-col justify-between">
                 <div className="w-full 2xl:h-[300px] h-[250px] relative">
                   <Image
-                    src={doctor.image || "/default-doctor.jpg"}
+                    src={doctor.photo?.url || "/fallback.jpg"}
                     alt={doctor.name}
-                    fill={true}
-                    quality={100}
+                    fill
                     className="rounded-t-2xl object-cover object-top"
                   />
                   <div className="absolute bottom-3 bg-white px-2 py-1 rounded-r-md flex items-center shadow-md gap-1">
@@ -103,7 +106,7 @@ export default function DoctorsCarousel() {
                 </div>
                 <div className="p-4 flex flex-col flex-grow">
                   <span className="bg-[#CFFAFE] w-max px-3 py-1.5 rounded-md text-sm font-semibold">
-                    {doctor.specialty || "Неизвестно"}
+                  {doctor.speciality?.[0]?.name || "Неизвестно"}
                   </span>
 
                   <h3 className="text-lg font-semibold mt-2">{doctor.name}</h3>
@@ -129,7 +132,7 @@ export default function DoctorsCarousel() {
         </Swiper>
 
         <div className="flex justify-center mt-5">
-          <Button className="bg-blue-600 text-white px-7 py-6 rounded-full mb-[40px]">
+          <Button className="bg-blue-600 text-white px-7 py-6 rounded-full mb-[40px] hover:bg-blue-500">
             Посмотреть всех
           </Button>
         </div>
