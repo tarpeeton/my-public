@@ -5,9 +5,6 @@ import Discount from "@/components/Discount/Discount";
 import NewsCard from "@/components/News/News";
 import LogosAnimation from "@/components/LogosAnimation/LogoAnim";
 
-
-
-
 function allClinics() {
   return (
     <div>
@@ -19,7 +16,7 @@ function allClinics() {
       </div>
       <div className="mb-24">
         <LogosAnimation />
-        </div>
+      </div>
     </div>
   );
 }
