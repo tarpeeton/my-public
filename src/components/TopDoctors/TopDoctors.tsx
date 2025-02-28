@@ -4,8 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation, Autoplay } from "swiper/modules";
-import { Button } from "@/components/ui/button";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
+import { FaChevronLeft , FaChevronRight } from "react-icons/fa6";
 import { FaLocationDot } from "react-icons/fa6";
 import Image from "next/image";
 import { FaStar } from "react-icons/fa";
@@ -14,14 +13,16 @@ import axios from "axios";
 import { useLocale } from "next-intl";
 import useSwiperNavigation from "@/hooks/useSwiperPrevNext";
 import { FiArrowRight } from "react-icons/fi";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
+import { IDoctorFull } from "@/types/Doctor";
+
 
 export default function DoctorsCarousel() {
-  const [doctors, setDoctors] = useState([]);
+  const [doctors, setDoctors] = useState<IDoctorFull[] | []>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const { swiperRef, handlePrev, handleNext } = useSwiperNavigation();
-  const locale = useLocale() as "ru" | "uz" | "en";
+  const locale = useLocale()
 
   useEffect(() => {
     async function fetchDoctors() {
@@ -96,6 +97,7 @@ export default function DoctorsCarousel() {
                     src={doctor.photo?.url || "/fallback.jpg"}
                     alt={doctor.name}
                     fill
+                    quality={100}
                     className="rounded-t-2xl object-cover object-top"
                   />
                   <div className="absolute bottom-3 bg-white px-2 py-1 rounded-r-md flex items-center shadow-md gap-1">
@@ -119,13 +121,13 @@ export default function DoctorsCarousel() {
 
                   <div className="flex items-center text-sm mt-2">
                     <FaLocationDot className="w-5 h-5 text-blue-500 mr-1" />
-                    {doctor.location || "Неизвестный адрес"}
+                    {doctor?.receptionTime[0]?.address[locale] || "Неизвестный адрес"}
                   </div>
 
-                  <div className="flex justify-start mt-auto">
-                    <Button variant="link" className="text-[#0129E3]">
+                  <div className="flex flex-row items-center w-full mt-auto ">
+                    <Link  href={`/doctors/${doctor.slug}`} className="text-[#0129E3] w-full  flex items-center flex-row gap-2">
                       Подробнее <FiArrowRight className="w-4" />
-                    </Button>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -134,10 +136,7 @@ export default function DoctorsCarousel() {
         </Swiper>
 
         <div className="flex justify-center mt-5">
-          <Link
-            href={`/${locale}/doctors`}
-            className="bg-blue-600 text-white px-5 py-3 rounded-full mb-[40px] hover:bg-blue-500"
-          >
+          <Link href={'/doctors'} className="bg-blue-600 text-white px-5 py-3 lg-w-[250px] rounded-full mb-[40px] hover:bg-blue-500">
             Посмотреть всех
           </Link>
         </div>
