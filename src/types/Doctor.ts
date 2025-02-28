@@ -34,6 +34,13 @@ interface IWorkExperience {
 }
 
 
+interface ILanguageItem {
+  id: number;
+  code: string;
+  value: string;
+}
+
+
 export interface IDoctorFull {
     id: number;
     slug: string;
@@ -44,6 +51,7 @@ export interface IDoctorFull {
     exp: number;
     rating: number | null;
     gender: string;
+    description?: IMultiLang;
     phone: string;
     city: {
       id: number;
@@ -57,7 +65,7 @@ export interface IDoctorFull {
       facebook: string;
       youtube: string;
     };
-    language: string[];
+    language: ILanguageItem[];
     achievement: IMultiLang
     photo: {
       id: number;

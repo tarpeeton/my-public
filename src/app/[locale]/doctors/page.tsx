@@ -6,14 +6,14 @@ import Image from "next/image";
 import { FaStar } from "react-icons/fa";
 import axios from "axios";
 import { useLocale } from "next-intl";
-import { useEffect, useState } from "react";
+
+
 import Link from "next/link";
 import {
   Breadcrumb,
   BreadcrumbList,
   BreadcrumbItem,
   BreadcrumbLink,
-  BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 
@@ -47,7 +47,7 @@ export default function DoctorsCarousel() {
   console.log("Doctors list:", doctors);
 
   return (
-    <div className="lg:px-[100px] mb-32 mt-5">
+    <section className="lg:px-[100px] mb-32 mt-5">
       <Breadcrumb className="mb-3">
         <BreadcrumbList>
           <BreadcrumbItem>
@@ -57,7 +57,6 @@ export default function DoctorsCarousel() {
           <BreadcrumbItem>
             <BreadcrumbLink href="/news">Врачи</BreadcrumbLink>
           </BreadcrumbItem>
-          <BreadcrumbSeparator />
         </BreadcrumbList>
       </Breadcrumb>
 

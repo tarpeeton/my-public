@@ -1,8 +1,12 @@
+
+
+
 export interface IClinicFull {
       id: number;
       name: string;
       phone: string;
       phone2: string;
+      rating: number;
       logo: {
         id: number;
         url: string;
