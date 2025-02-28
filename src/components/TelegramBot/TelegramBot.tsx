@@ -5,6 +5,7 @@ import { BiLike } from "react-icons/bi";
 import { TbEyeUp } from "react-icons/tb";
 import { IoSettingsOutline } from "react-icons/io5";
 import { MdMoneyOff } from "react-icons/md";
+import Link from "next/link";
 
 export default function TelegramBotSection() {
   return (
@@ -28,7 +29,7 @@ export default function TelegramBotSection() {
         </div>
 
         <div className="flex flex-col text-left relative  md:-mt-0 -mt-20">
-        <h2 className="text-2xl md:text-3xl font-semibold mb-4 md:text-left text-start">
+          <h2 className="text-2xl md:text-3xl font-semibold mb-4 md:text-left text-start">
             Переходите в <span>Telegram-бот</span>
           </h2>
 
@@ -47,11 +48,14 @@ export default function TelegramBotSection() {
               </li>
             ))}
           </ul>
-
         </div>
-        <button className="md:mb-4 bg-white text-[#0129E3] py-3 rounded-full text-medium font-semibold hover:bg-gray-200 transition duration-300 lg:self-end px-10 mt-4 w-full lg:w-auto">
+        <a
+          href="https://t.me/med_yordam_test_bot"
+          target="_blank"
+          className="md:mb-4 bg-white text-[#0129E3] py-3 rounded-full text-medium font-semibold hover:bg-gray-200 transition duration-300 lg:self-end px-10 mt-4 w-full lg:w-auto"
+        >
           Перейти к боту
-        </button>
+        </a>
       </div>
     </div>
   );

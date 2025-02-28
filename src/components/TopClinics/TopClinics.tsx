@@ -81,6 +81,7 @@ export default function ClinicsCarousel() {
             1420: { slidesPerView: 4 },
           }}
         >
+          
           {clinics.map((clinic) => (
             <SwiperSlide key={clinic.id}>
               <div className="bg-white rounded-2xl overflow-hidden mb-10 shadow-sm hover:shadow-md duration-200">
@@ -126,12 +127,12 @@ export default function ClinicsCarousel() {
           ))}
         </Swiper>
         <div className="flex justify-center">
-          <Button
+        <Link href={`/${locale}/news`} 
             id="view-all-clinics"
-            className="bg-blue-600 text-white px-7 py-6 rounded-full mb-[40px] hover:bg-blue-500"
+            className="bg-blue-600 text-white px-5 py-3 rounded-full mb-[40px] hover:bg-blue-500"
           >
             Посмотреть все
-          </Button>
+          </Link>
         </div>
       </div>
     </section>

@@ -9,6 +9,9 @@ import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import Link from "next/link";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
+import useSwiperNavigation from "@/hooks/useSwiperPrevNext";
 
 const newsData = [
   {
@@ -54,32 +57,51 @@ const newsData = [
 ];
 
 export default function NewsCard() {
+  const locale = "ru";
+  const { swiperRef, handlePrev, handleNext } = useSwiperNavigation();
+
   return (
     <div className="lg:px-[100px]">
       <div className="p-6 bg-[#F6FAFF] rounded-3xl mt-10 relative">
         <span className="bg-button-gradient mb-2 text-white px-4 py-1 rounded-md text-sm font-semibold inline-block -rotate-[5deg]">
           Блог
         </span>
-        <h2 className="text-4xl font-semibold mb-6">Новости и статьи</h2>
+
+        <div className="flex flex-row justify-between items-center mb-4 relative">
+          <h2 className="text-4xl font-semibold mb-6">Новости и статьи</h2>
+
+          <div className="flex flex-row items-center gap-2">
+            <button
+              onClick={handlePrev}
+              className="hover:bg-blue-500 duration-100 md:w-14 w-10 h-10 flex items-center justify-center md:h-14 rounded-full bg-[#0129E3] text-white"
+            >
+              <FaChevronLeft />
+            </button>
+            <button
+              onClick={handleNext}
+              className="hover:bg-blue-500 duration-100 md:w-14 w-10 h-10 flex items-center justify-center md:h-14 rounded-full bg-[#0129E3] text-white"
+            >
+              <FaChevronRight />
+            </button>
+          </div>
+        </div>
 
         <Swiper
-          modules={[Navigation, Pagination]}
+          loop={true}
           spaceBetween={20}
-          slidesPerView={1}
+          onSwiper={(swiper) => (swiperRef.current = swiper)}
           breakpoints={{
+            320: { slidesPerView: 1 },
             768: { slidesPerView: 2 },
             1024: { slidesPerView: 3 },
+            1420: { slidesPerView: 3 },
           }}
-          navigation
-          pagination={{ clickable: true }}
-          className="pb-10"
         >
           {newsData.map((news, index) => (
             <SwiperSlide key={index}>
               <div className="relative bg-white shadow hover:shadow-md rounded-[25px] p-6 w-full mb-3">
-                
                 <span className="text-blue-600 text-sm font-semibold">
-                  {news.author} • {news.date}
+                  {news.date}
                 </span>
 
                 <h2 className="text-xl font-semibold mt-2">{news.title}</h2>
@@ -106,12 +128,13 @@ export default function NewsCard() {
 
         {/* Кнопка "Посмотреть новости" */}
         <div className="flex justify-center">
-          <Button
+          <Link
+            href={`/${locale}/news`}
             id="view-all-doctors"
-            className="bg-blue-600 text-white px-7 py-6 rounded-full mt-6"
+            className="bg-blue-600 text-white px-8 py-2.5 rounded-full mt-6 mb-5"
           >
-            Посмотреть новости
-          </Button>
+            Все новости
+          </Link>
         </div>
       </div>
     </div>

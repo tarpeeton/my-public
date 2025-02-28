@@ -1,58 +1,123 @@
-import Image from 'next/image';
-import React from 'react';
-import image from '@/assets/image/doctor_banner_image.png'
-import Rating from './rating';
-import { useTranslations } from 'next-intl';
-import { MoveRight, Phone } from 'lucide-react';
-import Link from 'next/link';
+import Image from "next/image";
+import React, { useState } from "react";
+import { MoveRight } from "lucide-react";
+import { FaPhoneAlt } from "react-icons/fa";
+import Link from "next/link";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import { Button } from "@/components/ui/button";
+
+const schedule = [
+  { date: "27 янв", day: "Пн", times: ["15:00", "16:00", "16:30", "17:00"] },
+  { date: "28 янв", day: "Вт", times: ["15:00", "16:00", "16:30", "17:00"] },
+  { date: "29 янв", day: "Ср", times: ["15:00", "16:00", "16:30", "17:00"] },
+  { date: "30 янв", day: "Чт", times: ["15:00", "16:00", "16:30", "17:00"] },
+];
+
 const DoctorCard = () => {
-    const t = useTranslations('Doctor')
-    const mapUrl = "https://yandex.uz/map-widget/v1/?ll=${longitude},${latitude}&z=12&pt=${longitude},${latitude},pm2rdl"
-    console.log(mapUrl);
-    
-    return (
-        <div className='shadow-md rounded-[20px] px-4 py-6 flex gap-6'>
-            <div className="flex w-full xl:w-[70%] gap-10">
-                <Image className='w-full md:w-[240px] md:h-[300px]' width={240} height={300} src={image} alt='doctor image'/>
-                <div className="flex flex-col space-y-3">
-                    <h3 className='text-[20px] md:text-[24px] xl:text-[32px] font-semibold'>Мирзаев Батыр Бахрамович </h3>
-                    <div className="flex items-center gap-x-3 md:gap-x-5">
-                        <span className='bg-[#0129E30D] p-2 px-5 rounded-full text-[#0129E3] text-[12px] md:text-[14px] xl:text-[20px] font-medium'>Гастроэнтеролог</span>
-                        <span className='bg-[#0129E30D] p-2 px-5 rounded-full text-[#0129E3] text-[12px] md:text-[14px] xl:text-[20px] font-medium'>Гастроэнтеролог</span>
-                        <span className='bg-[#0129E30D] p-2 px-5 rounded-full text-[#0129E3] text-[12px] md:text-[14px] xl:text-[20px] font-medium'>Гастроэнтеролог</span>
-                    </div>
-                    <p className='text-[13px] md:text-[15px] xl:text-[16px] font-normal'>Алголог, вертебролог, гериатр (геронтолог), детский вертебролог, детский невролог, детский реабилитолог,</p>
-                    <Rating rating={4}/>
-                    <h4 className="text-[16px] font-medium text-[#7C7C7C]">
-                        <span className='font-bold text-black'>{t('experens')}: </span> 10 {t('year')}
-                    </h4>
-                    <h3 className='text-[16px] font-semibold text-black'>{t('connection')}</h3>
-                    <div className="flex gap-x-6 items-center">
-                        <Phone className='text-[#0129E3] bg-[#0129E31A] p-2 rounded-full' size={40}/>
-                        <p className='text-[20px] font-medium'>+ 998 (99) 838 80 78</p>
-                    </div>
-                </div>
+  const [selectedTime, setSelectedTime] = useState(null);
+
+  return (
+    <div className="flex flex-col border-none shadow-xl shadow-gray-200/20">
+      <div className="p-6 flex flex-col lg:flex-row gap-4 ">
+        <div className="flex w-full xl:w-[70%] gap-10">
+          <Image
+            className="w-full md:w-[240px] md:h-[300px]"
+            width={240}
+            height={300}
+            src={"/doc-doc1.png"}
+            alt="doctor image"
+          />
+          <div className="flex flex-col space-y-3">
+            <h3 className="text-[24px] font-semibold">
+              Мирзаев Батыр Бахрамович
+            </h3>
+            <div className="flex items-center gap-2">
+              <span className="bg-blue-100 p-2 px-5 rounded-full text-blue-600 text-sm font-medium">
+                Гастроэнтеролог
+              </span>
             </div>
-            <div className="map w-full xl:w-[30%]">
-                <div className="flex flex-col md:flex-row xl:flex-col">
-                    <div className="">
-                        <h2 className='text-[16px] md:text-[20px] font-medium'>Эндомед клиник в Ташкент </h2>
-                        <p className='text-[16px] md:text-[20px] text-[#7C7C7C] font-medium'>ул. Ховос д. 22</p>
-                    </div>
-                    <Link className='text-[#0129E3] text-[14px] md:text-[16px] font-semibold flex items-center gap-x-3' href={''}>{t('map_open_text')} <MoveRight/></Link>
-                </div>
-                <div className="w-full">
-                <iframe
-                    src={`https://yandex.uz/map-widget/v1/?ll=${69.2401}%2C${41.2995}&z=12`}
-                    width="100%"
-                    height="230px"
-                    style={{ border: 0, marginTop: "10px" }}
-                    allowFullScreen
-                    />
-                </div>
+            <p className="text-gray-600">
+              Алголог, вертебролог, гериатр (геронтолог), детский невролог.
+            </p>
+            <h4 className="text-gray-700 font-medium">
+              Стаж: <span className="font-bold text-black">10 лет</span>
+            </h4>
+            <div className="flex gap-x-4 items-center">
+              <FaPhoneAlt
+                className="text-blue-600 bg-blue-100 p-2 rounded-full"
+                size={40}
+              />
+              <p className="text-lg font-medium">+ 998 (99) 838 80 78</p>
             </div>
+          </div>
         </div>
-    );
+
+        <div className="w-full xl:w-[30%]">
+          <h2 className="text-lg font-medium">Эндомед клиник в Ташкент</h2>
+          <p className="text-gray-600">ул. Ховос д. 22</p>
+          <Link
+            className="text-blue-600 font-semibold flex items-center gap-2 mt-2 mb-5"
+            href={"#"}
+          >
+            Открыть в Яндекс Картах <MoveRight />
+          </Link>
+          <iframe
+            src={`https://yandex.uz/map-widget/v1/?ll=69.2401,41.2995&z=12`}
+            width="100%"
+            height="230px"
+            style={{ border: 0, marginTop: "10px" }}
+            allowFullScreen
+          />
+        </div>
+      </div>
+
+      <div className="border-t-2">
+        <Tabs defaultValue={schedule[0].date}>
+          <TabsList className="items-start justify-start flex mt-3 gap-2">
+            {schedule.map((day) => (
+              <TabsTrigger
+                key={day.date}
+                value={day.date}
+                className="rounded-2xl py-2 text-sm text-start border-gray-200 data-[state=active]:border-2 data-[state=active]:border-[#0129E3] data-[state=active]:bg-[#F2F4FE]"
+              >
+                {day.date} <br />({day.day})
+              </TabsTrigger>
+            ))}
+          </TabsList>
+
+          {schedule.map((day) => (
+            <TabsContent
+              key={day.date}
+              value={day.date}
+              className="mb-7 mt-10 transition-all duration-300 ease-in-out hidden data-[state=active]:block"
+            >
+              <div className="flex justify-between items-center w-full">
+                <div className="flex gap-2">
+                  {day.times.map((time) => (
+                    <Button
+                      className="bg-[#0129E3] text-white rounded-xl py-6 px-6"
+                      key={time}
+                      variant={selectedTime === time ? "default" : "outline"}
+                      onClick={() => setSelectedTime(time)}
+                    >
+                      {time}
+                    </Button>
+                  ))}
+                </div>
+                
+                <Link
+                  href={"d"}
+                  className="bg-blue-600 text-white px-10 py-3 rounded-full hover:bg-blue-500"
+                >
+                  Подробнее
+                </Link>
+              </div>
+            </TabsContent>
+          ))}
+        </Tabs>
+      </div>
+    </div>
+  );
 };
 
 export default DoctorCard;

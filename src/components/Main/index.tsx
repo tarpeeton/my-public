@@ -31,7 +31,7 @@ const Main = () => {
         <FAQ />
       </div>
       <div className="mt-28">
-      <News />
+        <News />
       </div>
       <LogosAnimation />
       <TelegramBanner />

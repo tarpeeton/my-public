@@ -9,8 +9,7 @@ import { FaLocationDot } from "react-icons/fa6";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FiArrowRight, FiArrowLeft } from "react-icons/fi";
 import "swiper/css";
-import { FaChevronLeft , FaChevronRight } from "react-icons/fa6";
-
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 
 const donationCards = [
   {
@@ -56,7 +55,7 @@ export default function DonationList() {
 
   return (
     <div className="lg:px-[100px]">
-      <div className="p-8 bg-[#F6FAFF] rounded-3xl mt-10 py-12 relative">
+      <div className="p-8 bg-[#F6FAFF] rounded-3xl mt-12 py-12 relative">
         {/* Тег "Акции" */}
         <span className="bg-button-gradient mb-2 text-white px-4 py-1 rounded-md text-sm font-semibold inline-block -rotate-[5deg]">
           Акции
@@ -66,7 +65,7 @@ export default function DonationList() {
         <div className="flex flex-row flex-nowrap justify-between items-center mb-4 relative">
           <h2 className="text-4xl font-semibold">Акции и предложения </h2>
           <div className="flex flex-row items-center gap-2">
-          <button
+            <button
               onClick={handlePrev}
               className="hover:bg-blue-500 duration-100 md:w-14 w-10 h-10 flex items-center justify-center md:h-14 rounded-full bg-[#0129E3] text-white"
             >
@@ -90,12 +89,13 @@ export default function DonationList() {
             320: { slidesPerView: 1 },
             768: { slidesPerView: 2 },
             1024: { slidesPerView: 3 },
-            1420: { slidesPerView: 4 },
+            1420: { slidesPerView: 3 },
           }}
         >
           {donationCards.map((card) => (
             <SwiperSlide key={card.id}>
-              <div className="px-5 mb-5 md:px-0 bg-white rounded-2xl overflow-hidden shadow-s h-[500px] flex flex-col relative mt-7">
+              <div className="h-[450px] flex flex-col relative mt-7 bg-white rounded-2xl overflow-hidden shadow-sm">
+                {/* Метка со скидкой */}
                 <div className="absolute top-2 right-2 z-10">
                   <span className="relative z-10 bg-gradient-to-r from-blue-500 to-blue-700 text-white text-xs font-bold px-3 py-1 rounded-md">
                     {card.percentage}
@@ -103,7 +103,8 @@ export default function DonationList() {
                   <span className="absolute inset-0 -m-[8px] bg-white rounded-md"></span>
                 </div>
 
-                <div className="relative w-full h-[250px] md:h-[380px] rounded-2xl overflow-hidden">
+                {/* Фото с фиксированной высотой */}
+                <div className="relative w-full h-[250px] rounded-2xl overflow-hidden">
                   <Image
                     src={card.image}
                     alt="donation"
@@ -112,18 +113,20 @@ export default function DonationList() {
                   />
                 </div>
 
+                {/* Контент */}
                 <div className="px-2 flex flex-col flex-grow">
                   <h3 className="text-lg font-semibold">{card.title}</h3>
                   <p className="text-sm text-gray-500 mt-1 mb-2">
                     {card.description}
                   </p>
 
-                  <div className="flex items-center gap-2 text-sm text-gray-700 mt-3 mb-4">
+                  <div className="flex items-center gap-2 text-sm text-gray-700 mt-auto mb-4">
                     <FaLocationDot className="text-[#0129E3]" size={20} />
                     {card.location}
                   </div>
 
-                  <div className="mt- border-t border-gray-200">
+                  {/* Кнопки */}
+                  <div className="border-t border-gray-200">
                     <div className="grid grid-cols-2">
                       <Button
                         variant="ghost"

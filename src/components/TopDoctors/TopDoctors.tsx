@@ -5,7 +5,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation, Autoplay } from "swiper/modules";
 import { Button } from "@/components/ui/button";
-import { FaChevronLeft , FaChevronRight } from "react-icons/fa6";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 import { FaLocationDot } from "react-icons/fa6";
 import Image from "next/image";
 import { FaStar } from "react-icons/fa";
@@ -14,6 +14,7 @@ import axios from "axios";
 import { useLocale } from "next-intl";
 import useSwiperNavigation from "@/hooks/useSwiperPrevNext";
 import { FiArrowRight } from "react-icons/fi";
+import Link from "next/link";
 
 export default function DoctorsCarousel() {
   const [doctors, setDoctors] = useState([]);
@@ -106,7 +107,7 @@ export default function DoctorsCarousel() {
                 </div>
                 <div className="p-4 flex flex-col flex-grow">
                   <span className="bg-[#CFFAFE] w-max px-3 py-1.5 rounded-md text-sm font-semibold">
-                  {doctor.speciality?.[0]?.name || "Неизвестно"}
+                    {doctor.speciality?.[0]?.name || "Неизвестно"}
                   </span>
 
                   <h3 className="text-lg font-semibold mt-2">{doctor.name}</h3>
@@ -115,7 +116,7 @@ export default function DoctorsCarousel() {
                       ? doctor.morespec.slice(0, 50) + "..."
                       : doctor.morespec}
                   </p>
-                  
+
                   <div className="flex items-center text-sm mt-2">
                     <FaLocationDot className="w-5 h-5 text-blue-500 mr-1" />
                     {doctor.location || "Неизвестный адрес"}
@@ -133,9 +134,12 @@ export default function DoctorsCarousel() {
         </Swiper>
 
         <div className="flex justify-center mt-5">
-          <Button className="bg-blue-600 text-white px-7 py-6 rounded-full mb-[40px] hover:bg-blue-500">
+          <Link
+            href={`/${locale}/doctors`}
+            className="bg-blue-600 text-white px-5 py-3 rounded-full mb-[40px] hover:bg-blue-500"
+          >
             Посмотреть всех
-          </Button>
+          </Link>
         </div>
       </div>
     </div>

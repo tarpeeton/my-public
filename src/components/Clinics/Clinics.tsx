@@ -158,7 +158,7 @@ export default function ClinicsPage() {
 
                 <Link
                   href={`/clinick/${clinic.slug}`}
-                  className="mt-auto bg-[#0129E3] text-white flex items-center justify-center rounded-full px-10 py-1 text-sm h-12 w-44"
+                  className="mt-auto hover:bg-[#0325bc] duration-200 bg-[#0129E3] text-white flex items-center justify-center rounded-full px-10 py-1 text-sm h-12 w-44"
                 >
                   Подробнее
                 </Link>
