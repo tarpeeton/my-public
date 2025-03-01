@@ -104,7 +104,7 @@ const HowItWorksDesktop = () => {
                 <h2 className="text-4xl font-bold">Как это работает</h2>
               </div>
             </div>
-            <TabsList className="flex gap-1 p-1 rounded-2xl ">
+            <TabsList className="flex gap-1 p-1 rounded-2xl">
               <TabsTrigger
                 value="doctor"
                 className="border-gray-200 rounded-l-2xl flex-1 data-[state=active]:border-2 data-[state=active]:border-[#0129E3] data-[state=active]:bg-white"
@@ -139,7 +139,7 @@ const HowItWorksDesktop = () => {
               <TabsContent
                 key={key}
                 value={key}
-                className="relative z-10  justify-between min-h-[300px] transition-all duration-300 ease-in-out hidden data-[state=active]:flex"
+                className="relative z-10 justify-between min-h-[300px] transition-all duration-300 ease-in-out hidden data-[state=active]:flex"
               >
                 {steps.map((step, index) => (
                   <div

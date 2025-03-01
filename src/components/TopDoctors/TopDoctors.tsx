@@ -109,7 +109,7 @@ export default function DoctorsCarousel() {
                 </div>
                 <div className="p-4 flex flex-col flex-grow">
                   <span className="bg-[#CFFAFE] w-max px-3 py-1.5 rounded-md text-sm font-semibold">
-                  {doctor.speciality?.[0]?.name || "Неизвестно"}
+                    {doctor.speciality?.[0]?.name || "Неизвестно"}
                   </span>
 
                   <h3 className="text-lg font-semibold mt-2">{doctor.name}</h3>
@@ -118,7 +118,7 @@ export default function DoctorsCarousel() {
                       ? doctor.morespec.slice(0, 50) + "..."
                       : doctor.morespec}
                   </p>
-                  
+
                   <div className="flex items-center text-sm mt-2">
                     <FaLocationDot className="w-5 h-5 text-blue-500 mr-1" />
                     {doctor?.receptionTime[0]?.address[locale] || "Неизвестный адрес"}

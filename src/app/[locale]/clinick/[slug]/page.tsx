@@ -1,7 +1,3 @@
-
-
-
-
 function allClinics() {
   return (
     <div>
