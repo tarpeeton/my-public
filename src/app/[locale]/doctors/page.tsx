@@ -44,10 +44,10 @@ export default function DoctorsCarousel() {
 
     fetchAllDoctors();
   }, []);
-  console.log("Doctors list:", doctors);
 
   return (
     <section className="lg:px-[100px] mb-32 mt-5">
+
       <Breadcrumb className="mb-3">
         <BreadcrumbList>
           <BreadcrumbItem>
@@ -120,7 +120,8 @@ export default function DoctorsCarousel() {
             </div>
           ))}
         </div>
+        </div>
+        </section>
     );
 };
 
-export default Doctor
