@@ -5,6 +5,7 @@ import Image from "next/image";
 
 interface IBannerProps {
   total: number;
+  name: ServiceName
 }
 
 export interface ServiceName {
@@ -13,7 +14,7 @@ export interface ServiceName {
     en: string;
   }
 
-export const Banner = ({ total }: IBannerProps) => {
+export const Banner = ({ total , name }: IBannerProps) => {
   const locale = useLocale() as "ru" | "uz" | "en";
   const [serviceName, setServiceName] = useState<ServiceName>({
     ru: "Услуги",
@@ -22,16 +23,8 @@ export const Banner = ({ total }: IBannerProps) => {
   });
 
   useEffect(() => {
-    const storedName = localStorage.getItem("serviceName");
-    if (storedName) {
-      try {
-        const parsed: ServiceName = JSON.parse(storedName);
-        setServiceName(parsed);
-      } catch (error) {
-        console.error("Ошибка при разборе serviceName из localStorage", error);
-      }
-    }
-  }, []);
+    setServiceName(name)
+  },[])
 
 
   

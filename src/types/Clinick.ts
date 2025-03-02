@@ -1,3 +1,19 @@
+export interface IServicesResponse extends Array<{
+  id: number;
+  service: {
+    id: number;
+    categoryId: number;
+    slug: string;
+    name: {
+      uz: string;
+      ru: string;
+      en: string;
+    };
+    useCount: number | null;
+    categorySlug: string;
+  };
+  price: number;
+}> {}
 
 
 
@@ -30,20 +46,7 @@ export interface IClinicFull {
         id: number;
         url: string;
       }[];
-      services: {
-        id: number;
-        service: {
-          id: number;
-          categoryId: number;
-          slug: string;
-          name: {
-            uz: string;
-            ru: string;
-            en: string;
-          };
-        };
-        price: number;
-      }[];
+      services: IServicesResponse ;
       promotions: {
         id: number;
         address: {

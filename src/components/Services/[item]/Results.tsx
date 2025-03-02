@@ -15,6 +15,7 @@ import { useLocale } from "next-intl";
 import { ClinickAppLicationModal } from "@/components/Modals/ClinickApplicationModal";
 import { FaAngleDown } from "react-icons/fa6";
 import { transformedPrice } from "./itemServices";
+import { useParams } from "next/navigation";
 
 interface IDoctorResponse {
   data: IDoctorFull[];
@@ -29,12 +30,10 @@ export const Result = () => {
   const [openAppLication, setOpenApplication] = useState(false);
   const [clinickID, setClinickID] = useState(0);
   const [openServices, setOpenServices] = useState<Record<number, boolean>>({});
-
+  const {id} = useParams()
 
   const locale = useLocale();
-  const serviceIdLS =
-    typeof window !== "undefined" ? localStorage.getItem("serviceID") : null;
-  const serviceId = serviceIdLS ? Number(serviceIdLS) : null;
+ 
 
   useEffect(() => {
     const fetchAllDoctors = async () => {
@@ -49,7 +48,7 @@ export const Result = () => {
       }
     };
     fetchAllDoctors();
-    filterClinickByService(Number(serviceId));
+    filterClinickByService(Number(id));
   }, []);
 
   const handleOpenAppLicationModal = (id: number) => {
@@ -65,9 +64,9 @@ export const Result = () => {
           { headers: { "Accept-Language": "" } }
         );
         const filteredClinick =
-          serviceId !== null
+        id !== null
             ? res.data.data.filter((clinic) =>
-                clinic.services.some((s) => s.service.categoryId === serviceId)
+                clinic.services.some((s) => s.service.categorySlug === id)
               )
             : res.data.data;
 
@@ -77,7 +76,9 @@ export const Result = () => {
       }
     };
     fetchAllClincik();
-  }, [setClinick, serviceId]);
+  }, [setClinick, id]);
+
+
 
   return (
     <section className="grid grid-cols-1 gap-[20px] pb-8 lg:pb-36">
@@ -173,13 +174,13 @@ export const Result = () => {
                 {[...item.services]
                   .sort((a, b) => {
                     if (
-                      a.service.categoryId === serviceId &&
-                      b.service.categoryId !== serviceId
+                      a.service.categorySlug === id &&
+                      b.service.categorySlug !== id
                     )
                       return -1;
                     if (
-                      a.service.categoryId !== serviceId &&
-                      b.service.categoryId === serviceId
+                      a.service.categorySlug !== id &&
+                      b.service.categorySlug === id
                     )
                       return 1;
                     return 0;
