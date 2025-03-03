@@ -61,13 +61,13 @@ const DoctorCard = () => {
           >
             Открыть в Яндекс Картах <MoveRight />
           </Link>
-          <iframe
+          {/* <iframe
             src={`https://yandex.uz/map-widget/v1/?ll=69.2401,41.2995&z=12`}
             width="100%"
             height="230px"
             style={{ border: 0, marginTop: "10px" }}
             allowFullScreen
-          />
+          /> */}
         </div>
       </div>
 

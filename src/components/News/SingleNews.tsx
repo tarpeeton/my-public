@@ -33,11 +33,8 @@ export default function NewsPage() {
         Zandra Wu • 18 Янв 2024
       </div>
 
-      {/* OPTIONLARNI MAP QILASIZ AGAR RASM BOLSA RASMINI KORSATASIZ AGAR BOLMASA KORSTMAYSIN ?? && ORQALI ISHLANG */}
 
-</div>
 
-      <div></div>
 
       <div className="w-full h-[400px] md:h-[635px] overflow-hidden rounded-3xl">
         <Image
