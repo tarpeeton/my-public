@@ -7,6 +7,8 @@ import { Breadcrumb,
     BreadcrumbPage,
     BreadcrumbSeparator, } from './ui/breadcrumb';
 import { Slash } from 'lucide-react';
+
+
 import { useLocale } from 'next-intl';
 
 interface Props{

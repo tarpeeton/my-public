@@ -11,6 +11,7 @@ interface DoctorStore {
 
   getMinPriceByServiceId: (slug: string) => number | null;
   filterClinickByService: (serviceId: number) => void;
+  filterClinickByServiceSlug: (serviceSlug: string) => void;
   updateMinPrice: (slug: string) => void;
 }
 
@@ -60,4 +61,16 @@ export const useDoctorStore = create<DoctorStore>((set, get) => ({
     );
     set({ clinick: filteredClinick });
   },
+  filterClinickByServiceSlug: (serviceSlug) => {
+    const { clinick } = get();
+    const filteredClinick = clinick.filter((clinic) =>
+      clinic.services.some((s) => s.service.slug === serviceSlug)
+    );
+    set({ clinick: filteredClinick });
+  },
+
+
+
+
+  
 }));

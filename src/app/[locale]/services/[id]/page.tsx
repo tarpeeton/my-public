@@ -1,6 +1,6 @@
-import axios from "axios";
 import { ServiceItemMain } from "@/components/Services/[item]/Main";
 import { IMultiLang } from "@/types/Doctor";
+import { Axios } from "@/axios/Axios";
 
 interface PageProps {
   params: {
@@ -14,7 +14,7 @@ export type ApiResponseServiceCategory = {
     id: number;
     slug: string;
     name: IMultiLang;
-    useCount?: number;
+    useCount: number;
   };
   status: number;
   pagination: unknown | null;
@@ -23,15 +23,15 @@ export type ApiResponseServiceCategory = {
 export default async function Page({ params }: PageProps) {
   const { id } = params;
   try {
-    const response = await axios.get(`https://medyordam.result-me.uz/api/service-category/${id}`);
+    const response = await Axios.get(`/service-category/${id}`);
     const fetchedData: ApiResponseServiceCategory = response.data;
     return (
-      <div>
+      <main>
         <ServiceItemMain
           totalElements={fetchedData?.data.useCount || 0}
           serviceData={fetchedData.data}
         />
-      </div>
+      </main>
     );
   } catch (error) {
     console.error("Failed to fetch data for slug:", id, error);

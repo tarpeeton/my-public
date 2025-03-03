@@ -15,7 +15,7 @@
 
 @font-face {
   font-family: 'SFProDisplay';
-  src: url('./fonts/SFPRODISPLAYMEDIUM.OTF') format('.OTF');
+  src: url('./SFPRODISPLAYREGULAR.OTF') format('.OTF');
   font-weight: normal;
   font-style: normal;
 }
@@ -27,10 +27,7 @@ body {
   font-family: 'SFProDisplay', !important;
 }
 
-button , a , h1 , h2 , h3 , h4 , h5 , p  , input , label , select  {
-  font-family: 'SFProDisplay', !important;
 
-}
 
 .ant-picker-input {
   display: none !important;
