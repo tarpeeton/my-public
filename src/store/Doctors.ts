@@ -2,9 +2,13 @@ import { create } from "zustand";
 import { IDoctorFull } from "@/types/Doctor";
 import { IClinicFull } from "@/types/Clinick";
 
+
+
+
 interface DoctorStore {
   doctors: IDoctorFull[];
   clinick: IClinicFull[];
+
   minPrice: number | null;
   setDoctors: (doctors: IDoctorFull[]) => void;
   setClinick: (clinick: IClinicFull[]) => void;

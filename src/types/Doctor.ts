@@ -13,7 +13,7 @@ interface IEducation {
   direction?: string;
 }
 
-interface ISpecialty {
+export interface ISpecialty {
   id: number;
   name: IMultiLang;
 }

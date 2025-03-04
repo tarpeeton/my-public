@@ -9,7 +9,6 @@ import { useLocale } from "next-intl";
 export default function NewsPage() {
   const { slug } = useParams();
   const locale = useLocale() as "ru" | "uz" | "en";
-  console.log(slug, "SLUG");
   const [data, setData] = useState<INewsData | {}>({});
 
 
